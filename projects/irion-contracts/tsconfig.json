@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "lib": [
+      "ESNext"
+    ],
+    "paths": {
+      "@algorandfoundation/algorand-typescript": [
+        "./node_modules/@algorandfoundation/algorand-typescript/index.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "smart_contracts/**/*.ts",
+    "artifacts/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "smart_contracts/**/*.algo.ts",
+    "smart_contracts/artifacts"
+  ]
+}
