@@ -1,0 +1,2610 @@
+#pragma version 11
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 8 0 1 2 140 200 1576800
+    bytecblock "l" 0x0020 "circuit_breaker_active" 0x151f7c75 "credit_oracle_app_id" "r" 0x008c "vault_app_id" "loan_counter" 0x156debe6 "governance_address"
+    // smart_contracts/loan_factory/contract.algo.ts:75
+    // export class LoanFactory extends Contract {
+    pushbytes 0x12c03e84 // method "bootstrap(byte[],uint64,uint64,uint64)void"
+    txna ApplicationArgs 0
+    match main_bootstrap_route@2
+
+main_switch_case_next@3:
+    // smart_contracts/loan_factory/contract.algo.ts:75
+    // export class LoanFactory extends Contract {
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    bz main_create_NoOp@18
+    pushbytess 0xb2349b1b 0xd48f1430 0x5e84fbcb 0x081e5ff4 0x07d45fda 0x32ca0be6 0x96997287 // method "register_pool(uint64,uint64)void", method "originate_overcollateralized(uint64,uint64,uint64)uint64", method "originate_revolving(uint64,uint64)uint64", method "originate_term(uint64,uint64,uint64)uint64", method "originate_installment(uint64,uint64,uint64,address)uint64", method "draw(uint64,uint64)void", method "repay(uint64,axfer)void"
+    bytec 9 // method "liquidate(uint64)void"
+    pushbytess 0xd33ca3de 0xc669749c 0x0b637be0 0x6b11a470 // method "get_loan(uint64)(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)", method "get_institution_loans(address)uint64[]", method "toggle_circuit_breaker(uint64)void", method "update_oracle(uint64)void"
+    txna ApplicationArgs 0
+    match register_pool originate_overcollateralized originate_revolving originate_term originate_installment draw repay liquidate get_loan get_institution_loans toggle_circuit_breaker update_oracle
+    err
+
+main_create_NoOp@18:
+    // smart_contracts/loan_factory/contract.algo.ts:75
+    // export class LoanFactory extends Contract {
+    pushbytes 0x4c5c61ba // method "create()void"
+    txna ApplicationArgs 0
+    match main_create_route@19
+    err
+
+main_create_route@19:
+    // smart_contracts/loan_factory/contract.algo.ts:90
+    // @abimethod({ allowActions: ['NoOp'], onCreate: 'require' })
+    intc_2 // 1
+    return
+
+main_bootstrap_route@2:
+    // smart_contracts/loan_factory/contract.algo.ts:93
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_2 // 1
+    txn OnCompletion
+    shl
+    pushint 3 // 3
+    &
+    assert // OnCompletion must be one of NoOp, OptIn
+    b bootstrap
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.bootstrap[routing]() -> void:
+bootstrap:
+    // smart_contracts/loan_factory/contract.algo.ts:93
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    txna ApplicationArgs 1
+    dup
+    intc_1 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:76
+    // governance_address = GlobalState<bytes>()
+    bytec 10 // "governance_address"
+    // smart_contracts/loan_factory/contract.algo.ts:100
+    // this.governance_address.value = governance_address
+    uncover 4
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:77
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 4 // "credit_oracle_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:101
+    // this.credit_oracle_app_id.value = credit_oracle_app_id
+    uncover 3
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:78
+    // vault_app_id = GlobalState<uint64>()
+    bytec 7 // "vault_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:102
+    // this.vault_app_id.value = vault_app_id
+    uncover 2
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:80
+    // iusdc_asset_id = GlobalState<uint64>()
+    pushbytes "iusdc_asset_id"
+    // smart_contracts/loan_factory/contract.algo.ts:103
+    // this.iusdc_asset_id.value = iusdc_asset_id
+    swap
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:79
+    // loan_counter = GlobalState<uint64>()
+    bytec 8 // "loan_counter"
+    // smart_contracts/loan_factory/contract.algo.ts:104
+    // this.loan_counter.value = Uint64(0)
+    intc_1 // 0
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:105
+    // this.circuit_breaker_active.value = Uint64(0)
+    intc_1 // 0
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:93
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.register_pool[routing]() -> void:
+register_pool:
+    // smart_contracts/loan_factory/contract.algo.ts:110
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:112
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/loan_factory/contract.algo.ts:113
+    // this.pool_registry(asset_id).value = pool_app_id
+    swap
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:84
+    // pool_registry = BoxMap<uint64, uint64>({ keyPrefix: 'r' })
+    bytec 5 // "r"
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:113
+    // this.pool_registry(asset_id).value = pool_app_id
+    swap
+    itob
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:110
+    // @abimethod()
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.originate_overcollateralized[routing]() -> void:
+originate_overcollateralized:
+    // smart_contracts/loan_factory/contract.algo.ts:126
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:132
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:132
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Circuit breaker active
+    // smart_contracts/loan_factory/contract.algo.ts:133
+    // assert(borrow_amount > Uint64(0), 'Amount must be > 0')
+    dig 1
+    assert // Amount must be > 0
+    // smart_contracts/loan_factory/contract.algo.ts:134
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    uncover 2
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:84
+    // pool_registry = BoxMap<uint64, uint64>({ keyPrefix: 'r' })
+    bytec 5 // "r"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:134
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    dup
+    box_len
+    bury 1
+    assert // No pool for asset
+    // smart_contracts/loan_factory/contract.algo.ts:136
+    // const pool_app_id = this.pool_registry(asset_id).value
+    box_get
+    pop
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:137
+    // const loan_id = this.next_loan_id()
+    callsub next_loan_id
+    // smart_contracts/loan_factory/contract.algo.ts:141
+    // beneficiary: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:157
+    // origination_round: Global.round,
+    global Round
+    // smart_contracts/loan_factory/contract.algo.ts:139-159
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_OVERCOLLATERALIZED,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id,
+    //   principal: borrow_amount,
+    //   drawn_amount: borrow_amount,
+    //   credit_limit: Uint64(0),
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    bytec_1 // 0x0020
+    // smart_contracts/loan_factory/contract.algo.ts:140
+    // borrower: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:139-159
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_OVERCOLLATERALIZED,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id,
+    //   principal: borrow_amount,
+    //   drawn_amount: borrow_amount,
+    //   credit_limit: Uint64(0),
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    concat
+    dup
+    len
+    intc 4 // 140
+    +
+    bytec_1 // 0x0020
+    uncover 4
+    concat
+    swap
+    itob
+    extract 6 2
+    bytec 6 // 0x008c
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:142
+    // loan_type: TYPE_OVERCOLLATERALIZED,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:139-159
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_OVERCOLLATERALIZED,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id,
+    //   principal: borrow_amount,
+    //   drawn_amount: borrow_amount,
+    //   credit_limit: Uint64(0),
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    swap
+    dig 1
+    concat
+    dig 6
+    itob
+    concat
+    uncover 7
+    concat
+    dig 1
+    concat
+    uncover 7
+    itob
+    concat
+    dig 7
+    itob
+    swap
+    dig 1
+    concat
+    swap
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    swap
+    concat
+    uncover 3
+    itob
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:158
+    // late_fee_bps: LATE_FEE_BPS,
+    intc 5 // 200
+    // smart_contracts/loan_factory/contract.algo.ts:139-159
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_OVERCOLLATERALIZED,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id,
+    //   principal: borrow_amount,
+    //   drawn_amount: borrow_amount,
+    //   credit_limit: Uint64(0),
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:160
+    // this.loans(loan_id).value = clone(loan)
+    dig 1
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:160
+    // this.loans(loan_id).value = clone(loan)
+    dup
+    box_del
+    pop
+    uncover 2
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:161
+    // this.add_institution_loan(Txn.sender, loan_id)
+    txn Sender
+    uncover 2
+    callsub add_institution_loan
+    // smart_contracts/loan_factory/contract.algo.ts:164
+    // this.call_pool_borrow(pool_app_id, borrow_amount, Txn.sender)
+    txn Sender
+    uncover 2
+    dig 3
+    uncover 2
+    callsub call_pool_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:167
+    // this.call_oracle_borrow(Txn.sender, borrow_amount)
+    txn Sender
+    uncover 2
+    callsub call_oracle_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:126
+    // @abimethod()
+    bytec_3 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.originate_revolving[routing]() -> void:
+originate_revolving:
+    // smart_contracts/loan_factory/contract.algo.ts:179
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    dup
+    uncover 2
+    // smart_contracts/loan_factory/contract.algo.ts:181
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:181
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Circuit breaker active
+    // smart_contracts/loan_factory/contract.algo.ts:182
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:84
+    // pool_registry = BoxMap<uint64, uint64>({ keyPrefix: 'r' })
+    bytec 5 // "r"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:182
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    dup
+    box_len
+    bury 1
+    assert // No pool for asset
+    // smart_contracts/loan_factory/contract.algo.ts:184
+    // const pool_app_id = this.pool_registry(asset_id).value
+    box_get
+    pop
+    btoi
+    dup
+    cover 3
+    // smart_contracts/loan_factory/contract.algo.ts:187
+    // const loan_id = this.next_loan_id()
+    callsub next_loan_id
+    // smart_contracts/loan_factory/contract.algo.ts:191
+    // beneficiary: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:207
+    // origination_round: Global.round,
+    global Round
+    // smart_contracts/loan_factory/contract.algo.ts:189-209
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_REVOLVING,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: initial_draw,
+    //   drawn_amount: initial_draw,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    bytec_1 // 0x0020
+    // smart_contracts/loan_factory/contract.algo.ts:190
+    // borrower: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:189-209
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_REVOLVING,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: initial_draw,
+    //   drawn_amount: initial_draw,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    concat
+    dup
+    len
+    intc 4 // 140
+    +
+    bytec_1 // 0x0020
+    uncover 4
+    concat
+    swap
+    itob
+    extract 6 2
+    bytec 6 // 0x008c
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:192
+    // loan_type: TYPE_REVOLVING,
+    intc_2 // 1
+    // smart_contracts/loan_factory/contract.algo.ts:189-209
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_REVOLVING,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: initial_draw,
+    //   drawn_amount: initial_draw,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    uncover 5
+    itob
+    concat
+    uncover 5
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:195
+    // collateral_asset_id: Uint64(0),
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:189-209
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_REVOLVING,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: initial_draw,
+    //   drawn_amount: initial_draw,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    swap
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 6
+    itob
+    swap
+    dig 1
+    concat
+    swap
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    swap
+    concat
+    uncover 3
+    itob
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:208
+    // late_fee_bps: LATE_FEE_BPS,
+    intc 5 // 200
+    // smart_contracts/loan_factory/contract.algo.ts:189-209
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_REVOLVING,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: initial_draw,
+    //   drawn_amount: initial_draw,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Uint64(0),
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:210
+    // this.loans(loan_id).value = clone(loan)
+    dig 1
+    itob
+    dup
+    cover 4
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:210
+    // this.loans(loan_id).value = clone(loan)
+    dup
+    box_del
+    pop
+    swap
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:211
+    // this.add_institution_loan(Txn.sender, loan_id)
+    txn Sender
+    swap
+    callsub add_institution_loan
+    // smart_contracts/loan_factory/contract.algo.ts:213
+    // if (initial_draw > Uint64(0)) {
+    bz originate_revolving_after_if_else@3
+    // smart_contracts/loan_factory/contract.algo.ts:214
+    // this.call_pool_borrow(pool_app_id, initial_draw, Txn.sender)
+    txn Sender
+    dig 2
+    dig 4
+    dup
+    cover 3
+    uncover 2
+    callsub call_pool_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:215
+    // this.call_oracle_borrow(Txn.sender, initial_draw)
+    txn Sender
+    swap
+    callsub call_oracle_borrow
+
+originate_revolving_after_if_else@3:
+    // smart_contracts/loan_factory/contract.algo.ts:179
+    // @abimethod()
+    bytec_3 // 0x151f7c75
+    dig 1
+    concat
+    log
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.originate_term[routing]() -> void:
+originate_term:
+    // smart_contracts/loan_factory/contract.algo.ts:228
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:230
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:230
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Circuit breaker active
+    // smart_contracts/loan_factory/contract.algo.ts:231
+    // assert(amount > Uint64(0), 'Amount must be > 0')
+    dig 1
+    assert // Amount must be > 0
+    // smart_contracts/loan_factory/contract.algo.ts:232
+    // assert(maturity_rounds > Uint64(0), 'Maturity must be > 0')
+    dup
+    assert // Maturity must be > 0
+    // smart_contracts/loan_factory/contract.algo.ts:233
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    uncover 2
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:84
+    // pool_registry = BoxMap<uint64, uint64>({ keyPrefix: 'r' })
+    bytec 5 // "r"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:233
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    dup
+    box_len
+    bury 1
+    assert // No pool for asset
+    // smart_contracts/loan_factory/contract.algo.ts:235
+    // const pool_app_id = this.pool_registry(asset_id).value
+    box_get
+    pop
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:237
+    // const loan_id = this.next_loan_id()
+    callsub next_loan_id
+    // smart_contracts/loan_factory/contract.algo.ts:240
+    // borrower: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:241
+    // beneficiary: Txn.sender.bytes,
+    dup
+    // smart_contracts/loan_factory/contract.algo.ts:254
+    // maturity_round: Global.round + maturity_rounds,
+    global Round
+    dig 6
+    +
+    // smart_contracts/loan_factory/contract.algo.ts:255
+    // next_due_round: Global.round + maturity_rounds,
+    global Round
+    uncover 7
+    +
+    // smart_contracts/loan_factory/contract.algo.ts:257
+    // origination_round: Global.round,
+    global Round
+    // smart_contracts/loan_factory/contract.algo.ts:239-259
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_TERM,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Global.round + maturity_rounds,
+    //   next_due_round: Global.round + maturity_rounds,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    bytec_1 // 0x0020
+    uncover 5
+    concat
+    dup
+    len
+    intc 4 // 140
+    +
+    bytec_1 // 0x0020
+    uncover 6
+    concat
+    swap
+    itob
+    extract 6 2
+    bytec 6 // 0x008c
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:242
+    // loan_type: TYPE_TERM,
+    intc_3 // 2
+    // smart_contracts/loan_factory/contract.algo.ts:239-259
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_TERM,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Global.round + maturity_rounds,
+    //   next_due_round: Global.round + maturity_rounds,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    dig 7
+    itob
+    concat
+    uncover 8
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:245
+    // collateral_asset_id: Uint64(0),
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:239-259
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_TERM,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Global.round + maturity_rounds,
+    //   next_due_round: Global.round + maturity_rounds,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    swap
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 9
+    itob
+    swap
+    dig 1
+    concat
+    swap
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    uncover 6
+    itob
+    concat
+    uncover 5
+    itob
+    concat
+    swap
+    concat
+    uncover 3
+    itob
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:258
+    // late_fee_bps: LATE_FEE_BPS,
+    intc 5 // 200
+    // smart_contracts/loan_factory/contract.algo.ts:239-259
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: Txn.sender.bytes,
+    //   loan_type: TYPE_TERM,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount: Uint64(0),
+    //   num_installments: Uint64(0),
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Global.round + maturity_rounds,
+    //   next_due_round: Global.round + maturity_rounds,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:260
+    // this.loans(loan_id).value = clone(loan)
+    dig 1
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:260
+    // this.loans(loan_id).value = clone(loan)
+    dup
+    box_del
+    pop
+    uncover 2
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:261
+    // this.add_institution_loan(Txn.sender, loan_id)
+    txn Sender
+    uncover 2
+    callsub add_institution_loan
+    // smart_contracts/loan_factory/contract.algo.ts:262
+    // this.call_pool_borrow(pool_app_id, amount, Txn.sender)
+    txn Sender
+    uncover 2
+    dig 3
+    uncover 2
+    callsub call_pool_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:263
+    // this.call_oracle_borrow(Txn.sender, amount)
+    txn Sender
+    uncover 2
+    callsub call_oracle_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:228
+    // @abimethod()
+    bytec_3 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.originate_installment[routing]() -> void:
+originate_installment:
+    // smart_contracts/loan_factory/contract.algo.ts:276
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 4
+    dup
+    len
+    dup
+    pushint 32 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/loan_factory/contract.algo.ts:283
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:283
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker active')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Circuit breaker active
+    // smart_contracts/loan_factory/contract.algo.ts:284
+    // assert(amount > Uint64(0), 'Amount must be > 0')
+    dig 3
+    assert // Amount must be > 0
+    // smart_contracts/loan_factory/contract.algo.ts:285
+    // assert(num_installments >= Uint64(1), 'Min 1 installment')
+    dig 2
+    assert // Min 1 installment
+    // smart_contracts/loan_factory/contract.algo.ts:286
+    // assert(num_installments <= Uint64(52), 'Max 52 installments')
+    dig 2
+    pushint 52 // 52
+    <=
+    assert // Max 52 installments
+    // smart_contracts/loan_factory/contract.algo.ts:287
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    uncover 4
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:84
+    // pool_registry = BoxMap<uint64, uint64>({ keyPrefix: 'r' })
+    bytec 5 // "r"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:287
+    // assert(this.pool_registry(asset_id).exists, 'No pool for asset')
+    dup
+    box_len
+    bury 1
+    assert // No pool for asset
+    // smart_contracts/loan_factory/contract.algo.ts:289
+    // const pool_app_id = this.pool_registry(asset_id).value
+    box_get
+    pop
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:291
+    // const loan_id: uint64 = this.next_loan_id()
+    callsub next_loan_id
+    // smart_contracts/loan_factory/contract.algo.ts:292
+    // const installment_amount: uint64 = amount / num_installments
+    dig 6
+    dig 6
+    /
+    // smart_contracts/loan_factory/contract.algo.ts:295
+    // borrower: Txn.sender.bytes,
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:310
+    // next_due_round: Global.round + INSTALLMENT_INTERVAL,
+    global Round
+    intc 6 // 1576800
+    +
+    // smart_contracts/loan_factory/contract.algo.ts:312
+    // origination_round: Global.round,
+    global Round
+    // smart_contracts/loan_factory/contract.algo.ts:294-314
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: beneficiary.bytes,
+    //   loan_type: TYPE_INSTALLMENT,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount,
+    //   num_installments,
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Global.round + INSTALLMENT_INTERVAL,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    bytec_1 // 0x0020
+    uncover 3
+    concat
+    dup
+    len
+    intc 4 // 140
+    +
+    uncover 8
+    itob
+    extract 6 2
+    dig 9
+    concat
+    swap
+    itob
+    extract 6 2
+    bytec 6 // 0x008c
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:297
+    // loan_type: TYPE_INSTALLMENT,
+    pushint 3 // 3
+    // smart_contracts/loan_factory/contract.algo.ts:294-314
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: beneficiary.bytes,
+    //   loan_type: TYPE_INSTALLMENT,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount,
+    //   num_installments,
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Global.round + INSTALLMENT_INTERVAL,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    dig 7
+    itob
+    concat
+    uncover 8
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:300
+    // collateral_asset_id: Uint64(0),
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:294-314
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: beneficiary.bytes,
+    //   loan_type: TYPE_INSTALLMENT,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount,
+    //   num_installments,
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Global.round + INSTALLMENT_INTERVAL,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    swap
+    dig 1
+    concat
+    dig 1
+    concat
+    dig 11
+    itob
+    swap
+    dig 1
+    concat
+    swap
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    uncover 6
+    itob
+    concat
+    uncover 9
+    itob
+    concat
+    dig 1
+    concat
+    dig 1
+    concat
+    uncover 5
+    itob
+    concat
+    swap
+    concat
+    uncover 3
+    itob
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:313
+    // late_fee_bps: LATE_FEE_BPS,
+    intc 5 // 200
+    // smart_contracts/loan_factory/contract.algo.ts:294-314
+    // const loan: LoanRecord = {
+    //   borrower: Txn.sender.bytes,
+    //   beneficiary: beneficiary.bytes,
+    //   loan_type: TYPE_INSTALLMENT,
+    //   pool_app_id,
+    //   asset_id,
+    //   collateral_asset_id: Uint64(0),
+    //   collateral_vault_id: Uint64(0),
+    //   principal: amount,
+    //   drawn_amount: amount,
+    //   credit_limit: Uint64(0), // cached off-chain, validated by API
+    //   total_repaid: Uint64(0),
+    //   installment_amount,
+    //   num_installments,
+    //   installments_paid: Uint64(0),
+    //   maturity_round: Uint64(0),
+    //   next_due_round: Global.round + INSTALLMENT_INTERVAL,
+    //   status: STATUS_ACTIVE,
+    //   origination_round: Global.round,
+    //   late_fee_bps: LATE_FEE_BPS,
+    // }
+    itob
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:315
+    // this.loans(loan_id).value = clone(loan)
+    dig 1
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    dig 1
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:315
+    // this.loans(loan_id).value = clone(loan)
+    dup
+    box_del
+    pop
+    uncover 2
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:316
+    // this.add_institution_loan(Txn.sender, loan_id)
+    txn Sender
+    uncover 2
+    callsub add_institution_loan
+    // smart_contracts/loan_factory/contract.algo.ts:319
+    // this.call_pool_borrow(pool_app_id, amount, beneficiary)
+    swap
+    dig 3
+    uncover 3
+    callsub call_pool_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:320
+    // this.call_oracle_borrow(Txn.sender, amount)
+    txn Sender
+    uncover 2
+    callsub call_oracle_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:276
+    // @abimethod()
+    bytec_3 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.draw[routing]() -> void:
+draw:
+    // smart_contracts/loan_factory/contract.algo.ts:327
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:329
+    // const loan = clone(this.loans(loan_id).value)
+    swap
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:329
+    // const loan = clone(this.loans(loan_id).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:329-330
+    // const loan = clone(this.loans(loan_id).value)
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    dig 1
+    pushint 116 // 116
+    intc_0 // 8
+    box_extract
+    // smart_contracts/loan_factory/contract.algo.ts:330
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    btoi
+    !
+    assert // Loan not active
+    // smart_contracts/loan_factory/contract.algo.ts:331
+    // assert(loan.loan_type === TYPE_REVOLVING, 'Not a revolving loan')
+    dig 1
+    pushint 4 // 4
+    intc_0 // 8
+    box_extract
+    btoi
+    intc_2 // 1
+    ==
+    assert // Not a revolving loan
+    // smart_contracts/loan_factory/contract.algo.ts:332
+    // assert(Txn.sender.bytes === loan.borrower, 'Not the borrower')
+    txn Sender
+    dig 1
+    intc_1 // 0
+    extract_uint16
+    dig 2
+    intc_3 // 2
+    extract_uint16
+    dig 3
+    cover 2
+    substring3
+    extract 2 0
+    ==
+    assert // Not the borrower
+    // smart_contracts/loan_factory/contract.algo.ts:334
+    // const new_drawn: uint64 = loan.drawn_amount + amount
+    dig 1
+    pushint 52 // 52
+    intc_0 // 8
+    box_extract
+    btoi
+    dig 3
+    +
+    // smart_contracts/loan_factory/contract.algo.ts:335
+    // assert(new_drawn <= loan.credit_limit, 'Would exceed credit limit')
+    dig 2
+    pushint 60 // 60
+    intc_0 // 8
+    box_extract
+    btoi
+    dig 1
+    >=
+    assert // Would exceed credit limit
+    // smart_contracts/loan_factory/contract.algo.ts:337
+    // loan.drawn_amount = new_drawn
+    itob
+    swap
+    dig 1
+    replace2 52
+    // smart_contracts/loan_factory/contract.algo.ts:337-338
+    // loan.drawn_amount = new_drawn
+    // this.loans(loan_id).value = clone(loan)
+    uncover 2
+    pushint 52 // 52
+    uncover 3
+    box_replace
+    // smart_contracts/loan_factory/contract.algo.ts:340
+    // this.call_pool_borrow(loan.pool_app_id, amount, Txn.sender)
+    pushint 12 // 12
+    extract_uint64
+    dig 1
+    txn Sender
+    callsub call_pool_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:341
+    // this.call_oracle_borrow(Txn.sender, amount)
+    txn Sender
+    swap
+    callsub call_oracle_borrow
+    // smart_contracts/loan_factory/contract.algo.ts:327
+    // @abimethod()
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.repay[routing]() -> void:
+repay:
+    pushbytes ""
+    dupn 4
+    // smart_contracts/loan_factory/contract.algo.ts:351
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txn GroupIndex
+    intc_2 // 1
+    -
+    dup
+    cover 2
+    gtxns TypeEnum
+    pushint 4 // axfer
+    ==
+    assert // transaction type is axfer
+    // smart_contracts/loan_factory/contract.algo.ts:353
+    // const loan = clone(this.loans(loan_id).value)
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    swap
+    concat
+    dupn 2
+    // smart_contracts/loan_factory/contract.algo.ts:353
+    // const loan = clone(this.loans(loan_id).value)
+    box_get
+    swap
+    dup
+    cover 3
+    cover 3
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:353-354
+    // const loan = clone(this.loans(loan_id).value)
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    dup
+    pushint 116 // 116
+    intc_0 // 8
+    box_extract
+    // smart_contracts/loan_factory/contract.algo.ts:354
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    btoi
+    !
+    assert // Loan not active
+    // smart_contracts/loan_factory/contract.algo.ts:355
+    // assert(Txn.sender.bytes === loan.borrower, 'Not the borrower')
+    txn Sender
+    dig 2
+    intc_1 // 0
+    extract_uint16
+    dig 3
+    intc_3 // 2
+    extract_uint16
+    uncover 4
+    cover 2
+    substring3
+    extract 2 0
+    ==
+    assert // Not the borrower
+    // smart_contracts/loan_factory/contract.algo.ts:357
+    // if (loan.asset_id > Uint64(0)) {
+    pushint 20 // 20
+    intc_0 // 8
+    box_extract
+    btoi
+    dup
+    bz repay_after_if_else@3
+    // smart_contracts/loan_factory/contract.algo.ts:358
+    // assert(payment.xferAsset.id === loan.asset_id, 'Wrong repayment asset')
+    dig 3
+    gtxns XferAsset
+    dig 1
+    ==
+    assert // Wrong repayment asset
+
+repay_after_if_else@3:
+    // smart_contracts/loan_factory/contract.algo.ts:361
+    // const is_on_time = Global.round <= loan.next_due_round
+    global Round
+    dig 3
+    pushint 108 // 108
+    intc_0 // 8
+    box_extract
+    btoi
+    <=
+    dup
+    bury 9
+    // smart_contracts/loan_factory/contract.algo.ts:363
+    // let effective_amount = payment.assetAmount
+    dig 4
+    gtxns AssetAmount
+    bury 10
+    // smart_contracts/loan_factory/contract.algo.ts:364
+    // if (!is_on_time && loan.loan_type !== TYPE_REVOLVING) {
+    bnz repay_after_if_else@6
+    dig 2
+    pushint 4 // 4
+    intc_0 // 8
+    box_extract
+    btoi
+    intc_2 // 1
+    !=
+    bz repay_after_if_else@6
+    // smart_contracts/loan_factory/contract.algo.ts:365
+    // const [h, l] = op.mulw(payment.assetAmount, loan.late_fee_bps)
+    dig 2
+    pushint 132 // 132
+    intc_0 // 8
+    box_extract
+    btoi
+    dig 9
+    dup
+    uncover 2
+    mulw
+    // smart_contracts/loan_factory/contract.algo.ts:366
+    // const fee = op.divw(h, l, BPS)
+    pushint 10000 // 10000
+    divw
+    // smart_contracts/loan_factory/contract.algo.ts:367
+    // effective_amount = payment.assetAmount + fee
+    +
+    bury 9
+
+repay_after_if_else@6:
+    // smart_contracts/loan_factory/contract.algo.ts:370
+    // loan.total_repaid = loan.total_repaid + effective_amount
+    dig 2
+    pushint 68 // 68
+    intc_0 // 8
+    box_extract
+    btoi
+    dig 9
+    +
+    itob
+    dig 2
+    swap
+    replace2 68
+    dup
+    bury 3
+    // smart_contracts/loan_factory/contract.algo.ts:372
+    // if (loan.loan_type === TYPE_INSTALLMENT) {
+    pushint 4 // 4
+    extract_uint64
+    dup
+    bury 7
+    pushint 3 // 3
+    ==
+    bz repay_else_body@12
+    // smart_contracts/loan_factory/contract.algo.ts:373
+    // loan.installments_paid = loan.installments_paid + Uint64(1)
+    dig 1
+    dup
+    pushint 92 // 92
+    extract_uint64
+    intc_2 // 1
+    +
+    itob
+    replace2 92
+    dup
+    bury 3
+    // smart_contracts/loan_factory/contract.algo.ts:374
+    // if (loan.installments_paid < loan.num_installments) {
+    dup
+    pushint 92 // 92
+    extract_uint64
+    swap
+    pushint 84 // 84
+    extract_uint64
+    <
+    bz repay_after_if_else@9
+    // smart_contracts/loan_factory/contract.algo.ts:375
+    // loan.next_due_round = loan.next_due_round + INSTALLMENT_INTERVAL
+    dig 1
+    dup
+    pushint 108 // 108
+    extract_uint64
+    intc 6 // 1576800
+    +
+    itob
+    replace2 108
+    bury 2
+
+repay_after_if_else@9:
+    // smart_contracts/loan_factory/contract.algo.ts:377
+    // if (loan.installments_paid >= loan.num_installments) {
+    dig 1
+    dup
+    pushint 92 // 92
+    extract_uint64
+    swap
+    pushint 84 // 84
+    extract_uint64
+    >=
+    bz repay_after_if_else@25
+    // smart_contracts/loan_factory/contract.algo.ts:378
+    // loan.status = STATUS_COMPLETED
+    intc_2 // 1
+    itob
+    dig 2
+    swap
+    replace2 116
+    bury 2
+
+repay_after_if_else@25:
+    // smart_contracts/loan_factory/contract.algo.ts:399
+    // this.loans(loan_id).value = clone(loan)
+    dig 2
+    dup
+    box_del
+    pop
+    dig 2
+    box_put
+    // smart_contracts/loan_factory/contract.algo.ts:400
+    // this.call_oracle_repay(Txn.sender, effective_amount, is_on_time)
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:520-529
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_repay(address,uint64,bool)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //     on_time ? Bytes('\x80') : Bytes('\x00'),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:521
+    // appId: this.credit_oracle_app_id.value,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:77
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 4 // "credit_oracle_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:521
+    // appId: this.credit_oracle_app_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/loan_factory/contract.algo.ts:525
+    // op.itob(amount),
+    dig 10
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:526
+    // on_time ? Bytes('\x80') : Bytes('\x00'),
+    pushbytess "\x00" "\xc2\x80" // "\x00", "\xc2\x80"
+    dig 12
+    select
+    // smart_contracts/loan_factory/contract.algo.ts:523
+    // methodSelector('update_on_repay(address,uint64,bool)void'),
+    pushbytes 0x36f84b5f // method "update_on_repay(address,uint64,bool)void"
+    itxn_field ApplicationArgs
+    uncover 3
+    itxn_field ApplicationArgs
+    swap
+    itxn_field ApplicationArgs
+    itxn_field ApplicationArgs
+    itxn_field ApplicationID
+    // smart_contracts/loan_factory/contract.algo.ts:520-529
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_repay(address,uint64,bool)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //     on_time ? Bytes('\x80') : Bytes('\x00'),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:528
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:520-529
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_repay(address,uint64,bool)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //     on_time ? Bytes('\x80') : Bytes('\x00'),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    // smart_contracts/loan_factory/contract.algo.ts:351
+    // @abimethod()
+    intc_2 // 1
+    return
+
+repay_else_body@12:
+    // smart_contracts/loan_factory/contract.algo.ts:380
+    // } else if (loan.loan_type === TYPE_REVOLVING) {
+    dig 5
+    intc_2 // 1
+    ==
+    bz repay_else_body@19
+    // smart_contracts/loan_factory/contract.algo.ts:382
+    // if (loan.drawn_amount >= effective_amount) {
+    dig 1
+    pushint 52 // 52
+    extract_uint64
+    dup
+    bury 8
+    dig 9
+    >=
+    bz repay_else_body@15
+    // smart_contracts/loan_factory/contract.algo.ts:383
+    // loan.drawn_amount = loan.drawn_amount - effective_amount
+    dig 6
+    dig 9
+    -
+    itob
+    dig 2
+    swap
+    replace2 52
+    bury 2
+
+repay_after_if_else@16:
+    // smart_contracts/loan_factory/contract.algo.ts:387
+    // if (loan.drawn_amount === Uint64(0)) loan.status = STATUS_COMPLETED
+    dig 1
+    pushint 52 // 52
+    extract_uint64
+    bnz repay_after_if_else@25
+    intc_2 // 1
+    itob
+    dig 2
+    swap
+    replace2 116
+    bury 2
+    b repay_after_if_else@25
+
+repay_else_body@15:
+    // smart_contracts/loan_factory/contract.algo.ts:385
+    // loan.drawn_amount = Uint64(0)
+    intc_1 // 0
+    itob
+    dig 2
+    swap
+    replace2 52
+    bury 2
+    b repay_after_if_else@16
+
+repay_else_body@19:
+    // smart_contracts/loan_factory/contract.algo.ts:390
+    // if (loan.total_repaid >= loan.principal) {
+    dig 1
+    dup
+    pushint 68 // 68
+    extract_uint64
+    swap
+    pushint 44 // 44
+    extract_uint64
+    >=
+    bz repay_after_if_else@25
+    // smart_contracts/loan_factory/contract.algo.ts:391
+    // loan.status = STATUS_COMPLETED
+    intc_2 // 1
+    itob
+    dig 2
+    swap
+    replace2 116
+    dup
+    bury 3
+    // smart_contracts/loan_factory/contract.algo.ts:393
+    // if (loan.collateral_vault_id > Uint64(0)) {
+    pushint 36 // 36
+    extract_uint64
+    dup
+    bury 6
+    bz repay_after_if_else@25
+    // smart_contracts/loan_factory/contract.algo.ts:544-551
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('release(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:545
+    // appId: this.vault_app_id.value,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:78
+    // vault_app_id = GlobalState<uint64>()
+    bytec 7 // "vault_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:545
+    // appId: this.vault_app_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/loan_factory/contract.algo.ts:548
+    // op.itob(vault_id),
+    dig 5
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:547
+    // methodSelector('release(uint64)void'),
+    pushbytes 0x59580be4 // method "release(uint64)void"
+    itxn_field ApplicationArgs
+    itxn_field ApplicationArgs
+    itxn_field ApplicationID
+    // smart_contracts/loan_factory/contract.algo.ts:544-551
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('release(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:550
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:544-551
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('release(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    b repay_after_if_else@25
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.liquidate[routing]() -> void:
+liquidate:
+    pushbytes ""
+    // smart_contracts/loan_factory/contract.algo.ts:405
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:407
+    // const loan = clone(this.loans(loan_id).value)
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    swap
+    concat
+    dupn 2
+    // smart_contracts/loan_factory/contract.algo.ts:407
+    // const loan = clone(this.loans(loan_id).value)
+    box_get
+    swap
+    cover 2
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:407-408
+    // const loan = clone(this.loans(loan_id).value)
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    dup
+    pushint 116 // 116
+    intc_0 // 8
+    box_extract
+    // smart_contracts/loan_factory/contract.algo.ts:408
+    // assert(loan.status === STATUS_ACTIVE, 'Loan not active')
+    btoi
+    !
+    assert // Loan not active
+    // smart_contracts/loan_factory/contract.algo.ts:410
+    // if (loan.loan_type === TYPE_INSTALLMENT || loan.loan_type === TYPE_TERM) {
+    pushint 4 // 4
+    intc_0 // 8
+    box_extract
+    btoi
+    dup
+    pushint 3 // 3
+    ==
+    bnz liquidate_if_body@3
+    dup
+    intc_3 // 2
+    ==
+    bz liquidate_else_body@4
+
+liquidate_if_body@3:
+    // smart_contracts/loan_factory/contract.algo.ts:411
+    // assert(Global.round > loan.next_due_round, 'Loan not overdue')
+    global Round
+    dig 3
+    pushint 108 // 108
+    intc_0 // 8
+    box_extract
+    btoi
+    >
+    assert // Loan not overdue
+
+liquidate_after_if_else@7:
+    // smart_contracts/loan_factory/contract.algo.ts:418
+    // loan.status = STATUS_LIQUIDATED
+    pushint 3 // 3
+    itob
+    dig 2
+    dig 1
+    replace2 116
+    // smart_contracts/loan_factory/contract.algo.ts:418-419
+    // loan.status = STATUS_LIQUIDATED
+    // this.loans(loan_id).value = clone(loan)
+    dig 4
+    pushint 116 // 116
+    uncover 3
+    box_replace
+    // smart_contracts/loan_factory/contract.algo.ts:421
+    // if (loan.collateral_vault_id > Uint64(0)) {
+    pushint 36 // 36
+    extract_uint64
+    dup
+    bury 5
+    bz liquidate_after_if_else@9
+    // smart_contracts/loan_factory/contract.algo.ts:555-562
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('liquidate(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:556
+    // appId: this.vault_app_id.value,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:78
+    // vault_app_id = GlobalState<uint64>()
+    bytec 7 // "vault_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:556
+    // appId: this.vault_app_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/loan_factory/contract.algo.ts:559
+    // op.itob(vault_id),
+    dig 4
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:558
+    // methodSelector('liquidate(uint64)void'),
+    bytec 9 // method "liquidate(uint64)void"
+    itxn_field ApplicationArgs
+    itxn_field ApplicationArgs
+    itxn_field ApplicationID
+    // smart_contracts/loan_factory/contract.algo.ts:555-562
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('liquidate(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:561
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:555-562
+    // itxn.applicationCall({
+    //   appId: this.vault_app_id.value,
+    //   appArgs: [
+    //     methodSelector('liquidate(uint64)void'),
+    //     op.itob(vault_id),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+
+liquidate_after_if_else@9:
+    // smart_contracts/loan_factory/contract.algo.ts:425
+    // this.call_oracle_default(Txn.sender)
+    txn Sender
+    // smart_contracts/loan_factory/contract.algo.ts:533-540
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_default(address)void'),
+    //     institution.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:534
+    // appId: this.credit_oracle_app_id.value,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:77
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 4 // "credit_oracle_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:534
+    // appId: this.credit_oracle_app_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/loan_factory/contract.algo.ts:536
+    // methodSelector('update_on_default(address)void'),
+    pushbytes 0x2778dd2b // method "update_on_default(address)void"
+    itxn_field ApplicationArgs
+    itxn_field ApplicationID
+    itxn_field ApplicationArgs
+    // smart_contracts/loan_factory/contract.algo.ts:533-540
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_default(address)void'),
+    //     institution.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:539
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:533-540
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_default(address)void'),
+    //     institution.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    // smart_contracts/loan_factory/contract.algo.ts:405
+    // @abimethod()
+    intc_2 // 1
+    return
+
+liquidate_else_body@4:
+    // smart_contracts/loan_factory/contract.algo.ts:412
+    // } else if (loan.loan_type === TYPE_REVOLVING) {
+    dup
+    intc_2 // 1
+    ==
+    !
+    assert // Revolving loans cannot be liquidated by round
+    b liquidate_after_if_else@7
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_loan[routing]() -> void:
+get_loan:
+    // smart_contracts/loan_factory/contract.algo.ts:430
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:432
+    // if (!this.loans(loan_id).exists) {
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:86
+    // loans = BoxMap<uint64, LoanRecord>({ keyPrefix: 'l' })
+    bytec_0 // "l"
+    swap
+    concat
+    dup
+    // smart_contracts/loan_factory/contract.algo.ts:432
+    // if (!this.loans(loan_id).exists) {
+    box_len
+    bury 1
+    bnz get_loan_after_if_else@3
+    // smart_contracts/loan_factory/contract.algo.ts:433
+    // return [Bytes(''), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0)]
+    pushbytes 0x004a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+get_loan_after_inlined_smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_loan@4:
+    // smart_contracts/loan_factory/contract.algo.ts:430
+    // @abimethod({ readonly: true })
+    bytec_3 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+get_loan_after_if_else@3:
+    // smart_contracts/loan_factory/contract.algo.ts:435
+    // const l = clone(this.loans(loan_id).value)
+    dupn 2
+    box_get
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:437
+    // l.borrower,
+    dup
+    intc_1 // 0
+    extract_uint16
+    dig 1
+    intc_3 // 2
+    extract_uint16
+    substring3
+    extract 2 0
+    // smart_contracts/loan_factory/contract.algo.ts:438
+    // l.loan_type,
+    dig 1
+    pushint 4 // 4
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:439
+    // l.asset_id,
+    dig 2
+    pushint 20 // 20
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:440
+    // l.principal,
+    dig 3
+    pushint 44 // 44
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:441
+    // l.drawn_amount,
+    dig 4
+    pushint 52 // 52
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:442
+    // l.total_repaid,
+    dig 5
+    pushint 68 // 68
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:443
+    // l.installments_paid,
+    dig 6
+    pushint 92 // 92
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:444
+    // l.num_installments,
+    dig 7
+    pushint 84 // 84
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:445
+    // l.next_due_round,
+    dig 8
+    pushint 108 // 108
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:446
+    // l.status,
+    uncover 9
+    pushint 116 // 116
+    intc_0 // 8
+    box_extract
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:436-447
+    // return [
+    //   l.borrower,
+    //   l.loan_type,
+    //   l.asset_id,
+    //   l.principal,
+    //   l.drawn_amount,
+    //   l.total_repaid,
+    //   l.installments_paid,
+    //   l.num_installments,
+    //   l.next_due_round,
+    //   l.status,
+    // ]
+    dig 9
+    len
+    itob
+    extract 6 2
+    uncover 10
+    concat
+    uncover 9
+    itob
+    pushbytes 0x004a
+    swap
+    concat
+    uncover 9
+    itob
+    concat
+    uncover 8
+    itob
+    concat
+    uncover 7
+    itob
+    concat
+    uncover 6
+    itob
+    concat
+    uncover 5
+    itob
+    concat
+    uncover 4
+    itob
+    concat
+    uncover 3
+    itob
+    concat
+    uncover 2
+    itob
+    concat
+    swap
+    concat
+    // smart_contracts/loan_factory/contract.algo.ts:430
+    // @abimethod({ readonly: true })
+    b get_loan_after_inlined_smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_loan@4
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_institution_loans[routing]() -> void:
+get_institution_loans:
+    // smart_contracts/loan_factory/contract.algo.ts:450
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 32 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/loan_factory/contract.algo.ts:88
+    // institution_loans = BoxMap<Account, uint64[]>({ keyPrefix: 'u' })
+    pushbytes "u"
+    swap
+    concat
+    dup
+    // smart_contracts/loan_factory/contract.algo.ts:452
+    // if (!this.institution_loans(institution).exists) return []
+    box_len
+    bury 1
+    bnz get_institution_loans_after_if_else@3
+    pushbytes 0x0000
+
+get_institution_loans_after_inlined_smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_institution_loans@4:
+    // smart_contracts/loan_factory/contract.algo.ts:450
+    // @abimethod({ readonly: true })
+    bytec_3 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+get_institution_loans_after_if_else@3:
+    // smart_contracts/loan_factory/contract.algo.ts:453
+    // return this.institution_loans(institution).value
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:450
+    // @abimethod({ readonly: true })
+    b get_institution_loans_after_inlined_smart_contracts/loan_factory/contract.algo.ts::LoanFactory.get_institution_loans@4
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.toggle_circuit_breaker[routing]() -> void:
+toggle_circuit_breaker:
+    // smart_contracts/loan_factory/contract.algo.ts:458
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:460
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/loan_factory/contract.algo.ts:81
+    // circuit_breaker_active = GlobalState<uint64>()
+    bytec_2 // "circuit_breaker_active"
+    // smart_contracts/loan_factory/contract.algo.ts:461
+    // this.circuit_breaker_active.value = active
+    swap
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:458
+    // @abimethod()
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.update_oracle[routing]() -> void:
+update_oracle:
+    // smart_contracts/loan_factory/contract.algo.ts:464
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_0 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/loan_factory/contract.algo.ts:466
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/loan_factory/contract.algo.ts:77
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 4 // "credit_oracle_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:467
+    // this.credit_oracle_app_id.value = credit_oracle_app_id
+    swap
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:464
+    // @abimethod()
+    intc_2 // 1
+    return
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.next_loan_id() -> uint64:
+next_loan_id:
+    // smart_contracts/loan_factory/contract.algo.ts:473
+    // const id: uint64 = this.loan_counter.value + Uint64(1)
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:79
+    // loan_counter = GlobalState<uint64>()
+    bytec 8 // "loan_counter"
+    // smart_contracts/loan_factory/contract.algo.ts:473
+    // const id: uint64 = this.loan_counter.value + Uint64(1)
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_2 // 1
+    +
+    // smart_contracts/loan_factory/contract.algo.ts:79
+    // loan_counter = GlobalState<uint64>()
+    bytec 8 // "loan_counter"
+    // smart_contracts/loan_factory/contract.algo.ts:474
+    // this.loan_counter.value = id
+    dig 1
+    app_global_put
+    // smart_contracts/loan_factory/contract.algo.ts:475
+    // return id
+    retsub
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.add_institution_loan(institution: bytes, loan_id: uint64) -> void:
+add_institution_loan:
+    // smart_contracts/loan_factory/contract.algo.ts:478
+    // private add_institution_loan(institution: Account, loan_id: uint64): void {
+    proto 2 0
+    // smart_contracts/loan_factory/contract.algo.ts:88
+    // institution_loans = BoxMap<Account, uint64[]>({ keyPrefix: 'u' })
+    pushbytes "u"
+    frame_dig -2
+    concat
+    dup
+    // smart_contracts/loan_factory/contract.algo.ts:479
+    // if (!this.institution_loans(institution).exists) {
+    box_len
+    bury 1
+    bnz add_institution_loan_else_body@2
+    // smart_contracts/loan_factory/contract.algo.ts:480
+    // this.institution_loans(institution).value = [loan_id]
+    frame_dig -1
+    itob
+    pushbytes 0x0001
+    swap
+    concat
+    swap
+    dup
+    box_del
+    pop
+    swap
+    box_put
+    retsub
+
+add_institution_loan_else_body@2:
+    // smart_contracts/loan_factory/contract.algo.ts:482
+    // const existing = clone(this.institution_loans(institution).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/loan_factory/contract.algo.ts:483
+    // existing.push(loan_id)
+    frame_dig -1
+    itob
+    dig 1
+    swap
+    concat // on error: max array length exceeded
+    swap
+    intc_1 // 0
+    extract_uint16
+    intc_2 // 1
+    +
+    itob
+    extract 6 2
+    replace2 0
+    // smart_contracts/loan_factory/contract.algo.ts:484
+    // this.institution_loans(institution).value = clone(existing)
+    dig 1
+    box_del
+    pop
+    box_put
+    retsub
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.call_pool_borrow(pool_app_id: uint64, amount: uint64, recipient: bytes) -> void:
+call_pool_borrow:
+    // smart_contracts/loan_factory/contract.algo.ts:495
+    // private call_pool_borrow(pool_app_id: uint64, amount: uint64, recipient: Account): void {
+    proto 3 0
+    // smart_contracts/loan_factory/contract.algo.ts:496-504
+    // itxn.applicationCall({
+    //   appId: pool_app_id,
+    //   appArgs: [
+    //     methodSelector('borrow(uint64,address)uint64'),
+    //     op.itob(amount),
+    //     recipient.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:500
+    // op.itob(amount),
+    frame_dig -2
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:499
+    // methodSelector('borrow(uint64,address)uint64'),
+    pushbytes 0x99ecf519 // method "borrow(uint64,address)uint64"
+    itxn_field ApplicationArgs
+    itxn_field ApplicationArgs
+    frame_dig -1
+    itxn_field ApplicationArgs
+    frame_dig -3
+    itxn_field ApplicationID
+    // smart_contracts/loan_factory/contract.algo.ts:496-504
+    // itxn.applicationCall({
+    //   appId: pool_app_id,
+    //   appArgs: [
+    //     methodSelector('borrow(uint64,address)uint64'),
+    //     op.itob(amount),
+    //     recipient.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:503
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:496-504
+    // itxn.applicationCall({
+    //   appId: pool_app_id,
+    //   appArgs: [
+    //     methodSelector('borrow(uint64,address)uint64'),
+    //     op.itob(amount),
+    //     recipient.bytes,
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.call_oracle_borrow(institution: bytes, amount: uint64) -> void:
+call_oracle_borrow:
+    // smart_contracts/loan_factory/contract.algo.ts:507
+    // private call_oracle_borrow(institution: Account, amount: uint64): void {
+    proto 2 0
+    // smart_contracts/loan_factory/contract.algo.ts:508-516
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_borrow(address,uint64)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/loan_factory/contract.algo.ts:509
+    // appId: this.credit_oracle_app_id.value,
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:77
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 4 // "credit_oracle_app_id"
+    // smart_contracts/loan_factory/contract.algo.ts:509
+    // appId: this.credit_oracle_app_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/loan_factory/contract.algo.ts:513
+    // op.itob(amount),
+    frame_dig -1
+    itob
+    // smart_contracts/loan_factory/contract.algo.ts:511
+    // methodSelector('update_on_borrow(address,uint64)void'),
+    pushbytes 0xefbcfef6 // method "update_on_borrow(address,uint64)void"
+    itxn_field ApplicationArgs
+    frame_dig -2
+    itxn_field ApplicationArgs
+    itxn_field ApplicationArgs
+    itxn_field ApplicationID
+    // smart_contracts/loan_factory/contract.algo.ts:508-516
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_borrow(address,uint64)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 6 // 6
+    itxn_field TypeEnum
+    // smart_contracts/loan_factory/contract.algo.ts:515
+    // fee: Uint64(0),
+    intc_1 // 0
+    itxn_field Fee
+    // smart_contracts/loan_factory/contract.algo.ts:508-516
+    // itxn.applicationCall({
+    //   appId: this.credit_oracle_app_id.value,
+    //   appArgs: [
+    //     methodSelector('update_on_borrow(address,uint64)void'),
+    //     institution.bytes,
+    //     op.itob(amount),
+    //   ],
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts/loan_factory/contract.algo.ts::LoanFactory.assert_governance() -> void:
+assert_governance:
+    // smart_contracts/loan_factory/contract.algo.ts:566
+    // assert(Txn.sender.bytes === this.governance_address.value, 'Not governance')
+    txn Sender
+    intc_1 // 0
+    // smart_contracts/loan_factory/contract.algo.ts:76
+    // governance_address = GlobalState<bytes>()
+    bytec 10 // "governance_address"
+    // smart_contracts/loan_factory/contract.algo.ts:566
+    // assert(Txn.sender.bytes === this.governance_address.value, 'Not governance')
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    assert // Not governance
+    retsub

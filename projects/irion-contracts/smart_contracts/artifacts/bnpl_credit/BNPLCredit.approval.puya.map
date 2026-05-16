@@ -3,7 +3,7 @@
   "sources": [
     "../../bnpl_credit/contract.algo.ts"
   ],
-  "mappings": "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",
+  "mappings": "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",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -11,12 +11,12 @@
       "params": {},
       "block": "main",
       "stack_in": [],
-      "op": "intcblock 0 8 1 60"
+      "op": "intcblock 8 0 1 60"
     },
     "7": {
-      "op": "bytecblock \"l\" \"u\" \"lending_pool_app_id\" \"installment_interval\" \"loan_counter\" 0x151f7c75 \"credit_score_app_id\" \"asset_id\" \"late_fee_bps\" 0xebccb26c"
+      "op": "bytecblock \"l\" \"u\" \"installment_interval\" \"loan_counter\" 0x151f7c75 \"credit_score_app_id\" \"lending_pool_app_id\" \"asset_id\" \"late_fee_bps\""
     },
-    "119": {
+    "114": {
       "op": "pushbytes 0x800807fc // method \"bootstrap(uint64,uint64,uint64)void\"",
       "defined_out": [
         "Method(bootstrap(uint64,uint64,uint64)void)"
@@ -25,7 +25,7 @@
         "Method(bootstrap(uint64,uint64,uint64)void)"
       ]
     },
-    "125": {
+    "120": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(bootstrap(uint64,uint64,uint64)void)",
@@ -36,11 +36,11 @@
         "tmp%0#1"
       ]
     },
-    "128": {
+    "123": {
       "op": "match main_bootstrap_route@2",
       "stack_out": []
     },
-    "132": {
+    "127": {
       "block": "main_switch_case_next@3",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -51,7 +51,7 @@
         "tmp%4#0"
       ]
     },
-    "134": {
+    "129": {
       "op": "!",
       "defined_out": [
         "tmp%5#0"
@@ -60,12 +60,12 @@
         "tmp%5#0"
       ]
     },
-    "135": {
+    "130": {
       "error": "OnCompletion must be NoOp",
       "op": "assert // OnCompletion must be NoOp",
       "stack_out": []
     },
-    "136": {
+    "131": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%6#0"
@@ -74,11 +74,11 @@
         "tmp%6#0"
       ]
     },
-    "138": {
+    "133": {
       "op": "bz main_create_NoOp@13",
       "stack_out": []
     },
-    "141": {
+    "136": {
       "op": "pushbytess 0xdf54e8aa 0xd2602e8e 0x3c413647 0x0073cb92 0x0e4ba688 0x5b3cb21c 0xde4aa7ca // method \"opt_in_to_asset(uint64)void\", method \"initiate_loan(address,uint64,uint64)uint64\", method \"make_payment(uint64,axfer)void\", method \"dispute_loan(uint64)void\", method \"liquidate_loan(uint64)void\", method \"get_loan(uint64)(byte[],byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)\", method \"get_user_loans(address)uint64[]\"",
       "defined_out": [
         "Method(dispute_loan(uint64)void)",
@@ -99,7 +99,7 @@
         "Method(get_user_loans(address)uint64[])"
       ]
     },
-    "178": {
+    "173": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(dispute_loan(uint64)void)",
@@ -122,14 +122,14 @@
         "tmp%8#0"
       ]
     },
-    "181": {
+    "176": {
       "op": "match opt_in_to_asset initiate_loan make_payment dispute_loan liquidate_loan get_loan get_user_loans",
       "stack_out": []
     },
-    "197": {
+    "192": {
       "op": "err"
     },
-    "198": {
+    "193": {
       "block": "main_create_NoOp@13",
       "stack_in": [],
       "op": "pushbytes 0x4c5c61ba // method \"create()void\"",
@@ -140,7 +140,7 @@
         "Method(create()void)"
       ]
     },
-    "204": {
+    "199": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(create()void)",
@@ -151,14 +151,14 @@
         "tmp%9#0"
       ]
     },
-    "207": {
+    "202": {
       "op": "match main_create_route@14",
       "stack_out": []
     },
-    "211": {
+    "206": {
       "op": "err"
     },
-    "212": {
+    "207": {
       "block": "main_create_route@14",
       "stack_in": [],
       "op": "intc_2 // 1",
@@ -169,11 +169,11 @@
         "1"
       ]
     },
-    "213": {
+    "208": {
       "op": "return",
       "stack_out": []
     },
-    "214": {
+    "209": {
       "block": "main_bootstrap_route@2",
       "stack_in": [],
       "op": "intc_2 // 1",
@@ -184,7 +184,7 @@
         "1"
       ]
     },
-    "215": {
+    "210": {
       "op": "txn OnCompletion",
       "defined_out": [
         "1",
@@ -195,7 +195,7 @@
         "tmp%1#0"
       ]
     },
-    "217": {
+    "212": {
       "op": "shl",
       "defined_out": [
         "tmp%2#0"
@@ -204,7 +204,7 @@
         "tmp%2#0"
       ]
     },
-    "218": {
+    "213": {
       "op": "pushint 3 // 3",
       "defined_out": [
         "3",
@@ -215,7 +215,7 @@
         "3"
       ]
     },
-    "220": {
+    "215": {
       "op": "&",
       "defined_out": [
         "tmp%3#0"
@@ -224,15 +224,15 @@
         "tmp%3#0"
       ]
     },
-    "221": {
+    "216": {
       "error": "OnCompletion must be one of NoOp, OptIn",
       "op": "assert // OnCompletion must be one of NoOp, OptIn",
       "stack_out": []
     },
-    "222": {
+    "217": {
       "op": "b bootstrap"
     },
-    "225": {
+    "220": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.bootstrap[routing]",
       "params": {},
       "block": "bootstrap",
@@ -245,7 +245,7 @@
         "tmp%0#0"
       ]
     },
-    "228": {
+    "223": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -256,7 +256,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "229": {
+    "224": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -267,8 +267,8 @@
         "len%0#0"
       ]
     },
-    "230": {
-      "op": "intc_1 // 8",
+    "225": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -280,7 +280,7 @@
         "8"
       ]
     },
-    "231": {
+    "226": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -291,14 +291,14 @@
         "eq%0#0"
       ]
     },
-    "232": {
+    "227": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "233": {
+    "228": {
       "op": "btoi",
       "defined_out": [
         "credit_score_app_id#0"
@@ -307,7 +307,7 @@
         "credit_score_app_id#0"
       ]
     },
-    "234": {
+    "229": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "credit_score_app_id#0",
@@ -318,7 +318,7 @@
         "tmp%2#0"
       ]
     },
-    "237": {
+    "232": {
       "op": "dup",
       "defined_out": [
         "credit_score_app_id#0",
@@ -331,7 +331,7 @@
         "tmp%2#0 (copy)"
       ]
     },
-    "238": {
+    "233": {
       "op": "len",
       "defined_out": [
         "credit_score_app_id#0",
@@ -344,8 +344,8 @@
         "len%1#0"
       ]
     },
-    "239": {
-      "op": "intc_1 // 8",
+    "234": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "credit_score_app_id#0",
         "tmp%2#0",
@@ -353,7 +353,7 @@
         "8"
       ]
     },
-    "240": {
+    "235": {
       "op": "==",
       "defined_out": [
         "credit_score_app_id#0",
@@ -366,7 +366,7 @@
         "eq%1#0"
       ]
     },
-    "241": {
+    "236": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
@@ -374,7 +374,7 @@
         "tmp%2#0"
       ]
     },
-    "242": {
+    "237": {
       "op": "btoi",
       "defined_out": [
         "credit_score_app_id#0",
@@ -385,7 +385,7 @@
         "lending_pool_app_id#0"
       ]
     },
-    "243": {
+    "238": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
         "credit_score_app_id#0",
@@ -398,7 +398,7 @@
         "tmp%4#0"
       ]
     },
-    "246": {
+    "241": {
       "op": "dup",
       "defined_out": [
         "credit_score_app_id#0",
@@ -413,7 +413,7 @@
         "tmp%4#0 (copy)"
       ]
     },
-    "247": {
+    "242": {
       "op": "len",
       "defined_out": [
         "credit_score_app_id#0",
@@ -428,8 +428,8 @@
         "len%2#0"
       ]
     },
-    "248": {
-      "op": "intc_1 // 8",
+    "243": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "credit_score_app_id#0",
         "lending_pool_app_id#0",
@@ -438,7 +438,7 @@
         "8"
       ]
     },
-    "249": {
+    "244": {
       "op": "==",
       "defined_out": [
         "credit_score_app_id#0",
@@ -453,7 +453,7 @@
         "eq%2#0"
       ]
     },
-    "250": {
+    "245": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
@@ -462,7 +462,7 @@
         "tmp%4#0"
       ]
     },
-    "251": {
+    "246": {
       "op": "btoi",
       "defined_out": [
         "asset_id#0",
@@ -475,8 +475,8 @@
         "asset_id#0"
       ]
     },
-    "252": {
-      "op": "bytec 6 // \"credit_score_app_id\"",
+    "247": {
+      "op": "bytec 5 // \"credit_score_app_id\"",
       "defined_out": [
         "\"credit_score_app_id\"",
         "asset_id#0",
@@ -490,7 +490,7 @@
         "\"credit_score_app_id\""
       ]
     },
-    "254": {
+    "249": {
       "op": "uncover 3",
       "stack_out": [
         "lending_pool_app_id#0",
@@ -499,15 +499,15 @@
         "credit_score_app_id#0"
       ]
     },
-    "256": {
+    "251": {
       "op": "app_global_put",
       "stack_out": [
         "lending_pool_app_id#0",
         "asset_id#0"
       ]
     },
-    "257": {
-      "op": "bytec_2 // \"lending_pool_app_id\"",
+    "252": {
+      "op": "bytec 6 // \"lending_pool_app_id\"",
       "defined_out": [
         "\"lending_pool_app_id\"",
         "asset_id#0",
@@ -519,7 +519,7 @@
         "\"lending_pool_app_id\""
       ]
     },
-    "258": {
+    "254": {
       "op": "uncover 2",
       "stack_out": [
         "asset_id#0",
@@ -527,13 +527,13 @@
         "lending_pool_app_id#0"
       ]
     },
-    "260": {
+    "256": {
       "op": "app_global_put",
       "stack_out": [
         "asset_id#0"
       ]
     },
-    "261": {
+    "257": {
       "op": "bytec 7 // \"asset_id\"",
       "defined_out": [
         "\"asset_id\"",
@@ -544,42 +544,42 @@
         "\"asset_id\""
       ]
     },
-    "263": {
+    "259": {
       "op": "swap",
       "stack_out": [
         "\"asset_id\"",
         "asset_id#0"
       ]
     },
+    "260": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "261": {
+      "op": "bytec_3 // \"loan_counter\"",
+      "defined_out": [
+        "\"loan_counter\""
+      ],
+      "stack_out": [
+        "\"loan_counter\""
+      ]
+    },
+    "262": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "\"loan_counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"loan_counter\"",
+        "0"
+      ]
+    },
+    "263": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
     "264": {
-      "op": "app_global_put",
-      "stack_out": []
-    },
-    "265": {
-      "op": "bytec 4 // \"loan_counter\"",
-      "defined_out": [
-        "\"loan_counter\""
-      ],
-      "stack_out": [
-        "\"loan_counter\""
-      ]
-    },
-    "267": {
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "\"loan_counter\"",
-        "0"
-      ],
-      "stack_out": [
-        "\"loan_counter\"",
-        "0"
-      ]
-    },
-    "268": {
-      "op": "app_global_put",
-      "stack_out": []
-    },
-    "269": {
       "op": "bytec 8 // \"late_fee_bps\"",
       "defined_out": [
         "\"late_fee_bps\""
@@ -588,7 +588,7 @@
         "\"late_fee_bps\""
       ]
     },
-    "271": {
+    "266": {
       "op": "pushint 200 // 200",
       "defined_out": [
         "\"late_fee_bps\"",
@@ -599,12 +599,12 @@
         "200"
       ]
     },
-    "274": {
+    "269": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "275": {
-      "op": "bytec_3 // \"installment_interval\"",
+    "270": {
+      "op": "bytec_2 // \"installment_interval\"",
       "defined_out": [
         "\"installment_interval\""
       ],
@@ -612,7 +612,7 @@
         "\"installment_interval\""
       ]
     },
-    "276": {
+    "271": {
       "op": "pushint 1576800 // 1576800",
       "defined_out": [
         "\"installment_interval\"",
@@ -623,11 +623,11 @@
         "1576800"
       ]
     },
-    "280": {
+    "275": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "281": {
+    "276": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -636,11 +636,11 @@
         "1"
       ]
     },
-    "282": {
+    "277": {
       "op": "return",
       "stack_out": []
     },
-    "283": {
+    "278": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.opt_in_to_asset[routing]",
       "params": {},
       "block": "opt_in_to_asset",
@@ -653,7 +653,7 @@
         "tmp%0#0"
       ]
     },
-    "286": {
+    "281": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -664,7 +664,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "287": {
+    "282": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -675,8 +675,8 @@
         "len%0#0"
       ]
     },
-    "288": {
-      "op": "intc_1 // 8",
+    "283": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -688,7 +688,7 @@
         "8"
       ]
     },
-    "289": {
+    "284": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -699,14 +699,14 @@
         "eq%0#0"
       ]
     },
-    "290": {
+    "285": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "291": {
+    "286": {
       "op": "btoi",
       "defined_out": [
         "asset#0"
@@ -715,10 +715,10 @@
         "asset#0"
       ]
     },
-    "292": {
+    "287": {
       "op": "itxn_begin"
     },
-    "293": {
+    "288": {
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "asset#0",
@@ -729,14 +729,14 @@
         "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
       ]
     },
-    "295": {
+    "290": {
       "op": "itxn_field AssetReceiver",
       "stack_out": [
         "asset#0"
       ]
     },
-    "297": {
-      "op": "intc_0 // 0",
+    "292": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "asset#0"
@@ -746,17 +746,17 @@
         "0"
       ]
     },
-    "298": {
+    "293": {
       "op": "itxn_field AssetAmount",
       "stack_out": [
         "asset#0"
       ]
     },
-    "300": {
+    "295": {
       "op": "itxn_field XferAsset",
       "stack_out": []
     },
-    "302": {
+    "297": {
       "op": "pushint 4 // 4",
       "defined_out": [
         "4"
@@ -765,24 +765,24 @@
         "4"
       ]
     },
-    "304": {
+    "299": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "306": {
-      "op": "intc_0 // 0",
+    "301": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "307": {
+    "302": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "309": {
+    "304": {
       "op": "itxn_submit"
     },
-    "310": {
+    "305": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -791,11 +791,11 @@
         "1"
       ]
     },
-    "311": {
+    "306": {
       "op": "return",
       "stack_out": []
     },
-    "312": {
+    "307": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.initiate_loan[routing]",
       "params": {},
       "block": "initiate_loan",
@@ -808,7 +808,7 @@
         "merchant#0"
       ]
     },
-    "315": {
+    "310": {
       "op": "dup",
       "defined_out": [
         "merchant#0",
@@ -819,7 +819,7 @@
         "merchant#0 (copy)"
       ]
     },
-    "316": {
+    "311": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -830,7 +830,7 @@
         "len%0#0"
       ]
     },
-    "317": {
+    "312": {
       "op": "dup",
       "defined_out": [
         "len%0#0",
@@ -843,7 +843,7 @@
         "len%0#0 (copy)"
       ]
     },
-    "318": {
+    "313": {
       "op": "pushint 32 // 32",
       "defined_out": [
         "32",
@@ -858,7 +858,7 @@
         "32"
       ]
     },
-    "320": {
+    "315": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -871,7 +871,7 @@
         "eq%0#0"
       ]
     },
-    "321": {
+    "316": {
       "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "stack_out": [
@@ -879,7 +879,7 @@
         "len%0#0"
       ]
     },
-    "322": {
+    "317": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "len%0#0",
@@ -892,7 +892,7 @@
         "tmp%2#0"
       ]
     },
-    "325": {
+    "320": {
       "op": "dup",
       "defined_out": [
         "len%0#0",
@@ -907,7 +907,7 @@
         "tmp%2#0 (copy)"
       ]
     },
-    "326": {
+    "321": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -922,8 +922,8 @@
         "len%1#0"
       ]
     },
-    "327": {
-      "op": "intc_1 // 8",
+    "322": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -939,7 +939,7 @@
         "8"
       ]
     },
-    "328": {
+    "323": {
       "op": "==",
       "defined_out": [
         "eq%1#0",
@@ -954,7 +954,7 @@
         "eq%1#0"
       ]
     },
-    "329": {
+    "324": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
@@ -963,7 +963,7 @@
         "tmp%2#0"
       ]
     },
-    "330": {
+    "325": {
       "op": "btoi",
       "defined_out": [
         "amount#0",
@@ -976,7 +976,7 @@
         "amount#0"
       ]
     },
-    "331": {
+    "326": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
         "amount#0",
@@ -991,7 +991,7 @@
         "tmp%4#0"
       ]
     },
-    "334": {
+    "329": {
       "op": "dup",
       "defined_out": [
         "amount#0",
@@ -1008,7 +1008,7 @@
         "tmp%4#0 (copy)"
       ]
     },
-    "335": {
+    "330": {
       "op": "len",
       "defined_out": [
         "amount#0",
@@ -1025,8 +1025,8 @@
         "len%2#0"
       ]
     },
-    "336": {
-      "op": "intc_1 // 8",
+    "331": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "merchant#0",
         "len%0#0",
@@ -1036,7 +1036,7 @@
         "8"
       ]
     },
-    "337": {
+    "332": {
       "op": "==",
       "defined_out": [
         "amount#0",
@@ -1053,7 +1053,7 @@
         "eq%2#0"
       ]
     },
-    "338": {
+    "333": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
@@ -1063,7 +1063,7 @@
         "tmp%4#0"
       ]
     },
-    "339": {
+    "334": {
       "op": "btoi",
       "defined_out": [
         "amount#0",
@@ -1078,7 +1078,7 @@
         "num_installments#0"
       ]
     },
-    "340": {
+    "335": {
       "op": "dig 1",
       "defined_out": [
         "amount#0",
@@ -1095,7 +1095,7 @@
         "amount#0 (copy)"
       ]
     },
-    "342": {
+    "337": {
       "error": "Amount must be > 0",
       "op": "assert // Amount must be > 0",
       "stack_out": [
@@ -1105,7 +1105,7 @@
         "num_installments#0"
       ]
     },
-    "343": {
+    "338": {
       "op": "dup",
       "defined_out": [
         "amount#0",
@@ -1122,7 +1122,7 @@
         "num_installments#0 (copy)"
       ]
     },
-    "344": {
+    "339": {
       "error": "Installments must be > 0",
       "op": "assert // Installments must be > 0",
       "stack_out": [
@@ -1132,7 +1132,7 @@
         "num_installments#0"
       ]
     },
-    "345": {
+    "340": {
       "op": "dup",
       "stack_out": [
         "merchant#0",
@@ -1142,7 +1142,7 @@
         "num_installments#0 (copy)"
       ]
     },
-    "346": {
+    "341": {
       "op": "pushint 52 // 52",
       "defined_out": [
         "52",
@@ -1161,7 +1161,7 @@
         "52"
       ]
     },
-    "348": {
+    "343": {
       "op": "<=",
       "defined_out": [
         "amount#0",
@@ -1178,7 +1178,7 @@
         "tmp%2#1"
       ]
     },
-    "349": {
+    "344": {
       "error": "Max 52 installments",
       "op": "assert // Max 52 installments",
       "stack_out": [
@@ -1188,8 +1188,8 @@
         "num_installments#0"
       ]
     },
-    "350": {
-      "op": "intc_0 // 0",
+    "345": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "amount#0",
@@ -1205,8 +1205,8 @@
         "0"
       ]
     },
-    "351": {
-      "op": "bytec_2 // \"lending_pool_app_id\"",
+    "346": {
+      "op": "bytec 6 // \"lending_pool_app_id\"",
       "defined_out": [
         "\"lending_pool_app_id\"",
         "0",
@@ -1224,7 +1224,7 @@
         "\"lending_pool_app_id\""
       ]
     },
-    "352": {
+    "348": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
@@ -1243,7 +1243,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "353": {
+    "349": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1254,7 +1254,7 @@
         "lending_pool_app#0"
       ]
     },
-    "354": {
+    "350": {
       "op": "dup",
       "defined_out": [
         "amount#0",
@@ -1273,7 +1273,7 @@
         "lending_pool_app#0 (copy)"
       ]
     },
-    "355": {
+    "351": {
       "error": "Lending pool not set",
       "op": "assert // Lending pool not set",
       "stack_out": [
@@ -1284,10 +1284,10 @@
         "lending_pool_app#0"
       ]
     },
-    "356": {
+    "352": {
       "op": "itxn_begin"
     },
-    "357": {
+    "353": {
       "op": "dig 2",
       "stack_out": [
         "merchant#0",
@@ -1298,7 +1298,7 @@
         "amount#0 (copy)"
       ]
     },
-    "359": {
+    "355": {
       "op": "itob",
       "stack_out": [
         "merchant#0",
@@ -1309,7 +1309,7 @@
         "tmp%4#0"
       ]
     },
-    "360": {
+    "356": {
       "op": "txn Sender",
       "defined_out": [
         "amount#0",
@@ -1330,7 +1330,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "362": {
+    "358": {
       "op": "pushbytes 0x99ecf519 // method \"borrow(uint64,address)uint64\"",
       "defined_out": [
         "Method(borrow(uint64,address)uint64)",
@@ -1353,6 +1353,31 @@
         "Method(borrow(uint64,address)uint64)"
       ]
     },
+    "364": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": [
+        "merchant#0",
+        "len%0#0",
+        "amount#0",
+        "num_installments#0",
+        "lending_pool_app#0",
+        "tmp%4#0",
+        "reinterpret_bytes[32]%0#0"
+      ]
+    },
+    "366": {
+      "op": "dig 1",
+      "stack_out": [
+        "merchant#0",
+        "len%0#0",
+        "amount#0",
+        "num_installments#0",
+        "lending_pool_app#0",
+        "tmp%4#0",
+        "reinterpret_bytes[32]%0#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
     "368": {
       "op": "itxn_field ApplicationArgs",
       "stack_out": [
@@ -1366,31 +1391,6 @@
       ]
     },
     "370": {
-      "op": "dig 1",
-      "stack_out": [
-        "merchant#0",
-        "len%0#0",
-        "amount#0",
-        "num_installments#0",
-        "lending_pool_app#0",
-        "tmp%4#0",
-        "reinterpret_bytes[32]%0#0",
-        "tmp%4#0 (copy)"
-      ]
-    },
-    "372": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "merchant#0",
-        "len%0#0",
-        "amount#0",
-        "num_installments#0",
-        "lending_pool_app#0",
-        "tmp%4#0",
-        "reinterpret_bytes[32]%0#0"
-      ]
-    },
-    "374": {
       "op": "itxn_field ApplicationArgs",
       "stack_out": [
         "merchant#0",
@@ -1401,7 +1401,7 @@
         "tmp%4#0"
       ]
     },
-    "376": {
+    "372": {
       "op": "swap",
       "stack_out": [
         "merchant#0",
@@ -1412,7 +1412,7 @@
         "lending_pool_app#0"
       ]
     },
-    "377": {
+    "373": {
       "op": "itxn_field ApplicationID",
       "stack_out": [
         "merchant#0",
@@ -1422,7 +1422,7 @@
         "tmp%4#0"
       ]
     },
-    "379": {
+    "375": {
       "op": "pushint 6 // 6",
       "defined_out": [
         "6",
@@ -1441,7 +1441,7 @@
         "6"
       ]
     },
-    "381": {
+    "377": {
       "op": "itxn_field TypeEnum",
       "stack_out": [
         "merchant#0",
@@ -1451,8 +1451,32 @@
         "tmp%4#0"
       ]
     },
+    "379": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "merchant#0",
+        "len%0#0",
+        "amount#0",
+        "num_installments#0",
+        "tmp%4#0",
+        "0"
+      ]
+    },
+    "380": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "merchant#0",
+        "len%0#0",
+        "amount#0",
+        "num_installments#0",
+        "tmp%4#0"
+      ]
+    },
+    "382": {
+      "op": "itxn_submit"
+    },
     "383": {
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "stack_out": [
         "merchant#0",
         "len%0#0",
@@ -1463,31 +1487,7 @@
       ]
     },
     "384": {
-      "op": "itxn_field Fee",
-      "stack_out": [
-        "merchant#0",
-        "len%0#0",
-        "amount#0",
-        "num_installments#0",
-        "tmp%4#0"
-      ]
-    },
-    "386": {
-      "op": "itxn_submit"
-    },
-    "387": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "merchant#0",
-        "len%0#0",
-        "amount#0",
-        "num_installments#0",
-        "tmp%4#0",
-        "0"
-      ]
-    },
-    "388": {
-      "op": "bytec 4 // \"loan_counter\"",
+      "op": "bytec_3 // \"loan_counter\"",
       "defined_out": [
         "\"loan_counter\"",
         "0",
@@ -1507,7 +1507,7 @@
         "\"loan_counter\""
       ]
     },
-    "390": {
+    "385": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
@@ -1528,7 +1528,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "391": {
+    "386": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1540,7 +1540,7 @@
         "maybe_value%1#0"
       ]
     },
-    "392": {
+    "387": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -1561,7 +1561,7 @@
         "1"
       ]
     },
-    "393": {
+    "388": {
       "op": "+",
       "defined_out": [
         "amount#0",
@@ -1580,8 +1580,8 @@
         "new_loan_id#0"
       ]
     },
-    "394": {
-      "op": "bytec 4 // \"loan_counter\"",
+    "389": {
+      "op": "bytec_3 // \"loan_counter\"",
       "stack_out": [
         "merchant#0",
         "len%0#0",
@@ -1592,7 +1592,7 @@
         "\"loan_counter\""
       ]
     },
-    "396": {
+    "390": {
       "op": "dig 1",
       "defined_out": [
         "\"loan_counter\"",
@@ -1615,7 +1615,7 @@
         "new_loan_id#0 (copy)"
       ]
     },
-    "398": {
+    "392": {
       "op": "app_global_put",
       "stack_out": [
         "merchant#0",
@@ -1626,7 +1626,7 @@
         "new_loan_id#0"
       ]
     },
-    "399": {
+    "393": {
       "op": "uncover 3",
       "stack_out": [
         "merchant#0",
@@ -1637,7 +1637,7 @@
         "amount#0"
       ]
     },
-    "401": {
+    "395": {
       "op": "dig 3",
       "stack_out": [
         "merchant#0",
@@ -1649,7 +1649,7 @@
         "num_installments#0 (copy)"
       ]
     },
-    "403": {
+    "397": {
       "op": "/",
       "defined_out": [
         "installment_amount#0",
@@ -1668,7 +1668,7 @@
         "installment_amount#0"
       ]
     },
-    "404": {
+    "398": {
       "op": "txn Sender",
       "defined_out": [
         "installment_amount#0",
@@ -1689,7 +1689,7 @@
         "reinterpret_bytes[32]%1#0"
       ]
     },
-    "406": {
+    "400": {
       "op": "global Round",
       "defined_out": [
         "installment_amount#0",
@@ -1712,7 +1712,7 @@
         "tmp%7#1"
       ]
     },
-    "408": {
+    "402": {
       "op": "dup",
       "defined_out": [
         "installment_amount#0",
@@ -1737,8 +1737,8 @@
         "tmp%8#1"
       ]
     },
-    "409": {
-      "op": "intc_0 // 0",
+    "403": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "merchant#0",
         "len%0#0",
@@ -1752,8 +1752,8 @@
         "0"
       ]
     },
-    "410": {
-      "op": "bytec_3 // \"installment_interval\"",
+    "404": {
+      "op": "bytec_2 // \"installment_interval\"",
       "defined_out": [
         "\"installment_interval\"",
         "0",
@@ -1781,7 +1781,7 @@
         "\"installment_interval\""
       ]
     },
-    "411": {
+    "405": {
       "op": "app_global_get_ex",
       "defined_out": [
         "installment_amount#0",
@@ -1810,7 +1810,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "412": {
+    "406": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1826,7 +1826,7 @@
         "maybe_value%2#0"
       ]
     },
-    "413": {
+    "407": {
       "op": "+",
       "defined_out": [
         "installment_amount#0",
@@ -1851,7 +1851,7 @@
         "tmp%9#0"
       ]
     },
-    "414": {
+    "408": {
       "op": "pushbytes 0x0020",
       "defined_out": [
         "0x0020",
@@ -1878,7 +1878,7 @@
         "0x0020"
       ]
     },
-    "418": {
+    "412": {
       "op": "uncover 3",
       "stack_out": [
         "merchant#0",
@@ -1893,7 +1893,7 @@
         "reinterpret_bytes[32]%1#0"
       ]
     },
-    "420": {
+    "414": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -1918,7 +1918,7 @@
         "aggregate%encoded_value%0#0"
       ]
     },
-    "421": {
+    "415": {
       "op": "dup",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -1945,7 +1945,7 @@
         "aggregate%encoded_value%0#0 (copy)"
       ]
     },
-    "422": {
+    "416": {
       "op": "len",
       "defined_out": [
         "aggregate%data_length%0#0",
@@ -1972,7 +1972,7 @@
         "aggregate%data_length%0#0"
       ]
     },
-    "423": {
+    "417": {
       "op": "pushint 68 // 68",
       "defined_out": [
         "68",
@@ -2001,7 +2001,7 @@
         "68"
       ]
     },
-    "425": {
+    "419": {
       "op": "+",
       "defined_out": [
         "aggregate%current_tail_offset%0#0",
@@ -2028,7 +2028,7 @@
         "aggregate%current_tail_offset%0#0"
       ]
     },
-    "426": {
+    "420": {
       "op": "uncover 8",
       "stack_out": [
         "merchant#0",
@@ -2043,7 +2043,7 @@
         "len%0#0"
       ]
     },
-    "428": {
+    "422": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%2#0",
@@ -2070,7 +2070,7 @@
         "aggregate%as_bytes%2#0"
       ]
     },
-    "429": {
+    "423": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%current_tail_offset%0#0",
@@ -2097,7 +2097,7 @@
         "aggregate%length_uint16%1#0"
       ]
     },
-    "432": {
+    "426": {
       "op": "uncover 9",
       "stack_out": [
         "num_installments#0",
@@ -2112,7 +2112,7 @@
         "merchant#0"
       ]
     },
-    "434": {
+    "428": {
       "op": "concat",
       "defined_out": [
         "aggregate%current_tail_offset%0#0",
@@ -2137,7 +2137,7 @@
         "aggregate%encoded_value%1#0"
       ]
     },
-    "435": {
+    "429": {
       "op": "swap",
       "stack_out": [
         "num_installments#0",
@@ -2151,7 +2151,7 @@
         "aggregate%current_tail_offset%0#0"
       ]
     },
-    "436": {
+    "430": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%3#0",
@@ -2176,7 +2176,7 @@
         "aggregate%as_bytes%3#0"
       ]
     },
-    "437": {
+    "431": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2201,7 +2201,7 @@
         "aggregate%offset_as_uint16%1#0"
       ]
     },
-    "440": {
+    "434": {
       "op": "pushbytes 0x0044",
       "defined_out": [
         "0x0044",
@@ -2228,7 +2228,7 @@
         "0x0044"
       ]
     },
-    "444": {
+    "438": {
       "op": "swap",
       "stack_out": [
         "num_installments#0",
@@ -2243,7 +2243,7 @@
         "aggregate%offset_as_uint16%1#0"
       ]
     },
-    "445": {
+    "439": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2268,7 +2268,7 @@
         "aggregate%head%1#0"
       ]
     },
-    "446": {
+    "440": {
       "op": "uncover 7",
       "stack_out": [
         "num_installments#0",
@@ -2282,7 +2282,7 @@
         "tmp%4#0"
       ]
     },
-    "448": {
+    "442": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2305,8 +2305,8 @@
         "aggregate%head%2#0"
       ]
     },
-    "449": {
-      "op": "intc_0 // 0",
+    "443": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "num_installments#0",
         "new_loan_id#0",
@@ -2319,7 +2319,7 @@
         "0"
       ]
     },
-    "450": {
+    "444": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2344,7 +2344,7 @@
         "aggregate%val_as_bytes%1#0"
       ]
     },
-    "451": {
+    "445": {
       "op": "swap",
       "stack_out": [
         "num_installments#0",
@@ -2358,7 +2358,7 @@
         "aggregate%head%2#0"
       ]
     },
-    "452": {
+    "446": {
       "op": "dig 1",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2385,7 +2385,7 @@
         "aggregate%val_as_bytes%1#0 (copy)"
       ]
     },
-    "454": {
+    "448": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2410,7 +2410,7 @@
         "aggregate%head%3#0"
       ]
     },
-    "455": {
+    "449": {
       "op": "uncover 6",
       "stack_out": [
         "num_installments#0",
@@ -2424,7 +2424,7 @@
         "installment_amount#0"
       ]
     },
-    "457": {
+    "451": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2449,7 +2449,7 @@
         "aggregate%val_as_bytes%2#0"
       ]
     },
-    "458": {
+    "452": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2472,7 +2472,7 @@
         "aggregate%head%4#0"
       ]
     },
-    "459": {
+    "453": {
       "op": "uncover 7",
       "stack_out": [
         "new_loan_id#0",
@@ -2485,7 +2485,7 @@
         "num_installments#0"
       ]
     },
-    "461": {
+    "455": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2508,7 +2508,7 @@
         "aggregate%val_as_bytes%3#0"
       ]
     },
-    "462": {
+    "456": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2529,7 +2529,7 @@
         "aggregate%head%5#0"
       ]
     },
-    "463": {
+    "457": {
       "op": "dig 1",
       "stack_out": [
         "new_loan_id#0",
@@ -2542,7 +2542,7 @@
         "aggregate%val_as_bytes%1#0 (copy)"
       ]
     },
-    "465": {
+    "459": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2563,7 +2563,7 @@
         "aggregate%head%6#0"
       ]
     },
-    "466": {
+    "460": {
       "op": "uncover 5",
       "stack_out": [
         "new_loan_id#0",
@@ -2575,7 +2575,7 @@
         "tmp%7#1"
       ]
     },
-    "468": {
+    "462": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2596,7 +2596,7 @@
         "aggregate%val_as_bytes%5#0"
       ]
     },
-    "469": {
+    "463": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2615,7 +2615,7 @@
         "aggregate%head%7#0"
       ]
     },
-    "470": {
+    "464": {
       "op": "uncover 4",
       "stack_out": [
         "new_loan_id#0",
@@ -2626,7 +2626,7 @@
         "tmp%9#0"
       ]
     },
-    "472": {
+    "466": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2645,7 +2645,7 @@
         "aggregate%val_as_bytes%6#0"
       ]
     },
-    "473": {
+    "467": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2662,7 +2662,7 @@
         "aggregate%head%8#0"
       ]
     },
-    "474": {
+    "468": {
       "op": "swap",
       "stack_out": [
         "new_loan_id#0",
@@ -2672,7 +2672,7 @@
         "aggregate%val_as_bytes%1#0"
       ]
     },
-    "475": {
+    "469": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
@@ -2687,7 +2687,7 @@
         "aggregate%head%9#0"
       ]
     },
-    "476": {
+    "470": {
       "op": "uncover 2",
       "stack_out": [
         "new_loan_id#0",
@@ -2696,7 +2696,7 @@
         "aggregate%encoded_value%0#0"
       ]
     },
-    "478": {
+    "472": {
       "op": "concat",
       "defined_out": [
         "aggregate%concat%0#0",
@@ -2709,7 +2709,7 @@
         "aggregate%concat%0#0"
       ]
     },
-    "479": {
+    "473": {
       "op": "swap",
       "stack_out": [
         "new_loan_id#0",
@@ -2717,7 +2717,7 @@
         "aggregate%encoded_value%1#0"
       ]
     },
-    "480": {
+    "474": {
       "op": "concat",
       "defined_out": [
         "loan#0",
@@ -2728,14 +2728,14 @@
         "loan#0"
       ]
     },
-    "481": {
+    "475": {
       "op": "swap",
       "stack_out": [
         "loan#0",
         "new_loan_id#0"
       ]
     },
-    "482": {
+    "476": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0",
@@ -2746,7 +2746,7 @@
         "encoded_value%0#0"
       ]
     },
-    "483": {
+    "477": {
       "op": "dup",
       "stack_out": [
         "loan#0",
@@ -2754,7 +2754,7 @@
         "encoded_value%0#0"
       ]
     },
-    "484": {
+    "478": {
       "op": "cover 2",
       "defined_out": [
         "encoded_value%0#0",
@@ -2766,7 +2766,7 @@
         "encoded_value%0#0"
       ]
     },
-    "486": {
+    "480": {
       "op": "bytec_0 // \"l\"",
       "defined_out": [
         "\"l\"",
@@ -2780,7 +2780,7 @@
         "\"l\""
       ]
     },
-    "487": {
+    "481": {
       "op": "swap",
       "stack_out": [
         "encoded_value%0#0",
@@ -2789,7 +2789,7 @@
         "encoded_value%0#0"
       ]
     },
-    "488": {
+    "482": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2802,7 +2802,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "489": {
+    "483": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2817,7 +2817,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "490": {
+    "484": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2832,7 +2832,7 @@
         "{box_del}"
       ]
     },
-    "491": {
+    "485": {
       "op": "pop",
       "stack_out": [
         "encoded_value%0#0",
@@ -2840,7 +2840,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "492": {
+    "486": {
       "op": "swap",
       "stack_out": [
         "encoded_value%0#0",
@@ -2848,13 +2848,13 @@
         "loan#0"
       ]
     },
-    "493": {
+    "487": {
       "op": "box_put",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "494": {
+    "488": {
       "op": "bytec_1 // \"u\"",
       "defined_out": [
         "\"u\"",
@@ -2865,7 +2865,7 @@
         "\"u\""
       ]
     },
-    "495": {
+    "489": {
       "op": "txn Sender",
       "defined_out": [
         "\"u\"",
@@ -2878,7 +2878,7 @@
         "materialized_values%0#0"
       ]
     },
-    "497": {
+    "491": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%1#0",
@@ -2889,7 +2889,7 @@
         "box_prefixed_key%1#0"
       ]
     },
-    "498": {
+    "492": {
       "op": "box_len",
       "defined_out": [
         "_%0#0",
@@ -2902,20 +2902,20 @@
         "maybe_exists%3#0"
       ]
     },
-    "499": {
+    "493": {
       "op": "bury 1",
       "stack_out": [
         "encoded_value%0#0",
         "maybe_exists%3#0"
       ]
     },
-    "501": {
+    "495": {
       "op": "bnz initiate_loan_else_body@4",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "504": {
+    "498": {
       "op": "pushbytes 0x0001",
       "defined_out": [
         "0x0001",
@@ -2926,7 +2926,7 @@
         "0x0001"
       ]
     },
-    "508": {
+    "502": {
       "op": "dig 1",
       "stack_out": [
         "encoded_value%0#0",
@@ -2934,7 +2934,7 @@
         "encoded_value%0#0"
       ]
     },
-    "510": {
+    "504": {
       "op": "concat",
       "defined_out": [
         "aggregate%head%10#0",
@@ -2945,7 +2945,7 @@
         "aggregate%head%10#0"
       ]
     },
-    "511": {
+    "505": {
       "op": "bytec_1 // \"u\"",
       "stack_out": [
         "encoded_value%0#0",
@@ -2953,7 +2953,7 @@
         "\"u\""
       ]
     },
-    "512": {
+    "506": {
       "op": "txn Sender",
       "defined_out": [
         "\"u\"",
@@ -2968,7 +2968,7 @@
         "materialized_values%1#0"
       ]
     },
-    "514": {
+    "508": {
       "op": "concat",
       "defined_out": [
         "aggregate%head%10#0",
@@ -2981,7 +2981,7 @@
         "box_prefixed_key%2#0"
       ]
     },
-    "515": {
+    "509": {
       "op": "dup",
       "defined_out": [
         "aggregate%head%10#0",
@@ -2996,7 +2996,7 @@
         "box_prefixed_key%2#0 (copy)"
       ]
     },
-    "516": {
+    "510": {
       "op": "box_del",
       "stack_out": [
         "encoded_value%0#0",
@@ -3005,7 +3005,7 @@
         "{box_del}"
       ]
     },
-    "517": {
+    "511": {
       "op": "pop",
       "stack_out": [
         "encoded_value%0#0",
@@ -3013,7 +3013,7 @@
         "box_prefixed_key%2#0"
       ]
     },
-    "518": {
+    "512": {
       "op": "swap",
       "stack_out": [
         "encoded_value%0#0",
@@ -3021,18 +3021,18 @@
         "aggregate%head%10#0"
       ]
     },
-    "519": {
+    "513": {
       "op": "box_put",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "520": {
+    "514": {
       "block": "initiate_loan_after_if_else@5",
       "stack_in": [
         "encoded_value%0#0"
       ],
-      "op": "bytec 5 // 0x151f7c75",
+      "op": "bytec 4 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75"
       ],
@@ -3041,7 +3041,7 @@
         "0x151f7c75"
       ]
     },
-    "522": {
+    "516": {
       "op": "dig 1",
       "defined_out": [
         "0x151f7c75",
@@ -3053,7 +3053,7 @@
         "encoded_value%0#0"
       ]
     },
-    "524": {
+    "518": {
       "op": "concat",
       "defined_out": [
         "encoded_value%0#0",
@@ -3064,13 +3064,13 @@
         "tmp%8#0"
       ]
     },
-    "525": {
+    "519": {
       "op": "log",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "526": {
+    "520": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -3081,13 +3081,13 @@
         "1"
       ]
     },
-    "527": {
+    "521": {
       "op": "return",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "528": {
+    "522": {
       "block": "initiate_loan_else_body@4",
       "stack_in": [
         "encoded_value%0#0"
@@ -3101,7 +3101,7 @@
         "\"u\""
       ]
     },
-    "529": {
+    "523": {
       "op": "txn Sender",
       "defined_out": [
         "\"u\"",
@@ -3113,7 +3113,7 @@
         "materialized_values%2#0"
       ]
     },
-    "531": {
+    "525": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%3#0"
@@ -3123,7 +3123,7 @@
         "box_prefixed_key%3#0"
       ]
     },
-    "532": {
+    "526": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%1#0",
@@ -3135,7 +3135,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "533": {
+    "527": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
@@ -3143,7 +3143,7 @@
         "existing_loans#0"
       ]
     },
-    "534": {
+    "528": {
       "op": "dup",
       "defined_out": [
         "existing_loans#0",
@@ -3155,7 +3155,7 @@
         "existing_loans#0 (copy)"
       ]
     },
-    "535": {
+    "529": {
       "op": "dig 2",
       "defined_out": [
         "encoded_value%0#0",
@@ -3169,7 +3169,7 @@
         "encoded_value%0#0"
       ]
     },
-    "537": {
+    "531": {
       "error": "max array length exceeded",
       "op": "concat // on error: max array length exceeded",
       "defined_out": [
@@ -3183,7 +3183,7 @@
         "concat%0#0"
       ]
     },
-    "538": {
+    "532": {
       "op": "swap",
       "stack_out": [
         "encoded_value%0#0",
@@ -3191,8 +3191,8 @@
         "existing_loans#0"
       ]
     },
-    "539": {
-      "op": "intc_0 // 0",
+    "533": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "concat%0#0",
@@ -3206,7 +3206,7 @@
         "0"
       ]
     },
-    "540": {
+    "534": {
       "op": "extract_uint16",
       "defined_out": [
         "concat%0#0",
@@ -3219,7 +3219,7 @@
         "extract_uint16%0#0"
       ]
     },
-    "541": {
+    "535": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -3234,7 +3234,7 @@
         "1"
       ]
     },
-    "542": {
+    "536": {
       "op": "+",
       "defined_out": [
         "add%0#0",
@@ -3247,7 +3247,7 @@
         "add%0#0"
       ]
     },
-    "543": {
+    "537": {
       "op": "itob",
       "defined_out": [
         "as_bytes%0#0",
@@ -3260,7 +3260,7 @@
         "as_bytes%0#0"
       ]
     },
-    "544": {
+    "538": {
       "op": "extract 6 2",
       "defined_out": [
         "as_u16_bytes%0#0",
@@ -3273,14 +3273,14 @@
         "as_u16_bytes%0#0"
       ]
     },
-    "547": {
+    "541": {
       "op": "replace2 0",
       "stack_out": [
         "encoded_value%0#0",
         "existing_loans#0"
       ]
     },
-    "549": {
+    "543": {
       "op": "bytec_1 // \"u\"",
       "stack_out": [
         "encoded_value%0#0",
@@ -3288,7 +3288,7 @@
         "\"u\""
       ]
     },
-    "550": {
+    "544": {
       "op": "txn Sender",
       "defined_out": [
         "\"u\"",
@@ -3303,7 +3303,7 @@
         "materialized_values%3#0"
       ]
     },
-    "552": {
+    "546": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%4#0",
@@ -3316,7 +3316,7 @@
         "box_prefixed_key%4#0"
       ]
     },
-    "553": {
+    "547": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%4#0",
@@ -3331,7 +3331,7 @@
         "box_prefixed_key%4#0 (copy)"
       ]
     },
-    "554": {
+    "548": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%4#0",
@@ -3346,7 +3346,7 @@
         "{box_del}"
       ]
     },
-    "555": {
+    "549": {
       "op": "pop",
       "stack_out": [
         "encoded_value%0#0",
@@ -3354,7 +3354,7 @@
         "box_prefixed_key%4#0"
       ]
     },
-    "556": {
+    "550": {
       "op": "swap",
       "stack_out": [
         "encoded_value%0#0",
@@ -3362,131 +3362,102 @@
         "existing_loans#0"
       ]
     },
-    "557": {
+    "551": {
       "op": "box_put",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "558": {
+    "552": {
       "op": "b initiate_loan_after_if_else@5"
     },
-    "561": {
+    "555": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.make_payment[routing]",
       "params": {},
       "block": "make_payment",
       "stack_in": [],
-      "op": "pushbytes \"\"",
-      "stack_out": [
-        "tmp%6#0"
-      ]
-    },
-    "563": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0"
-      ]
-    },
-    "564": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0"
       ]
     },
-    "567": {
+    "558": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
         "tmp%0#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0",
         "tmp%0#0 (copy)"
       ]
     },
-    "568": {
+    "559": {
       "op": "len",
       "defined_out": [
         "len%0#0",
         "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0",
         "len%0#0"
       ]
     },
-    "569": {
-      "op": "intc_1 // 8",
+    "560": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
         "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0",
         "len%0#0",
         "8"
       ]
     },
-    "570": {
+    "561": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
         "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0",
         "eq%0#0"
       ]
     },
-    "571": {
+    "562": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "tmp%0#0"
       ]
     },
-    "572": {
+    "563": {
       "op": "btoi",
       "defined_out": [
         "loan_id#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "loan_id#0"
       ]
     },
-    "573": {
+    "564": {
       "op": "txn GroupIndex",
       "defined_out": [
         "loan_id#0",
         "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "loan_id#0",
         "tmp%2#0"
       ]
     },
-    "575": {
+    "566": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -3494,51 +3465,23 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "loan_id#0",
         "tmp%2#0",
         "1"
       ]
     },
-    "576": {
+    "567": {
       "op": "-",
       "defined_out": [
         "loan_id#0",
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "loan_id#0",
         "payment#0"
       ]
     },
-    "577": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "loan_id#0",
-        "payment#0",
-        "payment#0"
-      ]
-    },
-    "578": {
-      "op": "cover 2",
-      "defined_out": [
-        "loan_id#0",
-        "payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
-        "loan_id#0",
-        "payment#0"
-      ]
-    },
-    "580": {
+    "568": {
       "op": "dup",
       "defined_out": [
         "loan_id#0",
@@ -3546,15 +3489,12 @@
         "payment#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "loan_id#0",
         "payment#0",
         "payment#0 (copy)"
       ]
     },
-    "581": {
+    "569": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_type%0#0",
@@ -3562,15 +3502,12 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "loan_id#0",
         "payment#0",
         "gtxn_type%0#0"
       ]
     },
-    "583": {
+    "571": {
       "op": "pushint 4 // axfer",
       "defined_out": [
         "axfer",
@@ -3579,16 +3516,13 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "loan_id#0",
         "payment#0",
         "gtxn_type%0#0",
         "axfer"
       ]
     },
-    "585": {
+    "573": {
       "op": "==",
       "defined_out": [
         "gtxn_type_matches%0#0",
@@ -3596,50 +3530,38 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "loan_id#0",
         "payment#0",
         "gtxn_type_matches%0#0"
       ]
     },
-    "586": {
+    "574": {
       "error": "transaction type is axfer",
       "op": "assert // transaction type is axfer",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "loan_id#0",
         "payment#0"
       ]
     },
-    "587": {
+    "575": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "loan_id#0"
       ]
     },
-    "588": {
+    "576": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0",
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "encoded_value%0#0"
       ]
     },
-    "589": {
+    "577": {
       "op": "bytec_0 // \"l\"",
       "defined_out": [
         "\"l\"",
@@ -3647,66 +3569,51 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "encoded_value%0#0",
         "\"l\""
       ]
     },
-    "590": {
+    "578": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "\"l\"",
         "encoded_value%0#0"
       ]
     },
-    "591": {
+    "579": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "592": {
+    "580": {
       "op": "dup",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "593": {
-      "op": "cover 3",
+    "581": {
+      "op": "cover 2",
       "defined_out": [
         "box_prefixed_key%0#0",
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "595": {
+    "583": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3714,16 +3621,13 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "596": {
+    "584": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%1#0",
@@ -3732,36 +3636,27 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "aggregate%box_get%1#0"
       ]
     },
-    "597": {
+    "585": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "aggregate%box_get%1#0",
         "loan#0"
       ]
     },
-    "598": {
+    "586": {
       "op": "dup",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "aggregate%box_get%1#0",
@@ -3769,13 +3664,10 @@
         "loan#0 (copy)"
       ]
     },
-    "599": {
+    "587": {
       "op": "cover 3",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -3783,8 +3675,8 @@
         "loan#0"
       ]
     },
-    "601": {
-      "op": "cover 5",
+    "589": {
+      "op": "cover 4",
       "defined_out": [
         "aggregate%box_get%1#0",
         "box_prefixed_key%0#0",
@@ -3792,46 +3684,37 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "aggregate%box_get%1#0"
       ]
     },
-    "603": {
+    "591": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "604": {
+    "592": {
       "op": "dup",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "605": {
+    "593": {
       "op": "intc_3 // 60",
       "defined_out": [
         "60",
@@ -3841,11 +3724,8 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -3853,14 +3733,11 @@
         "60"
       ]
     },
-    "606": {
-      "op": "intc_1 // 8",
+    "594": {
+      "op": "intc_0 // 8",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -3869,7 +3746,7 @@
         "8"
       ]
     },
-    "607": {
+    "595": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%0#0",
@@ -3878,18 +3755,15 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "box%box_extract%0#0"
       ]
     },
-    "608": {
+    "596": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3898,18 +3772,15 @@
         "values%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "values%0#0"
       ]
     },
-    "609": {
+    "597": {
       "op": "!",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3918,46 +3789,37 @@
         "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "tmp%0#1"
       ]
     },
-    "610": {
+    "598": {
       "error": "Loan not active",
       "op": "assert // Loan not active",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "611": {
+    "599": {
       "op": "dig 2",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "payment#0 (copy)"
       ]
     },
-    "613": {
+    "601": {
       "op": "gtxns Sender",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3966,18 +3828,15 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "615": {
+    "603": {
       "op": "dig 2",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3987,11 +3846,8 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -3999,14 +3855,11 @@
         "loan#0 (copy)"
       ]
     },
-    "617": {
-      "op": "intc_0 // 0",
+    "605": {
+      "op": "intc_1 // 0",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -4015,7 +3868,7 @@
         "0"
       ]
     },
-    "618": {
+    "606": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -4025,11 +3878,8 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -4037,14 +3887,11 @@
         "aggregate%extract_uint16%0#0"
       ]
     },
-    "619": {
+    "607": {
       "op": "dig 3",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -4053,7 +3900,7 @@
         "loan#0 (copy)"
       ]
     },
-    "621": {
+    "609": {
       "op": "pushint 2 // 2",
       "defined_out": [
         "2",
@@ -4065,11 +3912,8 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -4079,7 +3923,7 @@
         "2"
       ]
     },
-    "623": {
+    "611": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -4090,11 +3934,8 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "loan#0",
         "box_prefixed_key%0#0",
@@ -4103,14 +3944,11 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "624": {
+    "612": {
       "op": "uncover 4",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "reinterpret_bytes[32]%0#0",
@@ -4119,14 +3957,11 @@
         "loan#0"
       ]
     },
-    "626": {
+    "614": {
       "op": "cover 2",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "reinterpret_bytes[32]%0#0",
@@ -4135,7 +3970,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "628": {
+    "616": {
       "op": "substring3",
       "defined_out": [
         "aggregate%substring3%0#0",
@@ -4145,18 +3980,15 @@
         "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "reinterpret_bytes[32]%0#0",
         "aggregate%substring3%0#0"
       ]
     },
-    "629": {
+    "617": {
       "op": "extract 2 0",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4166,18 +3998,15 @@
         "values%1#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "reinterpret_bytes[32]%0#0",
         "values%1#0"
       ]
     },
-    "632": {
+    "620": {
       "op": "==",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4186,46 +4015,36 @@
         "tmp%1#1"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0",
         "tmp%1#1"
       ]
     },
-    "633": {
+    "621": {
       "error": "Payment must be from borrower",
       "op": "assert // Payment must be from borrower",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
         "payment#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "634": {
-      "op": "swap",
+    "622": {
+      "op": "dig 1",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
         "box_prefixed_key%0#0",
-        "payment#0"
+        "payment#0 (copy)"
       ]
     },
-    "635": {
+    "624": {
       "op": "gtxns XferAsset",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4233,11 +4052,9 @@
         "tmp%2#0"
       ]
     },
-    "637": {
-      "op": "intc_0 // 0",
+    "626": {
+      "op": "intc_1 // 0",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4246,7 +4063,7 @@
         "0"
       ]
     },
-    "638": {
+    "627": {
       "op": "bytec 7 // \"asset_id\"",
       "defined_out": [
         "\"asset_id\"",
@@ -4257,8 +4074,6 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4268,7 +4083,7 @@
         "\"asset_id\""
       ]
     },
-    "640": {
+    "629": {
       "op": "app_global_get_ex",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4279,8 +4094,6 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4290,12 +4103,10 @@
         "maybe_exists%0#0"
       ]
     },
-    "641": {
+    "630": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4304,7 +4115,7 @@
         "maybe_value%0#0"
       ]
     },
-    "642": {
+    "631": {
       "op": "==",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4313,8 +4124,6 @@
         "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4322,19 +4131,17 @@
         "tmp%3#0"
       ]
     },
-    "643": {
+    "632": {
       "error": "Must pay with pool asset",
       "op": "assert // Must pay with pool asset",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "644": {
+    "633": {
       "op": "global Round",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4343,8 +4150,6 @@
         "payment_round#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4352,11 +4157,9 @@
         "payment_round#0"
       ]
     },
-    "646": {
+    "635": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4364,7 +4167,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "647": {
+    "636": {
       "op": "pushint 52 // 52",
       "defined_out": [
         "52",
@@ -4374,8 +4177,6 @@
         "payment_round#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4384,11 +4185,9 @@
         "52"
       ]
     },
-    "649": {
-      "op": "intc_1 // 8",
+    "638": {
+      "op": "intc_0 // 8",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4398,7 +4197,7 @@
         "8"
       ]
     },
-    "650": {
+    "639": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%1#0",
@@ -4408,8 +4207,6 @@
         "payment_round#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4417,7 +4214,7 @@
         "box%box_extract%1#0"
       ]
     },
-    "651": {
+    "640": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4427,8 +4224,6 @@
         "values%2#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
@@ -4436,7 +4231,7 @@
         "values%2#0"
       ]
     },
-    "652": {
+    "641": {
       "op": "<=",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -4445,1002 +4240,1040 @@
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
         "payment#0",
         "is_on_time#0"
       ]
     },
-    "653": {
-      "op": "bz make_payment_else_body@7",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "payment#0"
-      ]
+    "642": {
+      "op": "dup"
     },
-    "656": {
-      "op": "dig 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "payment#0",
-        "box_prefixed_key%0#0"
-      ]
-    },
-    "658": {
-      "op": "pushint 12 // 12",
+    "643": {
+      "op": "uncover 2",
       "defined_out": [
-        "12",
         "box_prefixed_key%0#0",
+        "is_on_time#0",
         "loan#0",
         "payment#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
+        "is_on_time#0",
+        "is_on_time#0",
+        "payment#0"
+      ]
+    },
+    "645": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "is_on_time#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "is_on_time#0",
+        "effective_payment#0"
+      ]
+    },
+    "647": {
+      "op": "swap",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "is_on_time#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "is_on_time#0"
+      ]
+    },
+    "648": {
+      "op": "bnz make_payment_after_if_else@3",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0"
+      ]
+    },
+    "651": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "0"
+      ]
+    },
+    "652": {
+      "op": "bytec 8 // \"late_fee_bps\"",
+      "defined_out": [
+        "\"late_fee_bps\"",
+        "0",
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "is_on_time#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "0",
+        "\"late_fee_bps\""
+      ]
+    },
+    "654": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "is_on_time#0",
+        "loan#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "655": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "656": {
+      "op": "dig 1",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "effective_payment#0 (copy)",
+        "is_on_time#0",
+        "loan#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "maybe_value%1#0",
+        "effective_payment#0 (copy)"
+      ]
+    },
+    "658": {
+      "op": "mulw",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "high#0",
+        "is_on_time#0",
+        "loan#0",
+        "low#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "high#0",
+        "low#0"
+      ]
+    },
+    "659": {
+      "op": "pushint 10000 // 10000",
+      "defined_out": [
+        "10000",
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "high#0",
+        "is_on_time#0",
+        "loan#0",
+        "low#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "high#0",
+        "low#0",
+        "10000"
+      ]
+    },
+    "662": {
+      "op": "divw",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "effective_payment#0",
+        "is_on_time#0",
+        "late_fee#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "late_fee#0"
+      ]
+    },
+    "663": {
+      "op": "+",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0"
+      ]
+    },
+    "664": {
+      "block": "make_payment_after_if_else@3",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0"
+      ],
+      "op": "dig 3",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "666": {
+      "op": "pushint 12 // 12",
+      "defined_out": [
+        "12",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "effective_payment#0",
         "box_prefixed_key%0#0",
         "12"
       ]
     },
-    "660": {
-      "op": "intc_1 // 8",
+    "668": {
+      "op": "intc_0 // 8",
+      "defined_out": [
+        "12",
+        "8",
+        "box_prefixed_key%0#0"
+      ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
+        "is_on_time#0",
+        "effective_payment#0",
         "box_prefixed_key%0#0",
         "12",
         "8"
       ]
     },
-    "661": {
+    "669": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%2#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "payment#0"
+        "box_prefixed_key%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
+        "is_on_time#0",
+        "effective_payment#0",
         "box%box_extract%2#0"
       ]
     },
-    "662": {
+    "670": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
-        "loan#0",
-        "payment#0",
         "values%3#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "payment#0",
+        "is_on_time#0",
+        "effective_payment#0",
         "values%3#0"
-      ]
-    },
-    "663": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%3#0",
-        "payment#0"
-      ]
-    },
-    "664": {
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0",
-        "values%3#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%3#0",
-        "tmp%6#0"
-      ]
-    },
-    "666": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%3#0",
-        "tmp%6#0",
-        "tmp%6#0"
-      ]
-    },
-    "667": {
-      "op": "bury 6",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0",
-        "values%3#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%3#0",
-        "tmp%6#0"
-      ]
-    },
-    "669": {
-      "op": "+",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%7#0"
-      ]
-    },
-    "670": {
-      "op": "itob",
-      "defined_out": [
-        "aggregate%val_as_bytes%0#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%0#0"
       ]
     },
     "671": {
-      "op": "dig 1",
+      "op": "+",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%11#0"
+      ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
+        "tmp%11#0"
+      ]
+    },
+    "672": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "673": {
+      "op": "dig 2",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "box_prefixed_key%0#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "aggregate%val_as_bytes%0#0",
         "loan#0"
       ]
     },
-    "673": {
+    "675": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "674": {
+    "676": {
       "op": "replace2 12",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0"
       ]
     },
-    "676": {
+    "678": {
       "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
+      "defined_out": [
         "box_prefixed_key%0#0",
         "loan#0",
+        "loan#0 (copy)"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)"
       ]
     },
-    "677": {
+    "679": {
       "op": "pushint 36 // 36",
       "defined_out": [
         "36",
         "box_prefixed_key%0#0",
         "loan#0",
-        "loan#0 (copy)",
-        "tmp%6#0"
+        "loan#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)",
         "36"
       ]
     },
-    "679": {
+    "681": {
       "op": "extract_uint64",
       "defined_out": [
         "box_prefixed_key%0#0",
         "loan#0",
-        "tmp%6#0",
         "values%4#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "values%4#0"
       ]
     },
-    "680": {
+    "682": {
       "op": "intc_2 // 1",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
+      "defined_out": [
+        "1",
         "box_prefixed_key%0#0",
         "loan#0",
+        "values%4#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "loan#0",
         "values%4#0",
         "1"
       ]
     },
-    "681": {
+    "683": {
       "op": "+",
       "defined_out": [
         "box_prefixed_key%0#0",
         "loan#0",
-        "tmp%6#0",
-        "tmp%8#0"
+        "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "tmp%8#0"
+        "tmp%12#0"
       ]
     },
-    "682": {
+    "684": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%1#0",
         "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0"
+        "loan#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "aggregate%val_as_bytes%1#0"
       ]
     },
-    "683": {
+    "685": {
       "op": "replace2 36",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0"
       ]
     },
-    "685": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "686": {
+    "687": {
       "op": "bury 2",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "loan#0"
+      ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "689": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "is_on_time#0"
+      ]
+    },
+    "690": {
+      "op": "bz make_payment_else_body@7",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "693": {
+      "op": "dig 1",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "loan#0"
       ]
     },
-    "688": {
+    "695": {
       "op": "dup",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)"
       ]
     },
-    "689": {
+    "696": {
       "op": "pushint 36 // 36",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)",
         "36"
       ]
     },
-    "691": {
+    "698": {
       "op": "extract_uint64",
       "defined_out": [
         "box_prefixed_key%0#0",
+        "is_on_time#0",
         "loan#0",
-        "tmp%6#0",
         "values%5#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "values%5#0"
       ]
     },
-    "692": {
+    "699": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "values%5#0",
         "loan#0"
       ]
     },
-    "693": {
+    "700": {
       "op": "pushint 28 // 28",
       "defined_out": [
         "28",
         "box_prefixed_key%0#0",
+        "is_on_time#0",
         "loan#0",
-        "tmp%6#0",
         "values%5#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "values%5#0",
         "loan#0",
         "28"
       ]
     },
-    "695": {
+    "702": {
       "op": "extract_uint64",
       "defined_out": [
         "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0",
-        "values%5#0",
-        "values%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
+        "is_on_time#0",
         "loan#0",
         "values%5#0",
         "values%6#0"
-      ]
-    },
-    "696": {
-      "op": ">=",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0",
-        "tmp%9#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "tmp%9#0"
+        "is_on_time#0",
+        "values%5#0",
+        "values%6#0"
       ]
     },
-    "697": {
-      "op": "bz make_payment_else_body@5",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "700": {
-      "op": "intc_2 // 1",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "1"
-      ]
-    },
-    "701": {
-      "op": "itob",
+    "703": {
+      "op": "<",
       "defined_out": [
-        "aggregate%val_as_bytes%2#0",
         "box_prefixed_key%0#0",
+        "is_on_time#0",
         "loan#0",
-        "tmp%6#0"
+        "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "aggregate%val_as_bytes%2#0"
-      ]
-    },
-    "702": {
-      "op": "dig 1",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%2#0",
-        "loan#0"
+        "is_on_time#0",
+        "tmp%13#0"
       ]
     },
     "704": {
-      "op": "swap",
+      "op": "bz make_payment_after_if_else@10",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "707": {
+      "op": "dig 1",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0"
+      ]
+    },
+    "709": {
+      "op": "dup",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)"
+      ]
+    },
+    "710": {
+      "op": "pushint 52 // 52",
+      "defined_out": [
+        "52",
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)",
+        "52"
+      ]
+    },
+    "712": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0"
+      ]
+    },
+    "713": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0",
+        "0"
+      ]
+    },
+    "714": {
+      "op": "bytec_2 // \"installment_interval\"",
+      "defined_out": [
+        "\"installment_interval\"",
+        "0",
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0",
+        "0",
+        "\"installment_interval\""
+      ]
+    },
+    "715": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "values%7#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "716": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%7#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "717": {
+      "op": "+",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "tmp%14#0"
+      ]
+    },
+    "718": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%2#0",
+        "box_prefixed_key%0#0",
+        "is_on_time#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "loan#0",
         "aggregate%val_as_bytes%2#0"
       ]
     },
-    "705": {
-      "op": "replace2 60",
+    "719": {
+      "op": "replace2 52",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0"
-      ]
-    },
-    "707": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "708": {
-      "op": "bury 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "710": {
-      "op": "itxn_begin"
-    },
-    "711": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "0"
-      ]
-    },
-    "712": {
-      "op": "bytec_2 // \"lending_pool_app_id\"",
-      "defined_out": [
-        "\"lending_pool_app_id\"",
-        "0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "0",
-        "\"lending_pool_app_id\""
-      ]
-    },
-    "713": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_exists%1#0",
-        "maybe_value%1#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "maybe_exists%1#0"
-      ]
-    },
-    "714": {
-      "error": "check GlobalState exists",
-      "op": "assert // check GlobalState exists",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0"
-      ]
-    },
-    "715": {
-      "op": "dig 5",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%6#0"
-      ]
-    },
-    "717": {
-      "op": "itob",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0"
-      ]
-    },
-    "718": {
-      "op": "dig 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "720": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "loan#0 (copy)",
-        "0"
       ]
     },
     "721": {
-      "op": "extract_uint16",
-      "defined_out": [
-        "aggregate%extract_uint16%2#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0"
-      ],
+      "op": "bury 2",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%extract_uint16%2#0"
+        "is_on_time#0"
       ]
     },
-    "722": {
-      "op": "dig 3",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%extract_uint16%2#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "724": {
-      "op": "pushint 2 // 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%extract_uint16%2#0",
-        "loan#0 (copy)",
-        "2"
-      ]
-    },
-    "726": {
-      "op": "extract_uint16",
-      "defined_out": [
-        "aggregate%extract_uint16%2#0",
-        "aggregate%extract_uint16%3#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%extract_uint16%2#0",
-        "aggregate%extract_uint16%3#0"
-      ]
-    },
-    "727": {
-      "op": "uncover 4",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%extract_uint16%2#0",
-        "aggregate%extract_uint16%3#0",
-        "loan#0"
-      ]
-    },
-    "729": {
-      "op": "cover 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "loan#0",
-        "aggregate%extract_uint16%2#0",
-        "aggregate%extract_uint16%3#0"
-      ]
-    },
-    "731": {
-      "op": "substring3",
-      "defined_out": [
-        "aggregate%substring3%1#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "aggregate%substring3%1#0"
-      ]
-    },
-    "732": {
-      "op": "extract 2 0",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0",
-        "values%7#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "values%7#0"
-      ]
-    },
-    "735": {
-      "op": "bytec 9 // method \"repay(asset_transfer,address)\"",
-      "defined_out": [
-        "Method(repay(asset_transfer,address))",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "tmp%6#0",
-        "values%7#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "values%7#0",
-        "Method(repay(asset_transfer,address))"
-      ]
-    },
-    "737": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "tmp%11#0",
-        "values%7#0"
-      ]
-    },
-    "739": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "values%7#0",
-        "tmp%11#0"
-      ]
-    },
-    "740": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0",
-        "values%7#0"
-      ]
-    },
-    "742": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%1#0"
-      ]
-    },
-    "744": {
-      "op": "itxn_field ApplicationID",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "746": {
-      "op": "pushint 6 // 6",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "6"
-      ]
-    },
-    "748": {
-      "op": "itxn_field TypeEnum",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "750": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "0"
-      ]
-    },
-    "751": {
-      "op": "itxn_field Fee",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "753": {
-      "op": "itxn_submit"
-    },
-    "754": {
-      "block": "make_payment_after_if_else@12",
+    "723": {
+      "block": "make_payment_after_if_else@10",
       "stack_in": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "loan#0"
+        "loan#0",
+        "is_on_time#0"
       ],
       "op": "dig 1",
       "defined_out": [
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0"
+      ]
+    },
+    "725": {
+      "op": "dup",
+      "defined_out": [
+        "loan#0",
+        "loan#0 (copy)"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)"
+      ]
+    },
+    "726": {
+      "op": "pushint 36 // 36",
+      "defined_out": [
+        "36",
+        "loan#0",
+        "loan#0 (copy)"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)",
+        "36"
+      ]
+    },
+    "728": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "loan#0",
+        "values%11#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%11#0"
+      ]
+    },
+    "729": {
+      "op": "swap",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%11#0",
+        "loan#0"
+      ]
+    },
+    "730": {
+      "op": "pushint 28 // 28",
+      "defined_out": [
+        "28",
+        "loan#0",
+        "values%11#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%11#0",
+        "loan#0",
+        "28"
+      ]
+    },
+    "732": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "loan#0",
+        "values%11#0",
+        "values%12#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%11#0",
+        "values%12#0"
+      ]
+    },
+    "733": {
+      "op": ">=",
+      "defined_out": [
+        "loan#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "tmp%17#0"
+      ]
+    },
+    "734": {
+      "op": "bz make_payment_after_if_else@12",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "737": {
+      "op": "intc_2 // 1",
+      "defined_out": [
+        "1",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "1"
+      ]
+    },
+    "738": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%4#0",
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "aggregate%val_as_bytes%4#0"
+      ]
+    },
+    "739": {
+      "op": "dig 2",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "aggregate%val_as_bytes%4#0",
+        "loan#0"
+      ]
+    },
+    "741": {
+      "op": "swap",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "aggregate%val_as_bytes%4#0"
+      ]
+    },
+    "742": {
+      "op": "replace2 60",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0"
+      ]
+    },
+    "744": {
+      "op": "bury 2",
+      "defined_out": [
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "746": {
+      "block": "make_payment_after_if_else@12",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ],
+      "op": "dig 2",
+      "defined_out": [
         "box_prefixed_key%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "756": {
+    "748": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "757": {
+    "749": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%0#0",
         "{box_del}"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "box_prefixed_key%0#0",
         "{box_del}"
       ]
     },
-    "758": {
+    "750": {
       "op": "pop",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "box_prefixed_key%0#0"
       ]
     },
-    "759": {
-      "op": "dig 1",
+    "751": {
+      "op": "dig 2",
       "defined_out": [
         "box_prefixed_key%0#0",
         "loan#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "box_prefixed_key%0#0",
         "loan#0"
       ]
     },
-    "761": {
+    "753": {
       "op": "box_put",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
-        "loan#0"
+        "loan#0",
+        "is_on_time#0"
       ]
     },
-    "762": {
+    "754": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -5448,45 +5281,164 @@
         "loan#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "1"
       ]
     },
-    "763": {
+    "755": {
       "op": "return",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "756": {
+      "block": "make_payment_else_body@7",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "loan#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
         "loan#0"
       ]
     },
-    "764": {
-      "block": "make_payment_else_body@5",
-      "stack_in": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ],
-      "op": "dupn 2",
+    "758": {
+      "op": "dup",
       "defined_out": [
         "loan#0",
         "loan#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)"
       ]
     },
+    "759": {
+      "op": "pushint 36 // 36",
+      "defined_out": [
+        "36",
+        "loan#0",
+        "loan#0 (copy)"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)",
+        "36"
+      ]
+    },
+    "761": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "loan#0",
+        "values%8#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "values%8#0"
+      ]
+    },
+    "762": {
+      "op": "swap",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%8#0",
+        "loan#0"
+      ]
+    },
+    "763": {
+      "op": "pushint 28 // 28",
+      "defined_out": [
+        "28",
+        "loan#0",
+        "values%8#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%8#0",
+        "loan#0",
+        "28"
+      ]
+    },
+    "765": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "loan#0",
+        "values%8#0",
+        "values%9#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "values%8#0",
+        "values%9#0"
+      ]
+    },
     "766": {
+      "op": "<",
+      "defined_out": [
+        "loan#0",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "tmp%15#0"
+      ]
+    },
+    "767": {
+      "op": "bz make_payment_after_if_else@10",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0"
+      ]
+    },
+    "770": {
+      "op": "dig 1",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0"
+      ]
+    },
+    "772": {
+      "op": "dup",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "loan#0",
+        "is_on_time#0",
+        "loan#0",
+        "loan#0 (copy)"
+      ]
+    },
+    "773": {
       "op": "pushint 52 // 52",
       "defined_out": [
         "52",
@@ -5494,1397 +5446,144 @@
         "loan#0 (copy)"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "loan#0 (copy)",
         "52"
       ]
     },
-    "768": {
+    "775": {
       "op": "extract_uint64",
       "defined_out": [
         "loan#0",
-        "values%8#0"
+        "values%10#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "values%8#0"
+        "values%10#0"
       ]
     },
-    "769": {
-      "op": "intc_0 // 0",
+    "776": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "loan#0",
-        "values%8#0"
+        "values%10#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "values%8#0",
+        "values%10#0",
         "0"
       ]
     },
-    "770": {
-      "op": "bytec_3 // \"installment_interval\"",
+    "777": {
+      "op": "bytec_2 // \"installment_interval\"",
       "defined_out": [
         "\"installment_interval\"",
         "0",
         "loan#0",
-        "values%8#0"
+        "values%10#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "values%8#0",
+        "values%10#0",
         "0",
         "\"installment_interval\""
       ]
     },
-    "771": {
+    "778": {
       "op": "app_global_get_ex",
       "defined_out": [
         "loan#0",
-        "maybe_exists%2#0",
-        "maybe_value%2#0",
-        "values%8#0"
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "values%10#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "values%8#0",
-        "maybe_value%2#0",
-        "maybe_exists%2#0"
+        "values%10#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
       ]
     },
-    "772": {
+    "779": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "values%8#0",
-        "maybe_value%2#0"
+        "values%10#0",
+        "maybe_value%3#0"
       ]
     },
-    "773": {
+    "780": {
       "op": "+",
       "defined_out": [
         "loan#0",
-        "tmp%12#0"
+        "tmp%16#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
-        "tmp%12#0"
+        "tmp%16#0"
       ]
     },
-    "774": {
+    "781": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%3#0",
         "loan#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0",
         "aggregate%val_as_bytes%3#0"
       ]
     },
-    "775": {
+    "782": {
       "op": "replace2 52",
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
+        "is_on_time#0",
         "loan#0"
-      ]
-    },
-    "777": {
-      "op": "bury 1",
-      "defined_out": [
-        "loan#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "779": {
-      "op": "b make_payment_after_if_else@12"
-    },
-    "782": {
-      "block": "make_payment_else_body@7",
-      "stack_in": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "payment#0"
-      ],
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0"
       ]
     },
     "784": {
-      "op": "intc_0 // 0",
+      "op": "bury 2",
       "defined_out": [
-        "0",
-        "tmp%13#0"
+        "loan#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
         "box_prefixed_key%0#0",
         "loan#0",
-        "tmp%13#0",
-        "0"
+        "is_on_time#0"
       ]
     },
-    "785": {
-      "op": "bytec 8 // \"late_fee_bps\"",
-      "defined_out": [
-        "\"late_fee_bps\"",
-        "0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "0",
-        "\"late_fee_bps\""
-      ]
-    },
-    "787": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "maybe_exists%3#0",
-        "maybe_value%3#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "maybe_value%3#0",
-        "maybe_exists%3#0"
-      ]
-    },
-    "788": {
-      "error": "check GlobalState exists",
-      "op": "assert // check GlobalState exists",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "maybe_value%3#0"
-      ]
+    "786": {
+      "op": "b make_payment_after_if_else@10"
     },
     "789": {
-      "op": "dig 1",
-      "defined_out": [
-        "maybe_value%3#0",
-        "tmp%13#0",
-        "tmp%13#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "maybe_value%3#0",
-        "tmp%13#0 (copy)"
-      ]
-    },
-    "791": {
-      "op": "mulw",
-      "defined_out": [
-        "high#0",
-        "low#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "high#0",
-        "low#0"
-      ]
-    },
-    "792": {
-      "op": "pushint 10000 // 10000",
-      "defined_out": [
-        "10000",
-        "high#0",
-        "low#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "high#0",
-        "low#0",
-        "10000"
-      ]
-    },
-    "795": {
-      "op": "divw",
-      "defined_out": [
-        "late_fee#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%13#0",
-        "late_fee#0"
-      ]
-    },
-    "796": {
-      "op": "+",
-      "defined_out": [
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ]
-    },
-    "797": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "total_payment#0"
-      ]
-    },
-    "798": {
-      "op": "bury 4",
-      "defined_out": [
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ]
-    },
-    "800": {
-      "op": "dig 2",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0"
-      ]
-    },
-    "802": {
-      "op": "pushint 12 // 12",
-      "defined_out": [
-        "12",
-        "box_prefixed_key%0#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "12"
-      ]
-    },
-    "804": {
-      "op": "intc_1 // 8",
-      "defined_out": [
-        "12",
-        "8",
-        "box_prefixed_key%0#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "12",
-        "8"
-      ]
-    },
-    "805": {
-      "op": "box_extract",
-      "defined_out": [
-        "box%box_extract%3#0",
-        "box_prefixed_key%0#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "box%box_extract%3#0"
-      ]
-    },
-    "806": {
-      "op": "btoi",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "total_payment#0",
-        "values%9#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%9#0"
-      ]
-    },
-    "807": {
-      "op": "+",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "tmp%17#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%17#0"
-      ]
-    },
-    "808": {
-      "op": "itob",
-      "defined_out": [
-        "aggregate%val_as_bytes%4#0",
-        "box_prefixed_key%0#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%4#0"
-      ]
-    },
-    "809": {
-      "op": "dig 1",
-      "defined_out": [
-        "aggregate%val_as_bytes%4#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%4#0",
-        "loan#0"
-      ]
-    },
-    "811": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "aggregate%val_as_bytes%4#0"
-      ]
-    },
-    "812": {
-      "op": "replace2 12",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "814": {
-      "op": "dup",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "815": {
-      "op": "pushint 36 // 36",
-      "defined_out": [
-        "36",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "36"
-      ]
-    },
-    "817": {
-      "op": "extract_uint64",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%10#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%10#0"
-      ]
-    },
-    "818": {
-      "op": "intc_2 // 1",
-      "defined_out": [
-        "1",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%10#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%10#0",
-        "1"
-      ]
-    },
-    "819": {
-      "op": "+",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%18#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "tmp%18#0"
-      ]
-    },
-    "820": {
-      "op": "itob",
-      "defined_out": [
-        "aggregate%val_as_bytes%5#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "aggregate%val_as_bytes%5#0"
-      ]
-    },
-    "821": {
-      "op": "replace2 36",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "823": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "824": {
-      "op": "bury 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "826": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "827": {
-      "op": "pushint 36 // 36",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "36"
-      ]
-    },
-    "829": {
-      "op": "extract_uint64",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%11#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%11#0"
-      ]
-    },
-    "830": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%11#0",
-        "loan#0"
-      ]
-    },
-    "831": {
-      "op": "pushint 28 // 28",
-      "defined_out": [
-        "28",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%11#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%11#0",
-        "loan#0",
-        "28"
-      ]
-    },
-    "833": {
-      "op": "extract_uint64",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0",
-        "values%11#0",
-        "values%12#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "values%11#0",
-        "values%12#0"
-      ]
-    },
-    "834": {
-      "op": ">=",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%19#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "tmp%19#0"
-      ]
-    },
-    "835": {
-      "op": "bz make_payment_else_body@10",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "838": {
-      "op": "intc_2 // 1",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "1"
-      ]
-    },
-    "839": {
-      "op": "itob",
-      "defined_out": [
-        "aggregate%val_as_bytes%6#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%6#0"
-      ]
-    },
-    "840": {
-      "op": "dig 1",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "aggregate%val_as_bytes%6#0",
-        "loan#0"
-      ]
-    },
-    "842": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "aggregate%val_as_bytes%6#0"
-      ]
-    },
-    "843": {
-      "op": "replace2 60",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "845": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "846": {
-      "op": "bury 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "848": {
-      "op": "itxn_begin"
-    },
-    "849": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "0"
-      ]
-    },
-    "850": {
-      "op": "bytec_2 // \"lending_pool_app_id\"",
-      "defined_out": [
-        "\"lending_pool_app_id\"",
-        "0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "0",
-        "\"lending_pool_app_id\""
-      ]
-    },
-    "851": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_exists%4#0",
-        "maybe_value%4#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "maybe_exists%4#0"
-      ]
-    },
-    "852": {
-      "error": "check GlobalState exists",
-      "op": "assert // check GlobalState exists",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0"
-      ]
-    },
-    "853": {
-      "op": "dig 4",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "total_payment#0"
-      ]
-    },
-    "855": {
-      "op": "itob",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0"
-      ]
-    },
-    "856": {
-      "op": "dig 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "858": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "loan#0 (copy)",
-        "0"
-      ]
-    },
-    "859": {
-      "op": "extract_uint16",
-      "defined_out": [
-        "aggregate%extract_uint16%4#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%extract_uint16%4#0"
-      ]
-    },
-    "860": {
-      "op": "dig 3",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%extract_uint16%4#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "862": {
-      "op": "pushint 2 // 2",
-      "defined_out": [
-        "2",
-        "aggregate%extract_uint16%4#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%extract_uint16%4#0",
-        "loan#0 (copy)",
-        "2"
-      ]
-    },
-    "864": {
-      "op": "extract_uint16",
-      "defined_out": [
-        "aggregate%extract_uint16%4#0",
-        "aggregate%extract_uint16%5#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%extract_uint16%4#0",
-        "aggregate%extract_uint16%5#0"
-      ]
-    },
-    "865": {
-      "op": "uncover 4",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%extract_uint16%4#0",
-        "aggregate%extract_uint16%5#0",
-        "loan#0"
-      ]
-    },
-    "867": {
-      "op": "cover 2",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "loan#0",
-        "aggregate%extract_uint16%4#0",
-        "aggregate%extract_uint16%5#0"
-      ]
-    },
-    "869": {
-      "op": "substring3",
-      "defined_out": [
-        "aggregate%substring3%2#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "aggregate%substring3%2#0"
-      ]
-    },
-    "870": {
-      "op": "extract 2 0",
-      "defined_out": [
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0",
-        "values%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "values%13#0"
-      ]
-    },
-    "873": {
-      "op": "bytec 9 // method \"repay(asset_transfer,address)\"",
-      "defined_out": [
-        "Method(repay(asset_transfer,address))",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "total_payment#0",
-        "values%13#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "values%13#0",
-        "Method(repay(asset_transfer,address))"
-      ]
-    },
-    "875": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "tmp%20#0",
-        "values%13#0"
-      ]
-    },
-    "877": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "values%13#0",
-        "tmp%20#0"
-      ]
-    },
-    "878": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0",
-        "values%13#0"
-      ]
-    },
-    "880": {
-      "op": "itxn_field ApplicationArgs",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "maybe_value%4#0"
-      ]
-    },
-    "882": {
-      "op": "itxn_field ApplicationID",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "884": {
-      "op": "pushint 6 // 6",
-      "defined_out": [
-        "6",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "total_payment#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "6"
-      ]
-    },
-    "886": {
-      "op": "itxn_field TypeEnum",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "888": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "0"
-      ]
-    },
-    "889": {
-      "op": "itxn_field Fee",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "891": {
-      "op": "itxn_submit"
-    },
-    "892": {
-      "op": "b make_payment_after_if_else@12"
-    },
-    "895": {
-      "block": "make_payment_else_body@10",
-      "stack_in": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ],
-      "op": "dupn 2",
-      "defined_out": [
-        "loan#0",
-        "loan#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)"
-      ]
-    },
-    "897": {
-      "op": "pushint 52 // 52",
-      "defined_out": [
-        "52",
-        "loan#0",
-        "loan#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "loan#0 (copy)",
-        "52"
-      ]
-    },
-    "899": {
-      "op": "extract_uint64",
-      "defined_out": [
-        "loan#0",
-        "values%14#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%14#0"
-      ]
-    },
-    "900": {
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "0",
-        "loan#0",
-        "values%14#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%14#0",
-        "0"
-      ]
-    },
-    "901": {
-      "op": "bytec_3 // \"installment_interval\"",
-      "defined_out": [
-        "\"installment_interval\"",
-        "0",
-        "loan#0",
-        "values%14#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%14#0",
-        "0",
-        "\"installment_interval\""
-      ]
-    },
-    "902": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "loan#0",
-        "maybe_exists%5#0",
-        "maybe_value%5#0",
-        "values%14#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%14#0",
-        "maybe_value%5#0",
-        "maybe_exists%5#0"
-      ]
-    },
-    "903": {
-      "error": "check GlobalState exists",
-      "op": "assert // check GlobalState exists",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "values%14#0",
-        "maybe_value%5#0"
-      ]
-    },
-    "904": {
-      "op": "+",
-      "defined_out": [
-        "loan#0",
-        "tmp%21#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "tmp%21#0"
-      ]
-    },
-    "905": {
-      "op": "itob",
-      "defined_out": [
-        "aggregate%val_as_bytes%7#0",
-        "loan#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0",
-        "aggregate%val_as_bytes%7#0"
-      ]
-    },
-    "906": {
-      "op": "replace2 52",
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0",
-        "loan#0"
-      ]
-    },
-    "908": {
-      "op": "bury 1",
-      "defined_out": [
-        "loan#0"
-      ],
-      "stack_out": [
-        "tmp%6#0",
-        "total_payment#0",
-        "box_prefixed_key%0#0",
-        "loan#0"
-      ]
-    },
-    "910": {
-      "op": "b make_payment_after_if_else@12"
-    },
-    "913": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.dispute_loan[routing]",
       "params": {},
       "block": "dispute_loan",
@@ -6897,7 +5596,7 @@
         "tmp%0#0"
       ]
     },
-    "916": {
+    "792": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -6908,7 +5607,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "917": {
+    "793": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -6919,8 +5618,8 @@
         "len%0#0"
       ]
     },
-    "918": {
-      "op": "intc_1 // 8",
+    "794": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -6932,7 +5631,7 @@
         "8"
       ]
     },
-    "919": {
+    "795": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -6943,14 +5642,14 @@
         "eq%0#0"
       ]
     },
-    "920": {
+    "796": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "921": {
+    "797": {
       "op": "btoi",
       "defined_out": [
         "loan_id#0"
@@ -6959,7 +5658,7 @@
         "loan_id#0"
       ]
     },
-    "922": {
+    "798": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0"
@@ -6968,7 +5667,7 @@
         "encoded_value%0#0"
       ]
     },
-    "923": {
+    "799": {
       "op": "bytec_0 // \"l\"",
       "defined_out": [
         "\"l\"",
@@ -6979,14 +5678,14 @@
         "\"l\""
       ]
     },
-    "924": {
+    "800": {
       "op": "swap",
       "stack_out": [
         "\"l\"",
         "encoded_value%0#0"
       ]
     },
-    "925": {
+    "801": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -6995,7 +5694,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "926": {
+    "802": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7006,7 +5705,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "927": {
+    "803": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%1#0",
@@ -7019,7 +5718,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "928": {
+    "804": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
@@ -7027,7 +5726,7 @@
         "loan#0"
       ]
     },
-    "929": {
+    "805": {
       "op": "dig 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7035,7 +5734,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "931": {
+    "807": {
       "op": "intc_3 // 60",
       "defined_out": [
         "60",
@@ -7050,8 +5749,8 @@
         "60"
       ]
     },
-    "932": {
-      "op": "intc_1 // 8",
+    "808": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "loan#0",
@@ -7060,7 +5759,7 @@
         "8"
       ]
     },
-    "933": {
+    "809": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%0#0",
@@ -7073,7 +5772,7 @@
         "box%box_extract%0#0"
       ]
     },
-    "934": {
+    "810": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7086,7 +5785,7 @@
         "values%0#0"
       ]
     },
-    "935": {
+    "811": {
       "op": "!",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7099,7 +5798,7 @@
         "tmp%0#1"
       ]
     },
-    "936": {
+    "812": {
       "error": "Loan not active",
       "op": "assert // Loan not active",
       "stack_out": [
@@ -7107,7 +5806,7 @@
         "loan#0"
       ]
     },
-    "937": {
+    "813": {
       "op": "txn Sender",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7120,7 +5819,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "939": {
+    "815": {
       "op": "dig 1",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7135,8 +5834,8 @@
         "loan#0 (copy)"
       ]
     },
-    "941": {
-      "op": "intc_0 // 0",
+    "817": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "box_prefixed_key%0#0",
@@ -7152,7 +5851,7 @@
         "0"
       ]
     },
-    "942": {
+    "818": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -7167,7 +5866,7 @@
         "aggregate%extract_uint16%0#0"
       ]
     },
-    "943": {
+    "819": {
       "op": "dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7177,7 +5876,7 @@
         "loan#0 (copy)"
       ]
     },
-    "945": {
+    "821": {
       "op": "pushint 2 // 2",
       "defined_out": [
         "2",
@@ -7196,7 +5895,7 @@
         "2"
       ]
     },
-    "947": {
+    "823": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -7213,7 +5912,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "948": {
+    "824": {
       "op": "uncover 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7223,7 +5922,7 @@
         "loan#0"
       ]
     },
-    "950": {
+    "826": {
       "op": "cover 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7233,7 +5932,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "952": {
+    "828": {
       "op": "substring3",
       "defined_out": [
         "aggregate%substring3%0#0",
@@ -7246,7 +5945,7 @@
         "aggregate%substring3%0#0"
       ]
     },
-    "953": {
+    "829": {
       "op": "extract 2 0",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7259,7 +5958,7 @@
         "values%1#0"
       ]
     },
-    "956": {
+    "832": {
       "op": "==",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7270,14 +5969,14 @@
         "tmp%1#1"
       ]
     },
-    "957": {
+    "833": {
       "error": "Only borrower can dispute",
       "op": "assert // Only borrower can dispute",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "958": {
+    "834": {
       "op": "pushint 3 // 3",
       "defined_out": [
         "3",
@@ -7288,7 +5987,7 @@
         "3"
       ]
     },
-    "960": {
+    "836": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0",
@@ -7299,10 +5998,10 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "961": {
+    "837": {
       "op": "intc_3 // 60"
     },
-    "962": {
+    "838": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7310,11 +6009,11 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "963": {
+    "839": {
       "op": "box_replace",
       "stack_out": []
     },
-    "964": {
+    "840": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -7323,11 +6022,11 @@
         "1"
       ]
     },
-    "965": {
+    "841": {
       "op": "return",
       "stack_out": []
     },
-    "966": {
+    "842": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.liquidate_loan[routing]",
       "params": {},
       "block": "liquidate_loan",
@@ -7340,7 +6039,7 @@
         "tmp%0#0"
       ]
     },
-    "969": {
+    "845": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -7351,7 +6050,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "970": {
+    "846": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -7362,8 +6061,8 @@
         "len%0#0"
       ]
     },
-    "971": {
-      "op": "intc_1 // 8",
+    "847": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -7375,7 +6074,7 @@
         "8"
       ]
     },
-    "972": {
+    "848": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -7386,14 +6085,14 @@
         "eq%0#0"
       ]
     },
-    "973": {
+    "849": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "974": {
+    "850": {
       "op": "btoi",
       "defined_out": [
         "loan_id#0"
@@ -7402,7 +6101,7 @@
         "loan_id#0"
       ]
     },
-    "975": {
+    "851": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0"
@@ -7411,7 +6110,7 @@
         "encoded_value%0#0"
       ]
     },
-    "976": {
+    "852": {
       "op": "bytec_0 // \"l\"",
       "defined_out": [
         "\"l\"",
@@ -7422,14 +6121,14 @@
         "\"l\""
       ]
     },
-    "977": {
+    "853": {
       "op": "swap",
       "stack_out": [
         "\"l\"",
         "encoded_value%0#0"
       ]
     },
-    "978": {
+    "854": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -7438,7 +6137,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "979": {
+    "855": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7449,7 +6148,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "980": {
+    "856": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%1#0",
@@ -7462,7 +6161,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "981": {
+    "857": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
@@ -7470,7 +6169,7 @@
         "loan#0"
       ]
     },
-    "982": {
+    "858": {
       "op": "dig 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7478,7 +6177,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "984": {
+    "860": {
       "op": "intc_3 // 60",
       "defined_out": [
         "60",
@@ -7493,8 +6192,8 @@
         "60"
       ]
     },
-    "985": {
-      "op": "intc_1 // 8",
+    "861": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "loan#0",
@@ -7503,7 +6202,7 @@
         "8"
       ]
     },
-    "986": {
+    "862": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%0#0",
@@ -7516,7 +6215,7 @@
         "box%box_extract%0#0"
       ]
     },
-    "987": {
+    "863": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7529,7 +6228,7 @@
         "values%0#0"
       ]
     },
-    "988": {
+    "864": {
       "op": "!",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7542,7 +6241,7 @@
         "tmp%0#1"
       ]
     },
-    "989": {
+    "865": {
       "error": "Loan not active",
       "op": "assert // Loan not active",
       "stack_out": [
@@ -7550,7 +6249,7 @@
         "loan#0"
       ]
     },
-    "990": {
+    "866": {
       "op": "global Round",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7563,7 +6262,7 @@
         "tmp%1#1"
       ]
     },
-    "992": {
+    "868": {
       "op": "dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7572,7 +6271,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "994": {
+    "870": {
       "op": "pushint 52 // 52",
       "defined_out": [
         "52",
@@ -7589,8 +6288,8 @@
         "52"
       ]
     },
-    "996": {
-      "op": "intc_1 // 8",
+    "872": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "loan#0",
@@ -7600,7 +6299,7 @@
         "8"
       ]
     },
-    "997": {
+    "873": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%1#0",
@@ -7615,7 +6314,7 @@
         "box%box_extract%1#0"
       ]
     },
-    "998": {
+    "874": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7630,7 +6329,7 @@
         "values%1#0"
       ]
     },
-    "999": {
+    "875": {
       "op": ">=",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -7643,7 +6342,7 @@
         "tmp%2#0"
       ]
     },
-    "1000": {
+    "876": {
       "error": "Loan not overdue",
       "op": "assert // Loan not overdue",
       "stack_out": [
@@ -7651,7 +6350,7 @@
         "loan#0"
       ]
     },
-    "1001": {
+    "877": {
       "op": "pushint 2 // 2",
       "defined_out": [
         "2",
@@ -7664,7 +6363,7 @@
         "2"
       ]
     },
-    "1003": {
+    "879": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0",
@@ -7677,7 +6376,7 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "1004": {
+    "880": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7685,7 +6384,7 @@
         "loan#0"
       ]
     },
-    "1005": {
+    "881": {
       "op": "dig 1",
       "defined_out": [
         "aggregate%val_as_bytes%0#0",
@@ -7700,7 +6399,7 @@
         "aggregate%val_as_bytes%0#0 (copy)"
       ]
     },
-    "1007": {
+    "883": {
       "op": "replace2 60",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -7708,7 +6407,7 @@
         "loan#0"
       ]
     },
-    "1009": {
+    "885": {
       "op": "uncover 2",
       "stack_out": [
         "aggregate%val_as_bytes%0#0",
@@ -7716,7 +6415,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1011": {
+    "887": {
       "op": "intc_3 // 60",
       "stack_out": [
         "aggregate%val_as_bytes%0#0",
@@ -7725,7 +6424,7 @@
         "60"
       ]
     },
-    "1012": {
+    "888": {
       "op": "uncover 3",
       "stack_out": [
         "loan#0",
@@ -7734,17 +6433,17 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "1014": {
+    "890": {
       "op": "box_replace",
       "stack_out": [
         "loan#0"
       ]
     },
-    "1015": {
+    "891": {
       "op": "itxn_begin"
     },
-    "1016": {
-      "op": "intc_0 // 0",
+    "892": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "loan#0"
@@ -7754,8 +6453,8 @@
         "0"
       ]
     },
-    "1017": {
-      "op": "bytec 6 // \"credit_score_app_id\"",
+    "893": {
+      "op": "bytec 5 // \"credit_score_app_id\"",
       "defined_out": [
         "\"credit_score_app_id\"",
         "0",
@@ -7767,7 +6466,7 @@
         "\"credit_score_app_id\""
       ]
     },
-    "1019": {
+    "895": {
       "op": "app_global_get_ex",
       "defined_out": [
         "loan#0",
@@ -7780,7 +6479,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "1020": {
+    "896": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -7788,7 +6487,7 @@
         "maybe_value%0#0"
       ]
     },
-    "1021": {
+    "897": {
       "op": "dig 1",
       "defined_out": [
         "loan#0",
@@ -7801,8 +6500,8 @@
         "loan#0 (copy)"
       ]
     },
-    "1023": {
-      "op": "intc_0 // 0",
+    "899": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "loan#0",
         "maybe_value%0#0",
@@ -7810,7 +6509,7 @@
         "0"
       ]
     },
-    "1024": {
+    "900": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -7823,7 +6522,7 @@
         "aggregate%extract_uint16%0#0"
       ]
     },
-    "1025": {
+    "901": {
       "op": "dig 2",
       "stack_out": [
         "loan#0",
@@ -7832,7 +6531,7 @@
         "loan#0 (copy)"
       ]
     },
-    "1027": {
+    "903": {
       "op": "pushint 2 // 2",
       "stack_out": [
         "loan#0",
@@ -7842,7 +6541,7 @@
         "2"
       ]
     },
-    "1029": {
+    "905": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -7857,7 +6556,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "1030": {
+    "906": {
       "op": "uncover 3",
       "stack_out": [
         "maybe_value%0#0",
@@ -7866,7 +6565,7 @@
         "loan#0"
       ]
     },
-    "1032": {
+    "908": {
       "op": "cover 2",
       "stack_out": [
         "maybe_value%0#0",
@@ -7875,7 +6574,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "1034": {
+    "910": {
       "op": "substring3",
       "defined_out": [
         "aggregate%substring3%0#0",
@@ -7886,7 +6585,7 @@
         "aggregate%substring3%0#0"
       ]
     },
-    "1035": {
+    "911": {
       "op": "extract 2 0",
       "defined_out": [
         "maybe_value%0#0",
@@ -7897,7 +6596,7 @@
         "values%2#0"
       ]
     },
-    "1038": {
+    "914": {
       "op": "pushbytes 0xd8f5d030 // method \"update_score_on_default(address)\"",
       "defined_out": [
         "Method(update_score_on_default(address))",
@@ -7910,24 +6609,24 @@
         "Method(update_score_on_default(address))"
       ]
     },
-    "1044": {
+    "920": {
       "op": "itxn_field ApplicationArgs",
       "stack_out": [
         "maybe_value%0#0",
         "values%2#0"
       ]
     },
-    "1046": {
+    "922": {
       "op": "itxn_field ApplicationArgs",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "1048": {
+    "924": {
       "op": "itxn_field ApplicationID",
       "stack_out": []
     },
-    "1050": {
+    "926": {
       "op": "pushint 6 // 6",
       "defined_out": [
         "6"
@@ -7936,24 +6635,24 @@
         "6"
       ]
     },
-    "1052": {
+    "928": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "1054": {
-      "op": "intc_0 // 0",
+    "930": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "1055": {
+    "931": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "1057": {
+    "933": {
       "op": "itxn_submit"
     },
-    "1058": {
+    "934": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -7962,11 +6661,11 @@
         "1"
       ]
     },
-    "1059": {
+    "935": {
       "op": "return",
       "stack_out": []
     },
-    "1060": {
+    "936": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_loan[routing]",
       "params": {},
       "block": "get_loan",
@@ -7979,7 +6678,7 @@
         "tmp%0#0"
       ]
     },
-    "1063": {
+    "939": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -7990,7 +6689,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "1064": {
+    "940": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -8001,8 +6700,8 @@
         "len%0#0"
       ]
     },
-    "1065": {
-      "op": "intc_1 // 8",
+    "941": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "8",
         "len%0#0",
@@ -8014,7 +6713,7 @@
         "8"
       ]
     },
-    "1066": {
+    "942": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -8025,14 +6724,14 @@
         "eq%0#0"
       ]
     },
-    "1067": {
+    "943": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "1068": {
+    "944": {
       "op": "btoi",
       "defined_out": [
         "loan_id#0"
@@ -8041,7 +6740,7 @@
         "loan_id#0"
       ]
     },
-    "1069": {
+    "945": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0"
@@ -8050,7 +6749,7 @@
         "encoded_value%0#0"
       ]
     },
-    "1070": {
+    "946": {
       "op": "bytec_0 // \"l\"",
       "defined_out": [
         "\"l\"",
@@ -8061,14 +6760,14 @@
         "\"l\""
       ]
     },
-    "1071": {
+    "947": {
       "op": "swap",
       "stack_out": [
         "\"l\"",
         "encoded_value%0#0"
       ]
     },
-    "1072": {
+    "948": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -8077,7 +6776,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1073": {
+    "949": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -8087,7 +6786,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1074": {
+    "950": {
       "op": "box_len",
       "defined_out": [
         "_%0#0",
@@ -8100,20 +6799,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "1075": {
+    "951": {
       "op": "bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
         "maybe_exists%0#0"
       ]
     },
-    "1077": {
+    "953": {
       "op": "bnz get_loan_after_if_else@3",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1080": {
+    "956": {
       "op": "pushbytes 0x003c003e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8124,13 +6823,13 @@
         "tmp%2#0"
       ]
     },
-    "1146": {
+    "1022": {
       "block": "get_loan_after_inlined_smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_loan@4",
       "stack_in": [
         "box_prefixed_key%0#0",
         "tmp%2#0"
       ],
-      "op": "bytec 5 // 0x151f7c75",
+      "op": "bytec 4 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75"
       ],
@@ -8140,7 +6839,7 @@
         "0x151f7c75"
       ]
     },
-    "1148": {
+    "1024": {
       "op": "swap",
       "defined_out": [
         "0x151f7c75",
@@ -8152,7 +6851,7 @@
         "tmp%2#0"
       ]
     },
-    "1149": {
+    "1025": {
       "op": "concat",
       "defined_out": [
         "tmp%3#0"
@@ -8162,13 +6861,13 @@
         "tmp%3#0"
       ]
     },
-    "1150": {
+    "1026": {
       "op": "log",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1151": {
+    "1027": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -8178,13 +6877,13 @@
         "1"
       ]
     },
-    "1152": {
+    "1028": {
       "op": "return",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1153": {
+    "1029": {
       "block": "get_loan_after_if_else@3",
       "stack_in": [
         "box_prefixed_key%0#0"
@@ -8200,7 +6899,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1155": {
+    "1031": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%1#0",
@@ -8214,7 +6913,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "1156": {
+    "1032": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
@@ -8223,7 +6922,7 @@
         "loan#0"
       ]
     },
-    "1157": {
+    "1033": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8237,8 +6936,8 @@
         "loan#0 (copy)"
       ]
     },
-    "1158": {
-      "op": "intc_0 // 0",
+    "1034": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0",
         "box_prefixed_key%0#0",
@@ -8253,7 +6952,7 @@
         "0"
       ]
     },
-    "1159": {
+    "1035": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -8267,7 +6966,7 @@
         "aggregate%extract_uint16%0#0"
       ]
     },
-    "1160": {
+    "1036": {
       "op": "dig 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8277,7 +6976,7 @@
         "loan#0 (copy)"
       ]
     },
-    "1162": {
+    "1038": {
       "op": "pushint 2 // 2",
       "defined_out": [
         "2",
@@ -8295,7 +6994,7 @@
         "2"
       ]
     },
-    "1164": {
+    "1040": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -8311,7 +7010,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "1165": {
+    "1041": {
       "op": "dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8322,7 +7021,7 @@
         "loan#0 (copy)"
       ]
     },
-    "1167": {
+    "1043": {
       "op": "uncover 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8333,7 +7032,7 @@
         "aggregate%extract_uint16%0#0"
       ]
     },
-    "1169": {
+    "1045": {
       "op": "dig 2",
       "defined_out": [
         "aggregate%extract_uint16%0#0",
@@ -8353,7 +7052,7 @@
         "aggregate%extract_uint16%1#0 (copy)"
       ]
     },
-    "1171": {
+    "1047": {
       "op": "substring3",
       "defined_out": [
         "aggregate%extract_uint16%1#0",
@@ -8369,7 +7068,7 @@
         "aggregate%substring3%0#0"
       ]
     },
-    "1172": {
+    "1048": {
       "op": "extract 2 0",
       "defined_out": [
         "aggregate%extract_uint16%1#0",
@@ -8385,7 +7084,7 @@
         "values%0#0"
       ]
     },
-    "1175": {
+    "1051": {
       "op": "dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8396,7 +7095,7 @@
         "loan#0 (copy)"
       ]
     },
-    "1177": {
+    "1053": {
       "op": "len",
       "defined_out": [
         "aggregate%extract_uint16%1#0",
@@ -8414,7 +7113,7 @@
         "aggregate%len%0#0"
       ]
     },
-    "1178": {
+    "1054": {
       "op": "uncover 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8425,7 +7124,7 @@
         "loan#0"
       ]
     },
-    "1180": {
+    "1056": {
       "op": "uncover 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8436,7 +7135,7 @@
         "aggregate%extract_uint16%1#0"
       ]
     },
-    "1182": {
+    "1058": {
       "op": "uncover 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8447,7 +7146,7 @@
         "aggregate%len%0#0"
       ]
     },
-    "1184": {
+    "1060": {
       "op": "substring3",
       "defined_out": [
         "aggregate%substring3%1#0",
@@ -8461,7 +7160,7 @@
         "aggregate%substring3%1#0"
       ]
     },
-    "1185": {
+    "1061": {
       "op": "extract 2 0",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8475,7 +7174,7 @@
         "values%1#0"
       ]
     },
-    "1188": {
+    "1064": {
       "op": "dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8485,7 +7184,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1190": {
+    "1066": {
       "op": "pushint 4 // 4",
       "defined_out": [
         "4",
@@ -8503,8 +7202,8 @@
         "4"
       ]
     },
-    "1192": {
-      "op": "intc_1 // 8",
+    "1068": {
+      "op": "intc_0 // 8",
       "defined_out": [
         "4",
         "8",
@@ -8523,7 +7222,7 @@
         "8"
       ]
     },
-    "1193": {
+    "1069": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%0#0",
@@ -8539,7 +7238,7 @@
         "box%box_extract%0#0"
       ]
     },
-    "1194": {
+    "1070": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8555,7 +7254,7 @@
         "values%2#0"
       ]
     },
-    "1195": {
+    "1071": {
       "op": "dig 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8566,7 +7265,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1197": {
+    "1073": {
       "op": "pushint 12 // 12",
       "defined_out": [
         "12",
@@ -8586,8 +7285,8 @@
         "12"
       ]
     },
-    "1199": {
-      "op": "intc_1 // 8",
+    "1075": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0",
@@ -8599,7 +7298,7 @@
         "8"
       ]
     },
-    "1200": {
+    "1076": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%1#0",
@@ -8617,7 +7316,7 @@
         "box%box_extract%1#0"
       ]
     },
-    "1201": {
+    "1077": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8635,7 +7334,7 @@
         "values%3#0"
       ]
     },
-    "1202": {
+    "1078": {
       "op": "dig 4",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8647,7 +7346,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1204": {
+    "1080": {
       "op": "pushint 20 // 20",
       "defined_out": [
         "20",
@@ -8669,8 +7368,8 @@
         "20"
       ]
     },
-    "1206": {
-      "op": "intc_1 // 8",
+    "1082": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0",
@@ -8683,7 +7382,7 @@
         "8"
       ]
     },
-    "1207": {
+    "1083": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%2#0",
@@ -8703,7 +7402,7 @@
         "box%box_extract%2#0"
       ]
     },
-    "1208": {
+    "1084": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8723,7 +7422,7 @@
         "values%4#0"
       ]
     },
-    "1209": {
+    "1085": {
       "op": "dig 5",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8736,7 +7435,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1211": {
+    "1087": {
       "op": "pushint 28 // 28",
       "defined_out": [
         "28",
@@ -8760,8 +7459,8 @@
         "28"
       ]
     },
-    "1213": {
-      "op": "intc_1 // 8",
+    "1089": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0",
@@ -8775,7 +7474,7 @@
         "8"
       ]
     },
-    "1214": {
+    "1090": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%3#0",
@@ -8797,7 +7496,7 @@
         "box%box_extract%3#0"
       ]
     },
-    "1215": {
+    "1091": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8819,7 +7518,7 @@
         "values%5#0"
       ]
     },
-    "1216": {
+    "1092": {
       "op": "dig 6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8833,7 +7532,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1218": {
+    "1094": {
       "op": "pushint 36 // 36",
       "defined_out": [
         "36",
@@ -8859,8 +7558,8 @@
         "36"
       ]
     },
-    "1220": {
-      "op": "intc_1 // 8",
+    "1096": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0",
@@ -8875,7 +7574,7 @@
         "8"
       ]
     },
-    "1221": {
+    "1097": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%4#0",
@@ -8899,7 +7598,7 @@
         "box%box_extract%4#0"
       ]
     },
-    "1222": {
+    "1098": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -8923,7 +7622,7 @@
         "values%6#0"
       ]
     },
-    "1223": {
+    "1099": {
       "op": "dig 7",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -8938,7 +7637,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "1225": {
+    "1101": {
       "op": "pushint 52 // 52",
       "defined_out": [
         "52",
@@ -8966,8 +7665,8 @@
         "52"
       ]
     },
-    "1227": {
-      "op": "intc_1 // 8",
+    "1103": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "box_prefixed_key%0#0",
@@ -8983,7 +7682,7 @@
         "8"
       ]
     },
-    "1228": {
+    "1104": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%5#0",
@@ -9009,7 +7708,7 @@
         "box%box_extract%5#0"
       ]
     },
-    "1229": {
+    "1105": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -9035,7 +7734,7 @@
         "values%7#0"
       ]
     },
-    "1230": {
+    "1106": {
       "op": "uncover 8",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9050,7 +7749,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1232": {
+    "1108": {
       "op": "intc_3 // 60",
       "defined_out": [
         "60",
@@ -9078,8 +7777,8 @@
         "60"
       ]
     },
-    "1233": {
-      "op": "intc_1 // 8",
+    "1109": {
+      "op": "intc_0 // 8",
       "stack_out": [
         "box_prefixed_key%0#0",
         "values%0#0",
@@ -9095,7 +7794,7 @@
         "8"
       ]
     },
-    "1234": {
+    "1110": {
       "op": "box_extract",
       "defined_out": [
         "box%box_extract%6#0",
@@ -9122,7 +7821,7 @@
         "box%box_extract%6#0"
       ]
     },
-    "1235": {
+    "1111": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -9149,7 +7848,7 @@
         "values%8#0"
       ]
     },
-    "1236": {
+    "1112": {
       "op": "dig 8",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -9178,7 +7877,7 @@
         "values%0#0 (copy)"
       ]
     },
-    "1238": {
+    "1114": {
       "op": "len",
       "defined_out": [
         "aggregate%length%2#0",
@@ -9207,7 +7906,7 @@
         "aggregate%length%2#0"
       ]
     },
-    "1239": {
+    "1115": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%4#0",
@@ -9236,7 +7935,7 @@
         "aggregate%as_bytes%4#0"
       ]
     },
-    "1240": {
+    "1116": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%length_uint16%2#0",
@@ -9265,7 +7964,7 @@
         "aggregate%length_uint16%2#0"
       ]
     },
-    "1243": {
+    "1119": {
       "op": "uncover 9",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9281,7 +7980,7 @@
         "values%0#0"
       ]
     },
-    "1245": {
+    "1121": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9308,7 +8007,7 @@
         "aggregate%encoded_value%2#0"
       ]
     },
-    "1246": {
+    "1122": {
       "op": "dup",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9337,7 +8036,7 @@
         "aggregate%encoded_value%2#0 (copy)"
       ]
     },
-    "1247": {
+    "1123": {
       "op": "len",
       "defined_out": [
         "aggregate%data_length%2#0",
@@ -9366,7 +8065,7 @@
         "aggregate%data_length%2#0"
       ]
     },
-    "1248": {
+    "1124": {
       "op": "intc_3 // 60",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9383,7 +8082,7 @@
         "60"
       ]
     },
-    "1249": {
+    "1125": {
       "op": "+",
       "defined_out": [
         "aggregate%current_tail_offset%2#0",
@@ -9412,7 +8111,7 @@
         "aggregate%current_tail_offset%2#0"
       ]
     },
-    "1250": {
+    "1126": {
       "op": "dig 9",
       "defined_out": [
         "aggregate%current_tail_offset%2#0",
@@ -9443,7 +8142,7 @@
         "values%1#0 (copy)"
       ]
     },
-    "1252": {
+    "1128": {
       "op": "len",
       "defined_out": [
         "aggregate%current_tail_offset%2#0",
@@ -9474,7 +8173,7 @@
         "aggregate%length%3#0"
       ]
     },
-    "1253": {
+    "1129": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%6#0",
@@ -9505,7 +8204,7 @@
         "aggregate%as_bytes%6#0"
       ]
     },
-    "1254": {
+    "1130": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%current_tail_offset%2#0",
@@ -9536,7 +8235,7 @@
         "aggregate%length_uint16%3#0"
       ]
     },
-    "1257": {
+    "1133": {
       "op": "uncover 10",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9553,7 +8252,7 @@
         "values%1#0"
       ]
     },
-    "1259": {
+    "1135": {
       "op": "concat",
       "defined_out": [
         "aggregate%current_tail_offset%2#0",
@@ -9582,7 +8281,7 @@
         "aggregate%encoded_value%3#0"
       ]
     },
-    "1260": {
+    "1136": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9598,7 +8297,7 @@
         "aggregate%current_tail_offset%2#0"
       ]
     },
-    "1261": {
+    "1137": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%7#0",
@@ -9627,7 +8326,7 @@
         "aggregate%as_bytes%7#0"
       ]
     },
-    "1262": {
+    "1138": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9656,7 +8355,7 @@
         "aggregate%offset_as_uint16%3#0"
       ]
     },
-    "1265": {
+    "1141": {
       "op": "pushbytes 0x003c",
       "defined_out": [
         "0x003c",
@@ -9687,7 +8386,7 @@
         "0x003c"
       ]
     },
-    "1269": {
+    "1145": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9704,7 +8403,7 @@
         "aggregate%offset_as_uint16%3#0"
       ]
     },
-    "1270": {
+    "1146": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9733,7 +8432,7 @@
         "aggregate%head%10#0"
       ]
     },
-    "1271": {
+    "1147": {
       "op": "uncover 9",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9749,7 +8448,7 @@
         "values%2#0"
       ]
     },
-    "1273": {
+    "1149": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9778,7 +8477,7 @@
         "aggregate%val_as_bytes%7#0"
       ]
     },
-    "1274": {
+    "1150": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9805,7 +8504,7 @@
         "aggregate%head%11#0"
       ]
     },
-    "1275": {
+    "1151": {
       "op": "uncover 8",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9820,7 +8519,7 @@
         "values%3#0"
       ]
     },
-    "1277": {
+    "1153": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9847,7 +8546,7 @@
         "aggregate%val_as_bytes%8#0"
       ]
     },
-    "1278": {
+    "1154": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9872,7 +8571,7 @@
         "aggregate%head%12#0"
       ]
     },
-    "1279": {
+    "1155": {
       "op": "uncover 7",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9886,7 +8585,7 @@
         "values%4#0"
       ]
     },
-    "1281": {
+    "1157": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9911,7 +8610,7 @@
         "aggregate%val_as_bytes%9#0"
       ]
     },
-    "1282": {
+    "1158": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9934,7 +8633,7 @@
         "aggregate%head%13#0"
       ]
     },
-    "1283": {
+    "1159": {
       "op": "uncover 6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -9947,7 +8646,7 @@
         "values%5#0"
       ]
     },
-    "1285": {
+    "1161": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9970,7 +8669,7 @@
         "aggregate%val_as_bytes%10#0"
       ]
     },
-    "1286": {
+    "1162": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -9991,7 +8690,7 @@
         "aggregate%head%14#0"
       ]
     },
-    "1287": {
+    "1163": {
       "op": "uncover 5",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -10003,7 +8702,7 @@
         "values%6#0"
       ]
     },
-    "1289": {
+    "1165": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10024,7 +8723,7 @@
         "aggregate%val_as_bytes%11#0"
       ]
     },
-    "1290": {
+    "1166": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10043,7 +8742,7 @@
         "aggregate%head%15#0"
       ]
     },
-    "1291": {
+    "1167": {
       "op": "uncover 4",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -10054,7 +8753,7 @@
         "values%7#0"
       ]
     },
-    "1293": {
+    "1169": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10073,7 +8772,7 @@
         "aggregate%val_as_bytes%12#0"
       ]
     },
-    "1294": {
+    "1170": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10090,7 +8789,7 @@
         "aggregate%head%16#0"
       ]
     },
-    "1295": {
+    "1171": {
       "op": "uncover 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -10100,7 +8799,7 @@
         "values%8#0"
       ]
     },
-    "1297": {
+    "1173": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10117,7 +8816,7 @@
         "aggregate%val_as_bytes%13#0"
       ]
     },
-    "1298": {
+    "1174": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%2#0",
@@ -10132,7 +8831,7 @@
         "aggregate%head%17#0"
       ]
     },
-    "1299": {
+    "1175": {
       "op": "uncover 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -10141,7 +8840,7 @@
         "aggregate%encoded_value%2#0"
       ]
     },
-    "1301": {
+    "1177": {
       "op": "concat",
       "defined_out": [
         "aggregate%concat%2#0",
@@ -10154,7 +8853,7 @@
         "aggregate%concat%2#0"
       ]
     },
-    "1302": {
+    "1178": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -10162,7 +8861,7 @@
         "aggregate%encoded_value%3#0"
       ]
     },
-    "1303": {
+    "1179": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -10173,10 +8872,10 @@
         "tmp%2#0"
       ]
     },
-    "1304": {
+    "1180": {
       "op": "b get_loan_after_inlined_smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_loan@4"
     },
-    "1307": {
+    "1183": {
       "subroutine": "smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_user_loans[routing]",
       "params": {},
       "block": "get_user_loans",
@@ -10189,7 +8888,7 @@
         "user#0"
       ]
     },
-    "1310": {
+    "1186": {
       "op": "dup",
       "defined_out": [
         "user#0",
@@ -10200,7 +8899,7 @@
         "user#0 (copy)"
       ]
     },
-    "1311": {
+    "1187": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -10211,7 +8910,7 @@
         "len%0#0"
       ]
     },
-    "1312": {
+    "1188": {
       "op": "pushint 32 // 32",
       "defined_out": [
         "32",
@@ -10224,7 +8923,7 @@
         "32"
       ]
     },
-    "1314": {
+    "1190": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -10235,14 +8934,14 @@
         "eq%0#0"
       ]
     },
-    "1315": {
+    "1191": {
       "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "stack_out": [
         "user#0"
       ]
     },
-    "1316": {
+    "1192": {
       "op": "bytec_1 // \"u\"",
       "defined_out": [
         "\"u\"",
@@ -10253,14 +8952,14 @@
         "\"u\""
       ]
     },
-    "1317": {
+    "1193": {
       "op": "swap",
       "stack_out": [
         "\"u\"",
         "user#0"
       ]
     },
-    "1318": {
+    "1194": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -10269,7 +8968,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1319": {
+    "1195": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -10279,7 +8978,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1320": {
+    "1196": {
       "op": "box_len",
       "defined_out": [
         "_%0#0",
@@ -10292,20 +8991,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "1321": {
+    "1197": {
       "op": "bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
         "maybe_exists%0#0"
       ]
     },
-    "1323": {
+    "1199": {
       "op": "bnz get_user_loans_after_if_else@3",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1326": {
+    "1202": {
       "op": "pushbytes 0x0000",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -10316,13 +9015,13 @@
         "tmp%2#0"
       ]
     },
-    "1330": {
+    "1206": {
       "block": "get_user_loans_after_inlined_smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_user_loans@4",
       "stack_in": [
         "box_prefixed_key%0#0",
         "tmp%2#0"
       ],
-      "op": "bytec 5 // 0x151f7c75",
+      "op": "bytec 4 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75"
       ],
@@ -10332,7 +9031,7 @@
         "0x151f7c75"
       ]
     },
-    "1332": {
+    "1208": {
       "op": "swap",
       "defined_out": [
         "0x151f7c75",
@@ -10344,7 +9043,7 @@
         "tmp%2#0"
       ]
     },
-    "1333": {
+    "1209": {
       "op": "concat",
       "defined_out": [
         "tmp%3#0"
@@ -10354,13 +9053,13 @@
         "tmp%3#0"
       ]
     },
-    "1334": {
+    "1210": {
       "op": "log",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1335": {
+    "1211": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -10370,13 +9069,13 @@
         "1"
       ]
     },
-    "1336": {
+    "1212": {
       "op": "return",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "1337": {
+    "1213": {
       "block": "get_user_loans_after_if_else@3",
       "stack_in": [
         "box_prefixed_key%0#0"
@@ -10390,7 +9089,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "1338": {
+    "1214": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%0#0",
@@ -10403,7 +9102,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "1339": {
+    "1215": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "defined_out": [
@@ -10415,7 +9114,7 @@
         "tmp%2#0"
       ]
     },
-    "1340": {
+    "1216": {
       "op": "b get_user_loans_after_inlined_smart_contracts/bnpl_credit/contract.algo.ts::BNPLCredit.get_user_loans@4"
     }
   }

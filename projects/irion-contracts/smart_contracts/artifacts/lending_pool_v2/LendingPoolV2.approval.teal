@@ -1,0 +1,2652 @@
+#pragma version 11
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 0 1 8 4 10000 1000000000000000
+    bytecblock "total_senior_deposits" "total_junior_deposits" "total_borrowed" "total_senior_lp_supply" "total_junior_lp_supply" "l" "is_native_algo" "pool_asset_id" "reserve_balance" "last_update_round" "rate_base_bps" "rate_slope1_bps" "senior_lp_token_id" 0x151f7c75 "governance_address" "rate_slope2_bps" "rate_kink_bps" "reserve_factor_bps" "circuit_breaker_active" "junior_lp_token_id" "loan_factory_app_id" "circuit_breaker_bps" "senior_yield_floor_bps" "credit_oracle_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:54
+    // export class LendingPoolV2 extends Contract {
+    pushbytes 0xe6f9ef3f // method "bootstrap(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)void"
+    txna ApplicationArgs 0
+    match main_bootstrap_route@2
+
+main_switch_case_next@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:54
+    // export class LendingPoolV2 extends Contract {
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    bz main_create_NoOp@19
+    pushbytess 0xa6f57e23 0x3e26e453 0x5be5956d 0xe3aeb25c 0x99ecf519 0x44a72580 0x57dc12ba 0x894e72a8 0x122f7aed 0xa216003e 0xd883b8df 0x0b637be0 0x35d60fe1 // method "create_assets(byte[])void", method "deposit(uint64,axfer)void", method "deposit_algo(uint64,pay)void", method "withdraw(uint64,uint64)void", method "borrow(uint64,address)uint64", method "repay(axfer,byte[])void", method "get_pool_stats()(uint64,uint64,uint64,uint64,uint64,uint64)", method "get_lender_position(address)(uint64,uint64,uint64,uint64)", method "get_current_rate()uint64", method "set_authorized_apps(uint64,uint64)void", method "update_rate_params(uint64,uint64,uint64,uint64,uint64)void", method "toggle_circuit_breaker(uint64)void", method "sweep_reserves(address)void"
+    txna ApplicationArgs 0
+    match create_assets deposit deposit_algo withdraw borrow repay get_pool_stats get_lender_position get_current_rate set_authorized_apps update_rate_params toggle_circuit_breaker sweep_reserves
+    err
+
+main_create_NoOp@19:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:54
+    // export class LendingPoolV2 extends Contract {
+    pushbytes 0x4c5c61ba // method "create()void"
+    txna ApplicationArgs 0
+    match main_create_route@20
+    err
+
+main_create_route@20:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:91
+    // @abimethod({ allowActions: ['NoOp'], onCreate: 'require' })
+    intc_1 // 1
+    return
+
+main_bootstrap_route@2:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:97
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_1 // 1
+    txn OnCompletion
+    shl
+    pushint 3 // 3
+    &
+    assert // OnCompletion must be one of NoOp, OptIn
+    b bootstrap
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.bootstrap[routing]() -> void:
+bootstrap:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:97
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 5
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 6
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 7
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 8
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 9
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/lending_pool_v2/contract.algo.ts:56
+    // governance_address = GlobalState<bytes>()
+    bytec 14 // "governance_address"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:109
+    // this.governance_address.value = governance_address
+    uncover 9
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:61
+    // pool_asset_id = GlobalState<uint64>()  // 0 = native ALGO
+    bytec 7 // "pool_asset_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:110
+    // this.pool_asset_id.value = pool_asset_id
+    dig 8
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:111
+    // this.is_native_algo.value = pool_asset_id === Uint64(0) ? Uint64(1) : Uint64(0)
+    uncover 7
+    !
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:111
+    // this.is_native_algo.value = pool_asset_id === Uint64(0) ? Uint64(1) : Uint64(0)
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:79
+    // rate_base_bps = GlobalState<uint64>()      // base APR in BPS
+    bytec 10 // "rate_base_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:113
+    // this.rate_base_bps.value = rate_base_bps
+    uncover 7
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:80
+    // rate_slope1_bps = GlobalState<uint64>()    // additional rate at kink
+    bytec 11 // "rate_slope1_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:114
+    // this.rate_slope1_bps.value = rate_slope1_bps
+    uncover 6
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:81
+    // rate_slope2_bps = GlobalState<uint64>()    // steep slope above kink
+    bytec 15 // "rate_slope2_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:115
+    // this.rate_slope2_bps.value = rate_slope2_bps
+    uncover 5
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:82
+    // rate_kink_bps = GlobalState<uint64>()      // utilization kink (e.g. 8000 = 80%)
+    bytec 16 // "rate_kink_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:116
+    // this.rate_kink_bps.value = rate_kink_bps
+    uncover 4
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:83
+    // reserve_factor_bps = GlobalState<uint64>() // fraction of interest to reserves
+    bytec 17 // "reserve_factor_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:117
+    // this.reserve_factor_bps.value = reserve_factor_bps
+    uncover 3
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:84
+    // circuit_breaker_bps = GlobalState<uint64>()// utilization above which to pause borrows
+    bytec 21 // "circuit_breaker_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:118
+    // this.circuit_breaker_bps.value = circuit_breaker_bps
+    uncover 2
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:85
+    // senior_yield_floor_bps = GlobalState<uint64>() // guaranteed min yield for senior
+    bytec 22 // "senior_yield_floor_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:119
+    // this.senior_yield_floor_bps.value = senior_yield_floor_bps
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:121
+    // this.total_senior_deposits.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:122
+    // this.total_junior_deposits.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:123
+    // this.total_borrowed.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:124
+    // this.total_senior_lp_supply.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:125
+    // this.total_junior_lp_supply.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:74
+    // reserve_balance = GlobalState<uint64>()
+    bytec 8 // "reserve_balance"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:126
+    // this.reserve_balance.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:76
+    // circuit_breaker_active = GlobalState<uint64>() // 0=off, 1=on
+    bytec 18 // "circuit_breaker_active"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:127
+    // this.circuit_breaker_active.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:75
+    // last_update_round = GlobalState<uint64>()
+    bytec 9 // "last_update_round"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:128
+    // this.last_update_round.value = Global.round
+    global Round
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:65
+    // senior_lp_token_id = GlobalState<uint64>()
+    bytec 12 // "senior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:130
+    // this.senior_lp_token_id.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:66
+    // junior_lp_token_id = GlobalState<uint64>()
+    bytec 19 // "junior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:131
+    // this.junior_lp_token_id.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:58
+    // loan_factory_app_id = GlobalState<uint64>()
+    bytec 20 // "loan_factory_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:132
+    // this.loan_factory_app_id.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:57
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 23 // "credit_oracle_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:133
+    // this.credit_oracle_app_id.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:97
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.create_assets[routing]() -> void:
+create_assets:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:141
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:143
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:144
+    // assert(this.senior_lp_token_id.value === Uint64(0), 'Assets already created')
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:65
+    // senior_lp_token_id = GlobalState<uint64>()
+    bytec 12 // "senior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:144
+    // assert(this.senior_lp_token_id.value === Uint64(0), 'Assets already created')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Assets already created
+    // smart_contracts/lending_pool_v2/contract.algo.ts:146-154
+    // const senior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('S-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-S-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:150
+    // assetName: op.concat(asset_name_prefix, Bytes('-S-LP')),
+    dup
+    pushbytes "-S-LP"
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:151
+    // manager: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // smart_contracts/lending_pool_v2/contract.algo.ts:152
+    // reserve: Global.currentApplicationAddress,
+    dup
+    itxn_field ConfigAssetReserve
+    itxn_field ConfigAssetManager
+    itxn_field ConfigAssetName
+    // smart_contracts/lending_pool_v2/contract.algo.ts:149
+    // unitName: Bytes('S-LP'),
+    pushbytes "S-LP"
+    itxn_field ConfigAssetUnitName
+    // smart_contracts/lending_pool_v2/contract.algo.ts:148
+    // decimals: Uint64(6),
+    pushint 6 // 6
+    itxn_field ConfigAssetDecimals
+    // smart_contracts/lending_pool_v2/contract.algo.ts:147
+    // total: Uint64(1_000_000_000_000_000),
+    intc 5 // 1000000000000000
+    itxn_field ConfigAssetTotal
+    // smart_contracts/lending_pool_v2/contract.algo.ts:146-154
+    // const senior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('S-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-S-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 3 // 3
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:153
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:146-154
+    // const senior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('S-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-S-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    itxn CreatedAssetID
+    // smart_contracts/lending_pool_v2/contract.algo.ts:65
+    // senior_lp_token_id = GlobalState<uint64>()
+    bytec 12 // "senior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:155
+    // this.senior_lp_token_id.value = senior_lp.createdAsset.id
+    dig 1
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:158-163
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:160
+    // assetReceiver: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // smart_contracts/lending_pool_v2/contract.algo.ts:161
+    // assetAmount: Uint64(0),
+    intc_0 // 0
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:158-163
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:162
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:158-163
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    // smart_contracts/lending_pool_v2/contract.algo.ts:165-173
+    // const junior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('J-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-J-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:169
+    // assetName: op.concat(asset_name_prefix, Bytes('-J-LP')),
+    pushbytes "-J-LP"
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:170
+    // manager: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // smart_contracts/lending_pool_v2/contract.algo.ts:171
+    // reserve: Global.currentApplicationAddress,
+    dup
+    itxn_field ConfigAssetReserve
+    itxn_field ConfigAssetManager
+    itxn_field ConfigAssetName
+    // smart_contracts/lending_pool_v2/contract.algo.ts:168
+    // unitName: Bytes('J-LP'),
+    pushbytes "J-LP"
+    itxn_field ConfigAssetUnitName
+    // smart_contracts/lending_pool_v2/contract.algo.ts:167
+    // decimals: Uint64(6),
+    pushint 6 // 6
+    itxn_field ConfigAssetDecimals
+    // smart_contracts/lending_pool_v2/contract.algo.ts:166
+    // total: Uint64(1_000_000_000_000_000),
+    intc 5 // 1000000000000000
+    itxn_field ConfigAssetTotal
+    // smart_contracts/lending_pool_v2/contract.algo.ts:165-173
+    // const junior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('J-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-J-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    pushint 3 // 3
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:172
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:165-173
+    // const junior_lp = itxn.assetConfig({
+    //   total: Uint64(1_000_000_000_000_000),
+    //   decimals: Uint64(6),
+    //   unitName: Bytes('J-LP'),
+    //   assetName: op.concat(asset_name_prefix, Bytes('-J-LP')),
+    //   manager: Global.currentApplicationAddress,
+    //   reserve: Global.currentApplicationAddress,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    itxn CreatedAssetID
+    // smart_contracts/lending_pool_v2/contract.algo.ts:66
+    // junior_lp_token_id = GlobalState<uint64>()
+    bytec 19 // "junior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:174
+    // this.junior_lp_token_id.value = junior_lp.createdAsset.id
+    dig 1
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:176-181
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:178
+    // assetReceiver: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // smart_contracts/lending_pool_v2/contract.algo.ts:179
+    // assetAmount: Uint64(0),
+    intc_0 // 0
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:176-181
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:180
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:176-181
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    // smart_contracts/lending_pool_v2/contract.algo.ts:184
+    // if (this.is_native_algo.value === Uint64(0)) {
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:184
+    // if (this.is_native_algo.value === Uint64(0)) {
+    app_global_get_ex
+    assert // check GlobalState exists
+    bnz create_assets_after_if_else@8
+    // smart_contracts/lending_pool_v2/contract.algo.ts:185-190
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:186
+    // xferAsset: this.pool_asset_id.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:61
+    // pool_asset_id = GlobalState<uint64>()  // 0 = native ALGO
+    bytec 7 // "pool_asset_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:186
+    // xferAsset: this.pool_asset_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:187
+    // assetReceiver: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // smart_contracts/lending_pool_v2/contract.algo.ts:188
+    // assetAmount: Uint64(0),
+    intc_0 // 0
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:185-190
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:189
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:185-190
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: Global.currentApplicationAddress,
+    //   assetAmount: Uint64(0),
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+
+create_assets_after_if_else@8:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:141
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.deposit[routing]() -> void:
+deposit:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:201
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    dup
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    cover 2
+    gtxns TypeEnum
+    intc_3 // axfer
+    ==
+    assert // transaction type is axfer
+    // smart_contracts/lending_pool_v2/contract.algo.ts:203
+    // assert(this.is_native_algo.value === Uint64(0), 'Use deposit_algo for ALGO pool')
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:203
+    // assert(this.is_native_algo.value === Uint64(0), 'Use deposit_algo for ALGO pool')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Use deposit_algo for ALGO pool
+    // smart_contracts/lending_pool_v2/contract.algo.ts:204
+    // assert(tranche === TRANCHE_SENIOR || tranche === TRANCHE_JUNIOR, 'Invalid tranche')
+    bz deposit_bool_true@3
+    dig 1
+    intc_1 // 1
+    ==
+    bz deposit_bool_false@4
+
+deposit_bool_true@3:
+    intc_1 // 1
+
+deposit_bool_merge@5:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:204
+    // assert(tranche === TRANCHE_SENIOR || tranche === TRANCHE_JUNIOR, 'Invalid tranche')
+    assert // Invalid tranche
+    // smart_contracts/lending_pool_v2/contract.algo.ts:205
+    // assert(payment.xferAsset.id === this.pool_asset_id.value, 'Wrong asset')
+    dupn 2
+    gtxns XferAsset
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:61
+    // pool_asset_id = GlobalState<uint64>()  // 0 = native ALGO
+    bytec 7 // "pool_asset_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:205
+    // assert(payment.xferAsset.id === this.pool_asset_id.value, 'Wrong asset')
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    assert // Wrong asset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:207
+    // payment.assetReceiver.bytes === Global.currentApplicationAddress.bytes,
+    dup
+    gtxns AssetReceiver
+    global CurrentApplicationAddress
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:206-209
+    // assert(
+    //   payment.assetReceiver.bytes === Global.currentApplicationAddress.bytes,
+    //   'Asset must go to pool'
+    // )
+    assert // Asset must go to pool
+    // smart_contracts/lending_pool_v2/contract.algo.ts:210
+    // assert(payment.assetAmount > Uint64(0), 'Amount must be > 0')
+    gtxns AssetAmount
+    dup
+    assert // Amount must be > 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:212
+    // this.internal_deposit(Txn.sender, payment.assetAmount, tranche)
+    txn Sender
+    swap
+    dig 3
+    callsub internal_deposit
+    // smart_contracts/lending_pool_v2/contract.algo.ts:201
+    // @abimethod()
+    intc_1 // 1
+    return
+
+deposit_bool_false@4:
+    intc_0 // 0
+    b deposit_bool_merge@5
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.deposit_algo[routing]() -> void:
+deposit_algo:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:219
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    dup
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    cover 2
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // smart_contracts/lending_pool_v2/contract.algo.ts:221
+    // assert(this.is_native_algo.value === Uint64(1), 'Use deposit for ASA pool')
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:221
+    // assert(this.is_native_algo.value === Uint64(1), 'Use deposit for ASA pool')
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_1 // 1
+    ==
+    assert // Use deposit for ASA pool
+    // smart_contracts/lending_pool_v2/contract.algo.ts:222
+    // assert(tranche === TRANCHE_SENIOR || tranche === TRANCHE_JUNIOR, 'Invalid tranche')
+    bz deposit_algo_bool_true@3
+    dig 1
+    intc_1 // 1
+    ==
+    bz deposit_algo_bool_false@4
+
+deposit_algo_bool_true@3:
+    intc_1 // 1
+
+deposit_algo_bool_merge@5:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:222
+    // assert(tranche === TRANCHE_SENIOR || tranche === TRANCHE_JUNIOR, 'Invalid tranche')
+    assert // Invalid tranche
+    // smart_contracts/lending_pool_v2/contract.algo.ts:224
+    // payment.receiver.bytes === Global.currentApplicationAddress.bytes,
+    dupn 2
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:223-226
+    // assert(
+    //   payment.receiver.bytes === Global.currentApplicationAddress.bytes,
+    //   'ALGO must go to pool'
+    // )
+    assert // ALGO must go to pool
+    // smart_contracts/lending_pool_v2/contract.algo.ts:227
+    // assert(payment.amount > Uint64(0), 'Amount must be > 0')
+    gtxns Amount
+    dup
+    assert // Amount must be > 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:229
+    // this.internal_deposit(Txn.sender, payment.amount, tranche)
+    txn Sender
+    swap
+    dig 3
+    callsub internal_deposit
+    // smart_contracts/lending_pool_v2/contract.algo.ts:219
+    // @abimethod()
+    intc_1 // 1
+    return
+
+deposit_algo_bool_false@4:
+    intc_0 // 0
+    b deposit_algo_bool_merge@5
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.withdraw[routing]() -> void:
+withdraw:
+    pushbytes ""
+    dupn 2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:239
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    dup
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    dup
+    cover 2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:241
+    // assert(lp_amount > Uint64(0), 'LP amount must be > 0')
+    dup
+    assert // LP amount must be > 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:242
+    // assert(this.lender_positions(Txn.sender).exists, 'No position found')
+    txn Sender
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:242
+    // assert(this.lender_positions(Txn.sender).exists, 'No position found')
+    box_len
+    bury 1
+    assert // No position found
+    // smart_contracts/lending_pool_v2/contract.algo.ts:244
+    // this.update_yield(Txn.sender)
+    txn Sender
+    callsub update_yield
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:246
+    // const position = clone(this.lender_positions(Txn.sender).value)
+    txn Sender
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:246
+    // const position = clone(this.lender_positions(Txn.sender).value)
+    box_get
+    swap
+    dup
+    cover 2
+    cover 4
+    assert // Box must have value
+    // smart_contracts/lending_pool_v2/contract.algo.ts:247
+    // assert(position.tranche === tranche, 'Tranche mismatch')
+    dup
+    intc_2 // 8
+    extract_uint64
+    dig 3
+    ==
+    assert // Tranche mismatch
+    // smart_contracts/lending_pool_v2/contract.algo.ts:248
+    // assert(position.lp_amount >= lp_amount, 'Insufficient LP balance')
+    pushint 16 // 16
+    extract_uint64
+    dup
+    cover 3
+    <=
+    assert // Insufficient LP balance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:251-253
+    // const total_deposits: uint64 = tranche === TRANCHE_SENIOR
+    //   ? this.total_senior_deposits.value
+    //   : this.total_junior_deposits.value
+    bnz withdraw_ternary_false@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:252
+    // ? this.total_senior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:252
+    // ? this.total_senior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    bury 6
+
+withdraw_ternary_merge@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:254-256
+    // const total_lp: uint64 = tranche === TRANCHE_SENIOR
+    //   ? this.total_senior_lp_supply.value
+    //   : this.total_junior_lp_supply.value
+    dig 3
+    bnz withdraw_ternary_false@6
+    // smart_contracts/lending_pool_v2/contract.algo.ts:255
+    // ? this.total_senior_lp_supply.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:255
+    // ? this.total_senior_lp_supply.value
+    app_global_get_ex
+    assert // check GlobalState exists
+
+withdraw_ternary_merge@7:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:258
+    // const [high, low] = op.mulw(lp_amount, total_deposits)
+    dig 3
+    dup
+    dig 8
+    dup
+    cover 2
+    mulw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:259
+    // const principal_redemption: uint64 = op.divw(high, low, total_lp)
+    uncover 4
+    divw
+    dup
+    bury 10
+    // smart_contracts/lending_pool_v2/contract.algo.ts:260
+    // const yield_redemption: uint64 = position.accrued_yield
+    dig 4
+    pushint 24 // 24
+    extract_uint64
+    bury 8
+    // smart_contracts/lending_pool_v2/contract.algo.ts:263
+    // const available: uint64 = total_deposits - this.total_borrowed.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:263
+    // const available: uint64 = total_deposits - this.total_borrowed.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    uncover 2
+    swap
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:264
+    // assert(principal_redemption <= available, 'Insufficient liquidity for withdrawal')
+    <=
+    assert // Insufficient liquidity for withdrawal
+    // smart_contracts/lending_pool_v2/contract.algo.ts:267
+    // if (position.lp_amount === lp_amount) {
+    dig 1
+    ==
+    bz withdraw_else_body@9
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:268
+    // this.lender_positions(Txn.sender).delete()
+    txn Sender
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:268
+    // this.lender_positions(Txn.sender).delete()
+    box_del
+    pop
+
+withdraw_after_if_else@10:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:277
+    // if (tranche === TRANCHE_SENIOR) {
+    dig 3
+    bnz withdraw_else_body@12
+    // smart_contracts/lending_pool_v2/contract.algo.ts:278
+    // this.total_senior_deposits.value = this.total_senior_deposits.value - principal_redemption
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:278
+    // this.total_senior_deposits.value = this.total_senior_deposits.value - principal_redemption
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 7
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:278
+    // this.total_senior_deposits.value = this.total_senior_deposits.value - principal_redemption
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:279
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value - lp_amount
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:279
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value - lp_amount
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 3
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:279
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value - lp_amount
+    swap
+    app_global_put
+
+withdraw_after_if_else@13:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:285
+    // const total_payout: uint64 = principal_redemption + yield_redemption
+    dig 6
+    dig 5
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:286
+    // this.send_asset(Txn.sender, total_payout)
+    txn Sender
+    swap
+    callsub send_asset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:75
+    // last_update_round = GlobalState<uint64>()
+    bytec 9 // "last_update_round"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:287
+    // this.last_update_round.value = Global.round
+    global Round
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:239
+    // @abimethod()
+    intc_1 // 1
+    return
+
+withdraw_else_body@12:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:281
+    // this.total_junior_deposits.value = this.total_junior_deposits.value - principal_redemption
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:281
+    // this.total_junior_deposits.value = this.total_junior_deposits.value - principal_redemption
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 7
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:281
+    // this.total_junior_deposits.value = this.total_junior_deposits.value - principal_redemption
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:282
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value - lp_amount
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:282
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value - lp_amount
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 3
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:282
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value - lp_amount
+    swap
+    app_global_put
+    b withdraw_after_if_else@13
+
+withdraw_else_body@9:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:270
+    // position.lp_amount = position.lp_amount - lp_amount
+    dup
+    dig 3
+    -
+    itob
+    dig 2
+    swap
+    replace2 16
+    // smart_contracts/lending_pool_v2/contract.algo.ts:271
+    // position.deposit_amount = position.deposit_amount - principal_redemption
+    dup
+    intc_0 // 0
+    extract_uint64
+    dig 8
+    -
+    itob
+    replace2 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:272
+    // position.accrued_yield = Uint64(0)
+    intc_0 // 0
+    itob
+    replace2 24
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:273
+    // this.lender_positions(Txn.sender).value = clone(position)
+    txn Sender
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:273
+    // this.lender_positions(Txn.sender).value = clone(position)
+    swap
+    box_put
+    b withdraw_after_if_else@10
+
+withdraw_ternary_false@6:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:256
+    // : this.total_junior_lp_supply.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:256
+    // : this.total_junior_lp_supply.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    b withdraw_ternary_merge@7
+
+withdraw_ternary_false@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:253
+    // : this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:253
+    // : this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    bury 6
+    b withdraw_ternary_merge@4
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.borrow[routing]() -> void:
+borrow:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:296
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    dup
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    pushint 32 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/lending_pool_v2/contract.algo.ts:298
+    // this.assert_loan_factory()
+    callsub assert_loan_factory
+    // smart_contracts/lending_pool_v2/contract.algo.ts:299
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker: borrowing paused')
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:76
+    // circuit_breaker_active = GlobalState<uint64>() // 0=off, 1=on
+    bytec 18 // "circuit_breaker_active"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:299
+    // assert(this.circuit_breaker_active.value === Uint64(0), 'Circuit breaker: borrowing paused')
+    app_global_get_ex
+    assert // check GlobalState exists
+    !
+    assert // Circuit breaker: borrowing paused
+    // smart_contracts/lending_pool_v2/contract.algo.ts:301
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:301
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:301
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:302
+    // const available: uint64 = total_deposits - this.total_borrowed.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:302
+    // const available: uint64 = total_deposits - this.total_borrowed.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    dup2
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:303
+    // assert(amount <= available, 'Insufficient liquidity')
+    dig 4
+    >=
+    assert // Insufficient liquidity
+    // smart_contracts/lending_pool_v2/contract.algo.ts:306
+    // const new_borrowed: uint64 = this.total_borrowed.value + amount
+    dig 3
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:307
+    // const new_util_bps: uint64 = (new_borrowed * BPS) / total_deposits
+    dup
+    intc 4 // 10000
+    *
+    uncover 2
+    /
+    // smart_contracts/lending_pool_v2/contract.algo.ts:308
+    // assert(new_util_bps <= this.circuit_breaker_bps.value, 'Would breach circuit breaker')
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:84
+    // circuit_breaker_bps = GlobalState<uint64>()// utilization above which to pause borrows
+    bytec 21 // "circuit_breaker_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:308
+    // assert(new_util_bps <= this.circuit_breaker_bps.value, 'Would breach circuit breaker')
+    app_global_get_ex
+    assert // check GlobalState exists
+    <=
+    assert // Would breach circuit breaker
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:310
+    // this.total_borrowed.value = new_borrowed
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:311
+    // this.send_asset(borrower, amount)
+    swap
+    callsub send_asset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:75
+    // last_update_round = GlobalState<uint64>()
+    bytec 9 // "last_update_round"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:312
+    // this.last_update_round.value = Global.round
+    global Round
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:296
+    // @abimethod()
+    bytec 13 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.repay[routing]() -> void:
+repay:
+    pushbytes ""
+    // smart_contracts/lending_pool_v2/contract.algo.ts:322
+    // @abimethod()
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_3 // axfer
+    ==
+    assert // transaction type is axfer
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2 // 2
+    +
+    swap
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // smart_contracts/lending_pool_v2/contract.algo.ts:324
+    // this.assert_loan_factory()
+    callsub assert_loan_factory
+    // smart_contracts/lending_pool_v2/contract.algo.ts:325
+    // if (this.is_native_algo.value === Uint64(0)) {
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:325
+    // if (this.is_native_algo.value === Uint64(0)) {
+    app_global_get_ex
+    assert // check GlobalState exists
+    bnz repay_after_if_else@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:326
+    // assert(payment.xferAsset.id === this.pool_asset_id.value, 'Wrong repayment asset')
+    dupn 2
+    gtxns XferAsset
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:61
+    // pool_asset_id = GlobalState<uint64>()  // 0 = native ALGO
+    bytec 7 // "pool_asset_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:326
+    // assert(payment.xferAsset.id === this.pool_asset_id.value, 'Wrong repayment asset')
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    assert // Wrong repayment asset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:328
+    // payment.assetReceiver.bytes === Global.currentApplicationAddress.bytes,
+    gtxns AssetReceiver
+    global CurrentApplicationAddress
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:327-330
+    // assert(
+    //   payment.assetReceiver.bytes === Global.currentApplicationAddress.bytes,
+    //   'Repayment must go to pool'
+    // )
+    assert // Repayment must go to pool
+
+repay_after_if_else@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:332
+    // assert(payment.assetAmount > Uint64(0), 'Repayment must be > 0')
+    dup
+    gtxns AssetAmount
+    dup
+    bury 3
+    dup
+    assert // Repayment must be > 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:336
+    // const [h, l] = op.mulw(repayment, this.reserve_factor_bps.value)
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:83
+    // reserve_factor_bps = GlobalState<uint64>() // fraction of interest to reserves
+    bytec 17 // "reserve_factor_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:336
+    // const [h, l] = op.mulw(repayment, this.reserve_factor_bps.value)
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 1
+    mulw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:337
+    // const reserve_fee = op.divw(h, l, BPS)
+    intc 4 // 10000
+    divw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:338
+    // this.reserve_balance.value = this.reserve_balance.value + reserve_fee
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:74
+    // reserve_balance = GlobalState<uint64>()
+    bytec 8 // "reserve_balance"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:338
+    // this.reserve_balance.value = this.reserve_balance.value + reserve_fee
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:74
+    // reserve_balance = GlobalState<uint64>()
+    bytec 8 // "reserve_balance"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:338
+    // this.reserve_balance.value = this.reserve_balance.value + reserve_fee
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:340
+    // if (this.total_borrowed.value >= repayment) {
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:340
+    // if (this.total_borrowed.value >= repayment) {
+    app_global_get_ex
+    assert // check GlobalState exists
+    <=
+    bz repay_else_body@5
+    // smart_contracts/lending_pool_v2/contract.algo.ts:341
+    // this.total_borrowed.value = this.total_borrowed.value - repayment
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:341
+    // this.total_borrowed.value = this.total_borrowed.value - repayment
+    app_global_get_ex
+    assert // check GlobalState exists
+    dig 2
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:341
+    // this.total_borrowed.value = this.total_borrowed.value - repayment
+    swap
+    app_global_put
+
+repay_after_if_else@6:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:75
+    // last_update_round = GlobalState<uint64>()
+    bytec 9 // "last_update_round"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:346
+    // this.last_update_round.value = Global.round
+    global Round
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:322
+    // @abimethod()
+    intc_1 // 1
+    return
+
+repay_else_body@5:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:343
+    // this.total_borrowed.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    b repay_after_if_else@6
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.get_pool_stats[routing]() -> void:
+get_pool_stats:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:353
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:353
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:353
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    dup
+    // smart_contracts/lending_pool_v2/contract.algo.ts:354-356
+    // const util: uint64 = total_deposits > Uint64(0)
+    //   ? (this.total_borrowed.value * BPS) / total_deposits
+    //   : Uint64(0)
+    bz get_pool_stats_ternary_false@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:355
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:355
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc 4 // 10000
+    *
+    dig 1
+    /
+
+get_pool_stats_ternary_merge@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:360
+    // this.total_borrowed.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:360
+    // this.total_borrowed.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:362
+    // this.total_senior_deposits.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:362
+    // this.total_senior_deposits.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:363
+    // this.total_junior_deposits.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:363
+    // this.total_junior_deposits.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:364
+    // this.calculate_interest_rate(util),
+    uncover 3
+    dup
+    callsub calculate_interest_rate
+    // smart_contracts/lending_pool_v2/contract.algo.ts:358-365
+    // return [
+    //   total_deposits,
+    //   this.total_borrowed.value,
+    //   util,
+    //   this.total_senior_deposits.value,
+    //   this.total_junior_deposits.value,
+    //   this.calculate_interest_rate(util),
+    // ]
+    dig 5
+    itob
+    uncover 5
+    itob
+    concat
+    uncover 2
+    itob
+    concat
+    uncover 3
+    itob
+    concat
+    uncover 2
+    itob
+    concat
+    swap
+    itob
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:351
+    // @abimethod({ readonly: true })
+    bytec 13 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+get_pool_stats_ternary_false@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:356
+    // : Uint64(0)
+    intc_0 // 0
+    b get_pool_stats_ternary_merge@4
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.get_lender_position[routing]() -> void:
+get_lender_position:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:368
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 32 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    swap
+    concat
+    dup
+    // smart_contracts/lending_pool_v2/contract.algo.ts:370
+    // if (!this.lender_positions(lender).exists) {
+    box_len
+    bury 1
+    bnz get_lender_position_after_if_else@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:371
+    // return [Uint64(0), Uint64(0), Uint64(0), Uint64(0)]
+    pushbytes 0x0000000000000000000000000000000000000000000000000000000000000000
+
+get_lender_position_after_inlined_smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.get_lender_position@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:368
+    // @abimethod({ readonly: true })
+    bytec 13 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+get_lender_position_after_if_else@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:373
+    // const pos = clone(this.lender_positions(lender).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/lending_pool_v2/contract.algo.ts:374
+    // return [pos.deposit_amount, pos.tranche, pos.lp_amount, pos.accrued_yield]
+    dup
+    extract 0 8
+    dig 1
+    extract 8 8
+    dig 2
+    extract 16 8
+    uncover 3
+    extract 24 8
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/lending_pool_v2/contract.algo.ts:368
+    // @abimethod({ readonly: true })
+    b get_lender_position_after_inlined_smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.get_lender_position@4
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.get_current_rate[routing]() -> void:
+get_current_rate:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:379
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:379
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:379
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    dup
+    // smart_contracts/lending_pool_v2/contract.algo.ts:380-382
+    // const util: uint64 = total_deposits > Uint64(0)
+    //   ? (this.total_borrowed.value * BPS) / total_deposits
+    //   : Uint64(0)
+    bz get_current_rate_ternary_false@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:381
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:381
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc 4 // 10000
+    *
+    dig 1
+    /
+
+get_current_rate_ternary_merge@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:383
+    // return this.calculate_interest_rate(util)
+    callsub calculate_interest_rate
+    // smart_contracts/lending_pool_v2/contract.algo.ts:377
+    // @abimethod({ readonly: true })
+    itob
+    bytec 13 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+get_current_rate_ternary_false@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:382
+    // : Uint64(0)
+    intc_0 // 0
+    b get_current_rate_ternary_merge@4
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.set_authorized_apps[routing]() -> void:
+set_authorized_apps:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:388
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/lending_pool_v2/contract.algo.ts:390
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:58
+    // loan_factory_app_id = GlobalState<uint64>()
+    bytec 20 // "loan_factory_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:391
+    // this.loan_factory_app_id.value = loan_factory_app_id
+    uncover 2
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:57
+    // credit_oracle_app_id = GlobalState<uint64>()
+    bytec 23 // "credit_oracle_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:392
+    // this.credit_oracle_app_id.value = credit_oracle_app_id
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:388
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.update_rate_params[routing]() -> void:
+update_rate_params:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:395
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 5
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/lending_pool_v2/contract.algo.ts:403
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:79
+    // rate_base_bps = GlobalState<uint64>()      // base APR in BPS
+    bytec 10 // "rate_base_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:404
+    // this.rate_base_bps.value = rate_base_bps
+    uncover 5
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:80
+    // rate_slope1_bps = GlobalState<uint64>()    // additional rate at kink
+    bytec 11 // "rate_slope1_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:405
+    // this.rate_slope1_bps.value = rate_slope1_bps
+    uncover 4
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:81
+    // rate_slope2_bps = GlobalState<uint64>()    // steep slope above kink
+    bytec 15 // "rate_slope2_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:406
+    // this.rate_slope2_bps.value = rate_slope2_bps
+    uncover 3
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:82
+    // rate_kink_bps = GlobalState<uint64>()      // utilization kink (e.g. 8000 = 80%)
+    bytec 16 // "rate_kink_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:407
+    // this.rate_kink_bps.value = rate_kink_bps
+    uncover 2
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:83
+    // reserve_factor_bps = GlobalState<uint64>() // fraction of interest to reserves
+    bytec 17 // "reserve_factor_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:408
+    // this.reserve_factor_bps.value = reserve_factor_bps
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:395
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.toggle_circuit_breaker[routing]() -> void:
+toggle_circuit_breaker:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:411
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/lending_pool_v2/contract.algo.ts:413
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:76
+    // circuit_breaker_active = GlobalState<uint64>() // 0=off, 1=on
+    bytec 18 // "circuit_breaker_active"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:414
+    // this.circuit_breaker_active.value = active
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:411
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.sweep_reserves[routing]() -> void:
+sweep_reserves:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:417
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 32 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/lending_pool_v2/contract.algo.ts:419
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/lending_pool_v2/contract.algo.ts:420
+    // const amount = this.reserve_balance.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:74
+    // reserve_balance = GlobalState<uint64>()
+    bytec 8 // "reserve_balance"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:420
+    // const amount = this.reserve_balance.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:421
+    // assert(amount > Uint64(0), 'No reserves to sweep')
+    dup
+    assert // No reserves to sweep
+    // smart_contracts/lending_pool_v2/contract.algo.ts:74
+    // reserve_balance = GlobalState<uint64>()
+    bytec 8 // "reserve_balance"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:422
+    // this.reserve_balance.value = Uint64(0)
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:423
+    // this.send_asset(recipient, amount)
+    callsub send_asset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:417
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.internal_deposit(depositor: bytes, amount: uint64, tranche: uint64) -> void:
+internal_deposit:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:428
+    // private internal_deposit(depositor: Account, amount: uint64, tranche: uint64): void {
+    proto 3 0
+    intc_0 // 0
+    pushbytes ""
+    dupn 2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:429
+    // this.update_yield(depositor)
+    frame_dig -3
+    callsub update_yield
+    // smart_contracts/lending_pool_v2/contract.algo.ts:431-433
+    // const total_deposits = tranche === TRANCHE_SENIOR
+    //   ? this.total_senior_deposits.value
+    //   : this.total_junior_deposits.value
+    frame_dig -1
+    bnz internal_deposit_ternary_false@2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:432
+    // ? this.total_senior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:432
+    // ? this.total_senior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_bury 2
+
+internal_deposit_ternary_merge@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:434-436
+    // const total_lp = tranche === TRANCHE_SENIOR
+    //   ? this.total_senior_lp_supply.value
+    //   : this.total_junior_lp_supply.value
+    frame_dig -1
+    bnz internal_deposit_ternary_false@5
+    // smart_contracts/lending_pool_v2/contract.algo.ts:435
+    // ? this.total_senior_lp_supply.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:435
+    // ? this.total_senior_lp_supply.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_bury 3
+
+internal_deposit_ternary_merge@6:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:523
+    // if (existing_deposits === Uint64(0) || existing_lp === Uint64(0)) return deposit
+    frame_dig 2
+    bz internal_deposit_if_body@17
+    frame_dig 3
+    bnz internal_deposit_after_if_else@18
+
+internal_deposit_if_body@17:
+    frame_dig -2
+    frame_bury 1
+
+internal_deposit_after_inlined_smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.calculate_lp_tokens@19:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    frame_dig -3
+    concat
+    dup
+    frame_bury 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:440
+    // const existing = this.lender_positions(depositor).exists
+    box_len
+    bury 1
+    // smart_contracts/lending_pool_v2/contract.algo.ts:440-448
+    // const existing = this.lender_positions(depositor).exists
+    //   ? clone(this.lender_positions(depositor).value)
+    //   : {
+    //       deposit_amount: Uint64(0),
+    //       tranche,
+    //       lp_amount: Uint64(0),
+    //       accrued_yield: Uint64(0),
+    //       deposit_round: Global.round,
+    //     }
+    bz internal_deposit_ternary_false@8
+    // smart_contracts/lending_pool_v2/contract.algo.ts:441
+    // ? clone(this.lender_positions(depositor).value)
+    frame_dig 0
+    box_get
+    assert // Box must have value
+
+internal_deposit_ternary_merge@9:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:450
+    // existing.deposit_amount = existing.deposit_amount + amount
+    dup
+    intc_0 // 0
+    extract_uint64
+    frame_dig -2
+    +
+    itob
+    replace2 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:451
+    // existing.lp_amount = existing.lp_amount + lp_to_mint
+    dup
+    pushint 16 // 16
+    extract_uint64
+    frame_dig 1
+    +
+    itob
+    replace2 16
+    // smart_contracts/lending_pool_v2/contract.algo.ts:452
+    // existing.deposit_round = Global.round
+    global Round
+    itob
+    replace2 32
+    // smart_contracts/lending_pool_v2/contract.algo.ts:453
+    // this.lender_positions(depositor).value = clone(existing)
+    frame_dig 0
+    swap
+    box_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:455
+    // if (tranche === TRANCHE_SENIOR) {
+    frame_dig -1
+    bnz internal_deposit_else_body@12
+    // smart_contracts/lending_pool_v2/contract.algo.ts:456
+    // this.total_senior_deposits.value = this.total_senior_deposits.value + amount
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:456
+    // this.total_senior_deposits.value = this.total_senior_deposits.value + amount
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig -2
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:456
+    // this.total_senior_deposits.value = this.total_senior_deposits.value + amount
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:457
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value + lp_to_mint
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:457
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value + lp_to_mint
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig 1
+    dup
+    cover 2
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:72
+    // total_senior_lp_supply = GlobalState<uint64>()
+    bytec_3 // "total_senior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:457
+    // this.total_senior_lp_supply.value = this.total_senior_lp_supply.value + lp_to_mint
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:458-463
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:459
+    // xferAsset: this.senior_lp_token_id.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:65
+    // senior_lp_token_id = GlobalState<uint64>()
+    bytec 12 // "senior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:459
+    // xferAsset: this.senior_lp_token_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    swap
+    itxn_field AssetAmount
+    frame_dig -3
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:458-463
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:462
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:458-463
+    // itxn.assetTransfer({
+    //   xferAsset: this.senior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+
+internal_deposit_after_if_else@14:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:75
+    // last_update_round = GlobalState<uint64>()
+    bytec 9 // "last_update_round"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:475
+    // this.last_update_round.value = Global.round
+    global Round
+    app_global_put
+    retsub
+
+internal_deposit_else_body@12:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:465
+    // this.total_junior_deposits.value = this.total_junior_deposits.value + amount
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:465
+    // this.total_junior_deposits.value = this.total_junior_deposits.value + amount
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig -2
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:465
+    // this.total_junior_deposits.value = this.total_junior_deposits.value + amount
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:466
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value + lp_to_mint
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:466
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value + lp_to_mint
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig 1
+    dup
+    cover 2
+    +
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:466
+    // this.total_junior_lp_supply.value = this.total_junior_lp_supply.value + lp_to_mint
+    swap
+    app_global_put
+    // smart_contracts/lending_pool_v2/contract.algo.ts:467-472
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:468
+    // xferAsset: this.junior_lp_token_id.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:66
+    // junior_lp_token_id = GlobalState<uint64>()
+    bytec 19 // "junior_lp_token_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:468
+    // xferAsset: this.junior_lp_token_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    swap
+    itxn_field AssetAmount
+    frame_dig -3
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:467-472
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:471
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:467-472
+    // itxn.assetTransfer({
+    //   xferAsset: this.junior_lp_token_id.value,
+    //   assetReceiver: depositor,
+    //   assetAmount: lp_to_mint,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    b internal_deposit_after_if_else@14
+
+internal_deposit_ternary_false@8:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:447
+    // deposit_round: Global.round,
+    global Round
+    // smart_contracts/lending_pool_v2/contract.algo.ts:443
+    // deposit_amount: Uint64(0),
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:442-448
+    // : {
+    //     deposit_amount: Uint64(0),
+    //     tranche,
+    //     lp_amount: Uint64(0),
+    //     accrued_yield: Uint64(0),
+    //     deposit_round: Global.round,
+    //   }
+    itob
+    frame_dig -1
+    itob
+    dig 1
+    swap
+    concat
+    dig 1
+    concat
+    swap
+    concat
+    swap
+    itob
+    concat
+    b internal_deposit_ternary_merge@9
+
+internal_deposit_after_if_else@18:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:524
+    // const [h, l] = op.mulw(deposit, existing_lp)
+    frame_dig -2
+    frame_dig 3
+    mulw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:525
+    // return op.divw(h, l, existing_deposits)
+    frame_dig 2
+    divw
+    frame_bury 1
+    // smart_contracts/lending_pool_v2/contract.algo.ts:438
+    // const lp_to_mint = this.calculate_lp_tokens(amount, total_deposits, total_lp)
+    b internal_deposit_after_inlined_smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.calculate_lp_tokens@19
+
+internal_deposit_ternary_false@5:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:436
+    // : this.total_junior_lp_supply.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:73
+    // total_junior_lp_supply = GlobalState<uint64>()
+    bytec 4 // "total_junior_lp_supply"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:436
+    // : this.total_junior_lp_supply.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_bury 3
+    b internal_deposit_ternary_merge@6
+
+internal_deposit_ternary_false@2:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:433
+    // : this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:433
+    // : this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_bury 2
+    b internal_deposit_ternary_merge@3
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.update_yield(lender: bytes) -> void:
+update_yield:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:478
+    // private update_yield(lender: Account): void {
+    proto 1 0
+    intc_0 // 0
+    pushbytes ""
+    dup
+    // smart_contracts/lending_pool_v2/contract.algo.ts:87
+    // lender_positions = BoxMap<Account, LenderPosition>({ keyPrefix: 'l' })
+    bytec 5 // "l"
+    frame_dig -1
+    concat
+    dup
+    // smart_contracts/lending_pool_v2/contract.algo.ts:479
+    // if (!this.lender_positions(lender).exists) return
+    box_len
+    bury 1
+    bnz update_yield_after_if_else@2
+    retsub
+
+update_yield_after_if_else@2:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:480
+    // const pos = clone(this.lender_positions(lender).value)
+    frame_dig 3
+    box_get
+    swap
+    dup
+    cover 2
+    frame_bury 0
+    assert // Box must have value
+    // smart_contracts/lending_pool_v2/contract.algo.ts:481
+    // const rounds: uint64 = Global.round - pos.deposit_round
+    global Round
+    swap
+    pushint 32 // 32
+    extract_uint64
+    -
+    dup
+    frame_bury 1
+    // smart_contracts/lending_pool_v2/contract.algo.ts:482
+    // if (rounds === Uint64(0)) return
+    bnz update_yield_after_if_else@4
+    retsub
+
+update_yield_after_if_else@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:484
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:69
+    // total_senior_deposits = GlobalState<uint64>()
+    bytec_0 // "total_senior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:484
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:70
+    // total_junior_deposits = GlobalState<uint64>()
+    bytec_1 // "total_junior_deposits"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:484
+    // const total_deposits: uint64 = this.total_senior_deposits.value + this.total_junior_deposits.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    dup
+    frame_bury 2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:485-487
+    // const util: uint64 = total_deposits > Uint64(0)
+    //   ? (this.total_borrowed.value * BPS) / total_deposits
+    //   : Uint64(0)
+    bz update_yield_ternary_false@6
+    // smart_contracts/lending_pool_v2/contract.algo.ts:486
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:71
+    // total_borrowed = GlobalState<uint64>()
+    bytec_2 // "total_borrowed"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:486
+    // ? (this.total_borrowed.value * BPS) / total_deposits
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc 4 // 10000
+    *
+    frame_dig 2
+    /
+
+update_yield_ternary_merge@7:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:488
+    // let rate_bps: uint64 = this.calculate_interest_rate(util)
+    callsub calculate_interest_rate
+    // smart_contracts/lending_pool_v2/contract.algo.ts:491
+    // if (pos.tranche === TRANCHE_SENIOR) {
+    frame_dig 0
+    intc_2 // 8
+    extract_uint64
+    bnz update_yield_after_if_else@9
+    // smart_contracts/lending_pool_v2/contract.algo.ts:492
+    // const floor = this.senior_yield_floor_bps.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:85
+    // senior_yield_floor_bps = GlobalState<uint64>() // guaranteed min yield for senior
+    bytec 22 // "senior_yield_floor_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:492
+    // const floor = this.senior_yield_floor_bps.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:493
+    // rate_bps = rate_bps < floor ? rate_bps : floor
+    dup2
+    <
+    swap
+    cover 2
+    select
+
+update_yield_after_if_else@9:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:498
+    // (BigUint(pos.deposit_amount) * BigUint(rate_bps) * BigUint(rounds)) /
+    frame_dig 0
+    dup
+    extract 0 8
+    uncover 2
+    itob
+    b*
+    frame_dig 1
+    itob
+    b*
+    // smart_contracts/lending_pool_v2/contract.algo.ts:499
+    // (BigUint(BPS) * BigUint(ROUNDS_PER_YEAR))
+    pushbytes 0x19c64cbbe0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:498-499
+    // (BigUint(pos.deposit_amount) * BigUint(rate_bps) * BigUint(rounds)) /
+    // (BigUint(BPS) * BigUint(ROUNDS_PER_YEAR))
+    b/
+    // smart_contracts/lending_pool_v2/contract.algo.ts:501
+    // pos.accrued_yield = pos.accrued_yield + op.btoi(Bytes(yield_amt))
+    dig 1
+    pushint 24 // 24
+    extract_uint64
+    swap
+    btoi
+    +
+    itob
+    replace2 24
+    // smart_contracts/lending_pool_v2/contract.algo.ts:502
+    // pos.deposit_round = Global.round
+    global Round
+    itob
+    replace2 32
+    // smart_contracts/lending_pool_v2/contract.algo.ts:503
+    // this.lender_positions(lender).value = clone(pos)
+    frame_dig 3
+    swap
+    box_put
+    retsub
+
+update_yield_ternary_false@6:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:487
+    // : Uint64(0)
+    intc_0 // 0
+    b update_yield_ternary_merge@7
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.calculate_interest_rate(utilization_bps: uint64) -> uint64:
+calculate_interest_rate:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:506
+    // private calculate_interest_rate(utilization_bps: uint64): uint64 {
+    proto 1 1
+    // smart_contracts/lending_pool_v2/contract.algo.ts:507
+    // const kink = this.rate_kink_bps.value
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:82
+    // rate_kink_bps = GlobalState<uint64>()      // utilization kink (e.g. 8000 = 80%)
+    bytec 16 // "rate_kink_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:507
+    // const kink = this.rate_kink_bps.value
+    app_global_get_ex
+    swap
+    dup
+    uncover 2
+    assert // check GlobalState exists
+    // smart_contracts/lending_pool_v2/contract.algo.ts:508
+    // if (utilization_bps <= kink) {
+    frame_dig -1
+    >=
+    bz calculate_interest_rate_after_if_else@2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:509
+    // const [h, l] = op.mulw(this.rate_slope1_bps.value, utilization_bps)
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:80
+    // rate_slope1_bps = GlobalState<uint64>()    // additional rate at kink
+    bytec 11 // "rate_slope1_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:509
+    // const [h, l] = op.mulw(this.rate_slope1_bps.value, utilization_bps)
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig -1
+    mulw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:510
+    // return this.rate_base_bps.value + op.divw(h, l, kink)
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:79
+    // rate_base_bps = GlobalState<uint64>()      // base APR in BPS
+    bytec 10 // "rate_base_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:510
+    // return this.rate_base_bps.value + op.divw(h, l, kink)
+    app_global_get_ex
+    assert // check GlobalState exists
+    cover 2
+    uncover 3
+    divw
+    +
+    retsub
+
+calculate_interest_rate_after_if_else@2:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:512
+    // const excess: uint64 = utilization_bps - kink
+    frame_dig -1
+    dig 1
+    -
+    // smart_contracts/lending_pool_v2/contract.algo.ts:513
+    // const [h2, l2] = op.mulw(this.rate_slope2_bps.value, excess)
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:81
+    // rate_slope2_bps = GlobalState<uint64>()    // steep slope above kink
+    bytec 15 // "rate_slope2_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:513
+    // const [h2, l2] = op.mulw(this.rate_slope2_bps.value, excess)
+    app_global_get_ex
+    assert // check GlobalState exists
+    mulw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:514
+    // const steep: uint64 = op.divw(h2, l2, BPS - kink)
+    intc 4 // 10000
+    uncover 3
+    -
+    divw
+    // smart_contracts/lending_pool_v2/contract.algo.ts:515
+    // return this.rate_base_bps.value + this.rate_slope1_bps.value + steep
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:79
+    // rate_base_bps = GlobalState<uint64>()      // base APR in BPS
+    bytec 10 // "rate_base_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:515
+    // return this.rate_base_bps.value + this.rate_slope1_bps.value + steep
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:80
+    // rate_slope1_bps = GlobalState<uint64>()    // additional rate at kink
+    bytec 11 // "rate_slope1_bps"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:515
+    // return this.rate_base_bps.value + this.rate_slope1_bps.value + steep
+    app_global_get_ex
+    assert // check GlobalState exists
+    +
+    +
+    retsub
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.send_asset(recipient: bytes, amount: uint64) -> void:
+send_asset:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:528
+    // private send_asset(recipient: Account, amount: uint64): void {
+    proto 2 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:529
+    // if (this.is_native_algo.value === Uint64(1)) {
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:62
+    // is_native_algo = GlobalState<uint64>() // 1 if ALGO pool
+    bytec 6 // "is_native_algo"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:529
+    // if (this.is_native_algo.value === Uint64(1)) {
+    app_global_get_ex
+    assert // check GlobalState exists
+    intc_1 // 1
+    ==
+    bz send_asset_else_body@3
+    // smart_contracts/lending_pool_v2/contract.algo.ts:530-534
+    // itxn.payment({
+    //   receiver: recipient,
+    //   amount,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    frame_dig -1
+    itxn_field Amount
+    frame_dig -2
+    itxn_field Receiver
+    intc_1 // 1
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:533
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:530-534
+    // itxn.payment({
+    //   receiver: recipient,
+    //   amount,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    retsub
+
+send_asset_else_body@3:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:536-541
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: recipient,
+    //   assetAmount: amount,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_begin
+    // smart_contracts/lending_pool_v2/contract.algo.ts:537
+    // xferAsset: this.pool_asset_id.value,
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:61
+    // pool_asset_id = GlobalState<uint64>()  // 0 = native ALGO
+    bytec 7 // "pool_asset_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:537
+    // xferAsset: this.pool_asset_id.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    frame_dig -1
+    itxn_field AssetAmount
+    frame_dig -2
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/lending_pool_v2/contract.algo.ts:536-541
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: recipient,
+    //   assetAmount: amount,
+    //   fee: Uint64(0),
+    // }).submit()
+    intc_3 // 4
+    itxn_field TypeEnum
+    // smart_contracts/lending_pool_v2/contract.algo.ts:540
+    // fee: Uint64(0),
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/lending_pool_v2/contract.algo.ts:536-541
+    // itxn.assetTransfer({
+    //   xferAsset: this.pool_asset_id.value,
+    //   assetReceiver: recipient,
+    //   assetAmount: amount,
+    //   fee: Uint64(0),
+    // }).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.assert_governance() -> void:
+assert_governance:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:547
+    // Txn.sender.bytes === this.governance_address.value,
+    txn Sender
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:56
+    // governance_address = GlobalState<bytes>()
+    bytec 14 // "governance_address"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:547
+    // Txn.sender.bytes === this.governance_address.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:546-549
+    // assert(
+    //   Txn.sender.bytes === this.governance_address.value,
+    //   'Caller is not governance'
+    // )
+    assert // Caller is not governance
+    retsub
+
+
+// smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.assert_loan_factory() -> void:
+assert_loan_factory:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:554
+    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    txn ApplicationID
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:58
+    // loan_factory_app_id = GlobalState<uint64>()
+    bytec 20 // "loan_factory_app_id"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:554
+    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:554-555
+    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // Txn.sender.bytes === this.governance_address.value,
+    bnz assert_loan_factory_bool_true@2
+    // smart_contracts/lending_pool_v2/contract.algo.ts:555
+    // Txn.sender.bytes === this.governance_address.value,
+    txn Sender
+    intc_0 // 0
+    // smart_contracts/lending_pool_v2/contract.algo.ts:56
+    // governance_address = GlobalState<bytes>()
+    bytec 14 // "governance_address"
+    // smart_contracts/lending_pool_v2/contract.algo.ts:555
+    // Txn.sender.bytes === this.governance_address.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // smart_contracts/lending_pool_v2/contract.algo.ts:554-555
+    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // Txn.sender.bytes === this.governance_address.value,
+    bz assert_loan_factory_bool_false@3
+
+assert_loan_factory_bool_true@2:
+    intc_1 // 1
+
+assert_loan_factory_bool_merge@4:
+    // smart_contracts/lending_pool_v2/contract.algo.ts:553-557
+    // assert(
+    //   Txn.applicationId.id === this.loan_factory_app_id.value ||
+    //   Txn.sender.bytes === this.governance_address.value,
+    //   'Caller is not LoanFactory'
+    // )
+    assert // Caller is not LoanFactory
+    retsub
+
+assert_loan_factory_bool_false@3:
+    intc_0 // 0
+    b assert_loan_factory_bool_merge@4

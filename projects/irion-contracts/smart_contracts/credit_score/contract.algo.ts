@@ -65,6 +65,7 @@ export class CreditScore extends Contract {
     this.credit_profiles(Txn.sender).value = clone(initial_profile)
   }
 
+  @abimethod()
   public update_score_on_deposit(user: Account, amount: uint64): void {
     const profile = clone(this.credit_profiles(user).value)
 
@@ -80,6 +81,7 @@ export class CreditScore extends Contract {
     this.credit_profiles(user).value = clone(profile)
   }
 
+  @abimethod()
   public update_score_on_borrow(user: Account, amount: uint64): void {
     const profile = clone(this.credit_profiles(user).value)
 
@@ -92,6 +94,7 @@ export class CreditScore extends Contract {
     this.credit_profiles(user).value = clone(profile)
   }
 
+  @abimethod()
   public update_score_on_repay(user: Account, amount: uint64, on_time: boolean): void {
     const profile = clone(this.credit_profiles(user).value)
 
@@ -116,6 +119,7 @@ export class CreditScore extends Contract {
     this.credit_profiles(user).value = clone(profile)
   }
 
+  @abimethod()
   public update_score_on_default(user: Account): void {
     const profile = clone(this.credit_profiles(user).value)
 
@@ -127,11 +131,12 @@ export class CreditScore extends Contract {
   }
 
   private clamp_score(score: uint64): uint64 {
-    if (score < MIN_SCORE) {
-      return MIN_SCORE
-    }
+    // Note: uint64 cannot go negative at AVM level — callers must guard subtraction
     if (score > MAX_SCORE) {
       return MAX_SCORE
+    }
+    if (score < MIN_SCORE) {
+      return MIN_SCORE
     }
     return score
   }

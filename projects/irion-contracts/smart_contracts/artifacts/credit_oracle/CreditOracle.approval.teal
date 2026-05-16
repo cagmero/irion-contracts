@@ -1,0 +1,1383 @@
+#pragma version 11
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0 8 32 1000
+    bytecblock "c" "governance_address" "repayment_weight" "volume_weight" "tenure_weight" "concentration_weight" 0x151f7c75 "loan_factory_app_id" "lending_pool_v2_app_id"
+    // smart_contracts/credit_oracle/contract.algo.ts:78
+    // export class CreditOracle extends Contract {
+    pushbytes 0x0efff8f5 // method "bootstrap(byte[],uint64,uint64)void"
+    txna ApplicationArgs 0
+    match main_bootstrap_route@2
+
+main_switch_case_next@3:
+    // smart_contracts/credit_oracle/contract.algo.ts:78
+    // export class CreditOracle extends Contract {
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    bz main_create_NoOp@16
+    pushbytess 0x50658ca9 0x5bcd8a56 0xefbcfef6 0x36f84b5f 0x2778dd2b 0x0e5ed1dc 0x47fe37dd 0x6ceede8d 0xc62448a9 0xa53614d1 // method "create_profile()void", method "update_on_deposit(address,uint64)void", method "update_on_borrow(address,uint64)void", method "update_on_repay(address,uint64,bool)void", method "update_on_default(address)void", method "get_credit_limit(address,uint64)uint64", method "get_composite_score(address)uint64", method "get_full_profile(address)(uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)", method "set_weights(uint64,uint64,uint64,uint64)void", method "update_authorized_app(uint64,uint64)void"
+    txna ApplicationArgs 0
+    match create_profile update_on_deposit update_on_borrow update_on_repay update_on_default get_credit_limit get_composite_score get_full_profile set_weights update_authorized_app
+    err
+
+main_create_NoOp@16:
+    // smart_contracts/credit_oracle/contract.algo.ts:78
+    // export class CreditOracle extends Contract {
+    pushbytes 0x4c5c61ba // method "create()void"
+    txna ApplicationArgs 0
+    match main_create_route@17
+    err
+
+main_create_route@17:
+    // smart_contracts/credit_oracle/contract.algo.ts:93
+    // @abimethod({ allowActions: ['NoOp'], onCreate: 'require' })
+    intc_0 // 1
+    return
+
+main_bootstrap_route@2:
+    // smart_contracts/credit_oracle/contract.algo.ts:96
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_0 // 1
+    txn OnCompletion
+    shl
+    pushint 3 // 3
+    &
+    assert // OnCompletion must be one of NoOp, OptIn
+    b bootstrap
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.bootstrap[routing]() -> void:
+bootstrap:
+    // smart_contracts/credit_oracle/contract.algo.ts:96
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    txna ApplicationArgs 1
+    dup
+    intc_1 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/credit_oracle/contract.algo.ts:79
+    // governance_address = GlobalState<bytes>()
+    bytec_1 // "governance_address"
+    // smart_contracts/credit_oracle/contract.algo.ts:102
+    // this.governance_address.value = governance_address
+    uncover 3
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:80
+    // loan_factory_app_id = GlobalState<uint64>()
+    bytec 7 // "loan_factory_app_id"
+    // smart_contracts/credit_oracle/contract.algo.ts:103
+    // this.loan_factory_app_id.value = loan_factory_app_id
+    uncover 2
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:81
+    // lending_pool_v2_app_id = GlobalState<uint64>()
+    bytec 8 // "lending_pool_v2_app_id"
+    // smart_contracts/credit_oracle/contract.algo.ts:104
+    // this.lending_pool_v2_app_id.value = lending_pool_v2_app_id
+    swap
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:84
+    // repayment_weight = GlobalState<uint64>()
+    bytec_2 // "repayment_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:105
+    // this.repayment_weight.value = DEFAULT_REPAYMENT_WEIGHT
+    pushint 400 // 400
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:85
+    // volume_weight = GlobalState<uint64>()
+    bytec_3 // "volume_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:106
+    // this.volume_weight.value = DEFAULT_VOLUME_WEIGHT
+    pushint 250 // 250
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:86
+    // tenure_weight = GlobalState<uint64>()
+    bytec 4 // "tenure_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:107
+    // this.tenure_weight.value = DEFAULT_TENURE_WEIGHT
+    pushint 200 // 200
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:87
+    // concentration_weight = GlobalState<uint64>()
+    bytec 5 // "concentration_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:108
+    // this.concentration_weight.value = DEFAULT_CONCENTRATION_WEIGHT
+    pushint 150 // 150
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:96
+    // @abimethod({ allowActions: ['NoOp', 'OptIn'], onCreate: 'allow' })
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.create_profile[routing]() -> void:
+create_profile:
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    // smart_contracts/credit_oracle/contract.algo.ts:119
+    // assert(!this.profiles(Txn.sender).exists, 'Profile already exists')
+    txn Sender
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    concat
+    // smart_contracts/credit_oracle/contract.algo.ts:119
+    // assert(!this.profiles(Txn.sender).exists, 'Profile already exists')
+    box_len
+    bury 1
+    !
+    assert // Profile already exists
+    // smart_contracts/credit_oracle/contract.algo.ts:135
+    // last_updated_round: Global.round,
+    global Round
+    // smart_contracts/credit_oracle/contract.algo.ts:134
+    // first_seen_round: Global.round,
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:121-136
+    // const profile: DimensionScores = {
+    //   repayment_score: Uint64(0),
+    //   volume_score: Uint64(0),
+    //   tenure_score: Uint64(0),
+    //   concentration_risk: MAX_SCORE, // start at max (not concentrated yet)
+    //   composite_score: Uint64(0),
+    //   total_borrowed: Uint64(0),
+    //   total_repaid: Uint64(0),
+    //   active_loans: Uint64(0),
+    //   on_time_repayments: Uint64(0),
+    //   late_repayments: Uint64(0),
+    //   defaults: Uint64(0),
+    //   protocol_tenure_rounds: Uint64(0),
+    //   first_seen_round: Global.round,
+    //   last_updated_round: Global.round,
+    // }
+    itob
+    pushbytes 0x00000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    swap
+    concat
+    swap
+    itob
+    concat
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    // smart_contracts/credit_oracle/contract.algo.ts:137
+    // this.profiles(Txn.sender).value = clone(profile)
+    txn Sender
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    concat
+    // smart_contracts/credit_oracle/contract.algo.ts:137
+    // this.profiles(Txn.sender).value = clone(profile)
+    swap
+    box_put
+    // smart_contracts/credit_oracle/contract.algo.ts:117
+    // @abimethod()
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_deposit[routing]() -> void:
+update_on_deposit:
+    // smart_contracts/credit_oracle/contract.algo.ts:142
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    swap
+    // smart_contracts/credit_oracle/contract.algo.ts:144
+    // this.assert_authorized()
+    callsub assert_authorized
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:145
+    // if (!this.profiles(user).exists) return
+    box_len
+    bury 1
+    bz update_on_deposit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_deposit@4
+    // smart_contracts/credit_oracle/contract.algo.ts:147
+    // const profile = clone(this.profiles(user).value)
+    dupn 2
+    box_get
+    assert // Box must have value
+    // smart_contracts/credit_oracle/contract.algo.ts:149
+    // const new_volume: uint64 = profile.total_repaid + amount
+    dup
+    pushint 48 // 48
+    extract_uint64
+    dig 4
+    +
+    // smart_contracts/credit_oracle/contract.algo.ts:150
+    // profile.volume_score = this.calculate_volume_score(new_volume)
+    callsub calculate_volume_score
+    itob
+    replace2 8
+    // smart_contracts/credit_oracle/contract.algo.ts:151
+    // profile.last_updated_round = Global.round
+    global Round
+    itob
+    replace2 104
+    // smart_contracts/credit_oracle/contract.algo.ts:152
+    // profile.composite_score = this.recalculate_composite(profile)
+    callsub recalculate_composite
+    swap
+    itob
+    replace2 32
+    // smart_contracts/credit_oracle/contract.algo.ts:153
+    // this.profiles(user).value = clone(profile)
+    box_put
+
+update_on_deposit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_deposit@4:
+    // smart_contracts/credit_oracle/contract.algo.ts:142
+    // @abimethod()
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_borrow[routing]() -> void:
+update_on_borrow:
+    // smart_contracts/credit_oracle/contract.algo.ts:156
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    swap
+    // smart_contracts/credit_oracle/contract.algo.ts:158
+    // this.assert_authorized()
+    callsub assert_authorized
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:159
+    // if (!this.profiles(user).exists) return
+    box_len
+    bury 1
+    bz update_on_borrow_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_borrow@4
+    // smart_contracts/credit_oracle/contract.algo.ts:161
+    // const profile = clone(this.profiles(user).value)
+    dupn 2
+    box_get
+    assert // Box must have value
+    // smart_contracts/credit_oracle/contract.algo.ts:162
+    // profile.total_borrowed = profile.total_borrowed + amount
+    dup
+    pushint 40 // 40
+    extract_uint64
+    dig 4
+    +
+    itob
+    replace2 40
+    // smart_contracts/credit_oracle/contract.algo.ts:163
+    // profile.active_loans = profile.active_loans + Uint64(1)
+    dup
+    pushint 56 // 56
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 56
+    // smart_contracts/credit_oracle/contract.algo.ts:166
+    // const rounds_active: uint64 = Global.round - profile.first_seen_round
+    global Round
+    dig 1
+    pushint 96 // 96
+    extract_uint64
+    -
+    // smart_contracts/credit_oracle/contract.algo.ts:167
+    // profile.protocol_tenure_rounds = rounds_active
+    dup
+    itob
+    uncover 2
+    swap
+    replace2 88
+    // smart_contracts/credit_oracle/contract.algo.ts:168
+    // profile.tenure_score = this.calculate_tenure_score(rounds_active)
+    swap
+    callsub calculate_tenure_score
+    itob
+    replace2 16
+    // smart_contracts/credit_oracle/contract.algo.ts:170
+    // profile.last_updated_round = Global.round
+    global Round
+    itob
+    replace2 104
+    // smart_contracts/credit_oracle/contract.algo.ts:171
+    // profile.composite_score = this.recalculate_composite(profile)
+    callsub recalculate_composite
+    swap
+    itob
+    replace2 32
+    // smart_contracts/credit_oracle/contract.algo.ts:172
+    // this.profiles(user).value = clone(profile)
+    box_put
+
+update_on_borrow_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_borrow@4:
+    // smart_contracts/credit_oracle/contract.algo.ts:156
+    // @abimethod()
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_repay[routing]() -> void:
+update_on_repay:
+    intc_1 // 0
+    pushbytes ""
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:175
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    swap
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_0 // 1
+    ==
+    assert // invalid number of bytes for arc4.bool
+    intc_1 // 0
+    getbit
+    swap
+    // smart_contracts/credit_oracle/contract.algo.ts:177
+    // this.assert_authorized()
+    callsub assert_authorized
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:178
+    // if (!this.profiles(user).exists) return
+    box_len
+    bury 1
+    bz update_on_repay_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_repay@12
+    // smart_contracts/credit_oracle/contract.algo.ts:180
+    // const profile = clone(this.profiles(user).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/credit_oracle/contract.algo.ts:181
+    // profile.total_repaid = profile.total_repaid + amount
+    dup
+    pushint 48 // 48
+    extract_uint64
+    dig 4
+    +
+    itob
+    replace2 48
+    dup
+    bury 7
+    // smart_contracts/credit_oracle/contract.algo.ts:183
+    // if (profile.active_loans > Uint64(0)) {
+    pushint 56 // 56
+    extract_uint64
+    dup
+    bury 6
+    bz update_on_repay_after_if_else@5
+    // smart_contracts/credit_oracle/contract.algo.ts:184
+    // profile.active_loans = profile.active_loans - Uint64(1)
+    dig 4
+    intc_0 // 1
+    -
+    itob
+    dig 6
+    swap
+    replace2 56
+    bury 6
+
+update_on_repay_after_if_else@5:
+    // smart_contracts/credit_oracle/contract.algo.ts:187
+    // if (on_time) {
+    dig 1
+    bz update_on_repay_else_body@7
+    // smart_contracts/credit_oracle/contract.algo.ts:188
+    // profile.on_time_repayments = profile.on_time_repayments + Uint64(1)
+    dig 5
+    dup
+    pushint 64 // 64
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 64
+    // smart_contracts/credit_oracle/contract.algo.ts:189
+    // const new_score: uint64 = profile.repayment_score + ON_TIME_BONUS
+    dup
+    intc_1 // 0
+    extract_uint64
+    pushint 15 // 15
+    +
+    // smart_contracts/credit_oracle/contract.algo.ts:190
+    // profile.repayment_score = new_score > MAX_SCORE ? MAX_SCORE : new_score
+    dup
+    intc 4 // 1000
+    >
+    intc 4 // 1000
+    swap
+    select
+    itob
+    replace2 0
+    bury 6
+
+update_on_repay_after_if_else@11:
+    // smart_contracts/credit_oracle/contract.algo.ts:200
+    // profile.volume_score = this.calculate_volume_score(profile.total_repaid)
+    dig 5
+    dup
+    pushint 48 // 48
+    extract_uint64
+    callsub calculate_volume_score
+    itob
+    replace2 8
+    // smart_contracts/credit_oracle/contract.algo.ts:201
+    // const rounds_active: uint64 = Global.round - profile.first_seen_round
+    global Round
+    dig 1
+    pushint 96 // 96
+    extract_uint64
+    -
+    // smart_contracts/credit_oracle/contract.algo.ts:202
+    // profile.tenure_score = this.calculate_tenure_score(rounds_active)
+    dup
+    callsub calculate_tenure_score
+    itob
+    uncover 2
+    swap
+    replace2 16
+    // smart_contracts/credit_oracle/contract.algo.ts:203
+    // profile.protocol_tenure_rounds = rounds_active
+    swap
+    itob
+    replace2 88
+    // smart_contracts/credit_oracle/contract.algo.ts:204
+    // profile.last_updated_round = Global.round
+    global Round
+    itob
+    replace2 104
+    // smart_contracts/credit_oracle/contract.algo.ts:205
+    // profile.composite_score = this.recalculate_composite(profile)
+    callsub recalculate_composite
+    swap
+    itob
+    replace2 32
+    // smart_contracts/credit_oracle/contract.algo.ts:206
+    // this.profiles(user).value = clone(profile)
+    dig 1
+    swap
+    box_put
+
+update_on_repay_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_repay@12:
+    // smart_contracts/credit_oracle/contract.algo.ts:175
+    // @abimethod()
+    intc_0 // 1
+    return
+
+update_on_repay_else_body@7:
+    // smart_contracts/credit_oracle/contract.algo.ts:192
+    // profile.late_repayments = profile.late_repayments + Uint64(1)
+    dig 5
+    dup
+    pushint 72 // 72
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 72
+    dup
+    bury 7
+    // smart_contracts/credit_oracle/contract.algo.ts:193
+    // if (profile.repayment_score >= LATE_PENALTY) {
+    intc_1 // 0
+    extract_uint64
+    dup
+    bury 5
+    pushint 25 // 25
+    >=
+    bz update_on_repay_else_body@9
+    // smart_contracts/credit_oracle/contract.algo.ts:194
+    // profile.repayment_score = profile.repayment_score - LATE_PENALTY
+    dig 3
+    pushint 25 // 25
+    -
+    itob
+    dig 6
+    swap
+    replace2 0
+    bury 6
+    b update_on_repay_after_if_else@11
+
+update_on_repay_else_body@9:
+    // smart_contracts/credit_oracle/contract.algo.ts:196
+    // profile.repayment_score = MIN_SCORE
+    intc_1 // 0
+    itob
+    dig 6
+    swap
+    replace2 0
+    bury 6
+    b update_on_repay_after_if_else@11
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_default[routing]() -> void:
+update_on_default:
+    intc_1 // 0
+    pushbytes ""
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:209
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/credit_oracle/contract.algo.ts:211
+    // this.assert_authorized()
+    callsub assert_authorized
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:212
+    // if (!this.profiles(user).exists) return
+    box_len
+    bury 1
+    bz update_on_default_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_default@9
+    // smart_contracts/credit_oracle/contract.algo.ts:214
+    // const profile = clone(this.profiles(user).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/credit_oracle/contract.algo.ts:215
+    // profile.defaults = profile.defaults + Uint64(1)
+    dup
+    pushint 80 // 80
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 80
+    dup
+    bury 5
+    // smart_contracts/credit_oracle/contract.algo.ts:216
+    // if (profile.active_loans > Uint64(0)) {
+    pushint 56 // 56
+    extract_uint64
+    dup
+    bury 4
+    bz update_on_default_after_if_else@5
+    // smart_contracts/credit_oracle/contract.algo.ts:217
+    // profile.active_loans = profile.active_loans - Uint64(1)
+    dig 2
+    intc_0 // 1
+    -
+    itob
+    dig 4
+    swap
+    replace2 56
+    bury 4
+
+update_on_default_after_if_else@5:
+    // smart_contracts/credit_oracle/contract.algo.ts:219
+    // if (profile.repayment_score >= DEFAULT_PENALTY) {
+    dig 3
+    intc_1 // 0
+    extract_uint64
+    dup
+    bury 3
+    pushint 120 // 120
+    >=
+    bz update_on_default_else_body@7
+    // smart_contracts/credit_oracle/contract.algo.ts:220
+    // profile.repayment_score = profile.repayment_score - DEFAULT_PENALTY
+    dig 1
+    pushint 120 // 120
+    -
+    itob
+    dig 4
+    swap
+    replace2 0
+    bury 4
+
+update_on_default_after_if_else@8:
+    // smart_contracts/credit_oracle/contract.algo.ts:224
+    // profile.last_updated_round = Global.round
+    global Round
+    itob
+    dig 4
+    swap
+    replace2 104
+    // smart_contracts/credit_oracle/contract.algo.ts:225
+    // profile.composite_score = this.recalculate_composite(profile)
+    callsub recalculate_composite
+    swap
+    itob
+    replace2 32
+    // smart_contracts/credit_oracle/contract.algo.ts:226
+    // this.profiles(user).value = clone(profile)
+    dig 1
+    swap
+    box_put
+
+update_on_default_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_on_default@9:
+    // smart_contracts/credit_oracle/contract.algo.ts:209
+    // @abimethod()
+    intc_0 // 1
+    return
+
+update_on_default_else_body@7:
+    // smart_contracts/credit_oracle/contract.algo.ts:222
+    // profile.repayment_score = MIN_SCORE
+    intc_1 // 0
+    itob
+    dig 4
+    swap
+    replace2 0
+    bury 4
+    b update_on_default_after_if_else@8
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit[routing]() -> void:
+get_credit_limit:
+    pushbytes ""
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 2
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:241
+    // if (!this.profiles(institution).exists) return Uint64(0)
+    box_len
+    bury 1
+    bnz get_credit_limit_after_if_else@3
+    intc_1 // 0
+
+get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20:
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    itob
+    bytec 6 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+get_credit_limit_after_if_else@3:
+    // smart_contracts/credit_oracle/contract.algo.ts:243
+    // const score = this.profiles(institution).value.composite_score
+    dup
+    box_get
+    assert // Box must have value
+    intc_3 // 32
+    extract_uint64
+    dup
+    bury 3
+    // smart_contracts/credit_oracle/contract.algo.ts:246
+    // if (score < Uint64(100)) return Uint64(0)
+    pushint 100 // 100
+    <
+    bz get_credit_limit_after_if_else@5
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@5:
+    // smart_contracts/credit_oracle/contract.algo.ts:247
+    // if (score < Uint64(200)) return Uint64(10_000_000_000)       // $10,000
+    dig 1
+    pushint 200 // 200
+    <
+    bz get_credit_limit_after_if_else@7
+    pushint 10000000000 // 10000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@7:
+    // smart_contracts/credit_oracle/contract.algo.ts:248
+    // if (score < Uint64(300)) return Uint64(50_000_000_000)       // $50,000
+    dig 1
+    pushint 300 // 300
+    <
+    bz get_credit_limit_after_if_else@9
+    pushint 50000000000 // 50000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@9:
+    // smart_contracts/credit_oracle/contract.algo.ts:249
+    // if (score < Uint64(400)) return Uint64(100_000_000_000)      // $100,000
+    dig 1
+    pushint 400 // 400
+    <
+    bz get_credit_limit_after_if_else@11
+    pushint 100000000000 // 100000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@11:
+    // smart_contracts/credit_oracle/contract.algo.ts:250
+    // if (score < Uint64(500)) return Uint64(250_000_000_000)      // $250,000
+    dig 1
+    pushint 500 // 500
+    <
+    bz get_credit_limit_after_if_else@13
+    pushint 250000000000 // 250000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@13:
+    // smart_contracts/credit_oracle/contract.algo.ts:251
+    // if (score < Uint64(600)) return Uint64(500_000_000_000)      // $500,000
+    dig 1
+    pushint 600 // 600
+    <
+    bz get_credit_limit_after_if_else@15
+    pushint 500000000000 // 500000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@15:
+    // smart_contracts/credit_oracle/contract.algo.ts:252
+    // if (score < Uint64(700)) return Uint64(1_000_000_000_000)    // $1,000,000
+    dig 1
+    pushint 700 // 700
+    <
+    bz get_credit_limit_after_if_else@17
+    pushint 1000000000000 // 1000000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@17:
+    // smart_contracts/credit_oracle/contract.algo.ts:253
+    // if (score < Uint64(800)) return Uint64(5_000_000_000_000)    // $5,000,000
+    dig 1
+    pushint 800 // 800
+    <
+    bz get_credit_limit_after_if_else@19
+    pushint 5000000000000 // 5000000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+get_credit_limit_after_if_else@19:
+    // smart_contracts/credit_oracle/contract.algo.ts:254
+    // return Uint64(10_000_000_000_000)                             // $10,000,000
+    pushint 10000000000000 // 10000000000000
+    // smart_contracts/credit_oracle/contract.algo.ts:239
+    // @abimethod({ readonly: true })
+    b get_credit_limit_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_credit_limit@20
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_composite_score[routing]() -> void:
+get_composite_score:
+    // smart_contracts/credit_oracle/contract.algo.ts:259
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:261
+    // if (!this.profiles(institution).exists) return Uint64(0)
+    box_len
+    bury 1
+    bnz get_composite_score_after_if_else@3
+    intc_1 // 0
+
+get_composite_score_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_composite_score@4:
+    // smart_contracts/credit_oracle/contract.algo.ts:259
+    // @abimethod({ readonly: true })
+    itob
+    bytec 6 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+get_composite_score_after_if_else@3:
+    // smart_contracts/credit_oracle/contract.algo.ts:262
+    // return this.profiles(institution).value.composite_score
+    dup
+    box_get
+    assert // Box must have value
+    intc_3 // 32
+    extract_uint64
+    // smart_contracts/credit_oracle/contract.algo.ts:259
+    // @abimethod({ readonly: true })
+    b get_composite_score_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_composite_score@4
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_full_profile[routing]() -> void:
+get_full_profile:
+    // smart_contracts/credit_oracle/contract.algo.ts:265
+    // @abimethod({ readonly: true })
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // smart_contracts/credit_oracle/contract.algo.ts:89
+    // profiles = BoxMap<Account, DimensionScores>({ keyPrefix: 'c' })
+    bytec_0 // "c"
+    swap
+    concat
+    dup
+    // smart_contracts/credit_oracle/contract.algo.ts:269
+    // if (!this.profiles(institution).exists) {
+    box_len
+    bury 1
+    bnz get_full_profile_after_if_else@3
+    // smart_contracts/credit_oracle/contract.algo.ts:270-273
+    // return [
+    //   Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0),
+    //   Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0), Uint64(0),
+    // ]
+    pushbytes 0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+get_full_profile_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_full_profile@4:
+    // smart_contracts/credit_oracle/contract.algo.ts:265
+    // @abimethod({ readonly: true })
+    bytec 6 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+get_full_profile_after_if_else@3:
+    // smart_contracts/credit_oracle/contract.algo.ts:275
+    // const p = clone(this.profiles(institution).value)
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/credit_oracle/contract.algo.ts:277
+    // p.repayment_score,
+    dup
+    extract 0 8
+    // smart_contracts/credit_oracle/contract.algo.ts:278
+    // p.volume_score,
+    dig 1
+    extract 8 8
+    // smart_contracts/credit_oracle/contract.algo.ts:279
+    // p.tenure_score,
+    dig 2
+    extract 16 8
+    // smart_contracts/credit_oracle/contract.algo.ts:280
+    // p.concentration_risk,
+    dig 3
+    extract 24 8
+    // smart_contracts/credit_oracle/contract.algo.ts:281
+    // p.composite_score,
+    dig 4
+    extract 32 8
+    // smart_contracts/credit_oracle/contract.algo.ts:282
+    // p.total_borrowed,
+    dig 5
+    extract 40 8
+    // smart_contracts/credit_oracle/contract.algo.ts:283
+    // p.total_repaid,
+    dig 6
+    extract 48 8
+    // smart_contracts/credit_oracle/contract.algo.ts:284
+    // p.active_loans,
+    dig 7
+    extract 56 8
+    // smart_contracts/credit_oracle/contract.algo.ts:285
+    // p.on_time_repayments,
+    dig 8
+    extract 64 8
+    // smart_contracts/credit_oracle/contract.algo.ts:286
+    // p.late_repayments,
+    dig 9
+    extract 72 8
+    // smart_contracts/credit_oracle/contract.algo.ts:287
+    // p.defaults,
+    dig 10
+    extract 80 8
+    // smart_contracts/credit_oracle/contract.algo.ts:288
+    // p.protocol_tenure_rounds,
+    uncover 11
+    extract 88 8
+    // smart_contracts/credit_oracle/contract.algo.ts:276-289
+    // return [
+    //   p.repayment_score,
+    //   p.volume_score,
+    //   p.tenure_score,
+    //   p.concentration_risk,
+    //   p.composite_score,
+    //   p.total_borrowed,
+    //   p.total_repaid,
+    //   p.active_loans,
+    //   p.on_time_repayments,
+    //   p.late_repayments,
+    //   p.defaults,
+    //   p.protocol_tenure_rounds,
+    // ]
+    uncover 11
+    uncover 11
+    concat
+    uncover 10
+    concat
+    uncover 9
+    concat
+    uncover 8
+    concat
+    uncover 7
+    concat
+    uncover 6
+    concat
+    uncover 5
+    concat
+    uncover 4
+    concat
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // smart_contracts/credit_oracle/contract.algo.ts:265
+    // @abimethod({ readonly: true })
+    b get_full_profile_after_inlined_smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.get_full_profile@4
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.set_weights[routing]() -> void:
+set_weights:
+    // smart_contracts/credit_oracle/contract.algo.ts:294
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/credit_oracle/contract.algo.ts:301
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/credit_oracle/contract.algo.ts:303
+    // repayment_weight + volume_weight + tenure_weight + concentration_weight === Uint64(1000),
+    dig 3
+    dig 3
+    +
+    dig 2
+    +
+    dig 1
+    +
+    intc 4 // 1000
+    ==
+    // smart_contracts/credit_oracle/contract.algo.ts:302-305
+    // assert(
+    //   repayment_weight + volume_weight + tenure_weight + concentration_weight === Uint64(1000),
+    //   'Weights must sum to 1000'
+    // )
+    assert // Weights must sum to 1000
+    // smart_contracts/credit_oracle/contract.algo.ts:84
+    // repayment_weight = GlobalState<uint64>()
+    bytec_2 // "repayment_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:306
+    // this.repayment_weight.value = repayment_weight
+    uncover 4
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:85
+    // volume_weight = GlobalState<uint64>()
+    bytec_3 // "volume_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:307
+    // this.volume_weight.value = volume_weight
+    uncover 3
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:86
+    // tenure_weight = GlobalState<uint64>()
+    bytec 4 // "tenure_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:308
+    // this.tenure_weight.value = tenure_weight
+    uncover 2
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:87
+    // concentration_weight = GlobalState<uint64>()
+    bytec 5 // "concentration_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:309
+    // this.concentration_weight.value = concentration_weight
+    swap
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:294
+    // @abimethod()
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.update_authorized_app[routing]() -> void:
+update_authorized_app:
+    // smart_contracts/credit_oracle/contract.algo.ts:312
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/credit_oracle/contract.algo.ts:314
+    // this.assert_governance()
+    callsub assert_governance
+    // smart_contracts/credit_oracle/contract.algo.ts:80
+    // loan_factory_app_id = GlobalState<uint64>()
+    bytec 7 // "loan_factory_app_id"
+    // smart_contracts/credit_oracle/contract.algo.ts:315
+    // this.loan_factory_app_id.value = loan_factory_app_id
+    uncover 2
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:81
+    // lending_pool_v2_app_id = GlobalState<uint64>()
+    bytec 8 // "lending_pool_v2_app_id"
+    // smart_contracts/credit_oracle/contract.algo.ts:316
+    // this.lending_pool_v2_app_id.value = lending_pool_v2_app_id
+    swap
+    app_global_put
+    // smart_contracts/credit_oracle/contract.algo.ts:312
+    // @abimethod()
+    intc_0 // 1
+    return
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.recalculate_composite(p: bytes) -> uint64, bytes:
+recalculate_composite:
+    // smart_contracts/credit_oracle/contract.algo.ts:321
+    // private recalculate_composite(p: DimensionScores): uint64 {
+    proto 1 2
+    // smart_contracts/credit_oracle/contract.algo.ts:322
+    // const rw = this.repayment_weight.value
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:84
+    // repayment_weight = GlobalState<uint64>()
+    bytec_2 // "repayment_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:322
+    // const rw = this.repayment_weight.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/credit_oracle/contract.algo.ts:323
+    // const vw = this.volume_weight.value
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:85
+    // volume_weight = GlobalState<uint64>()
+    bytec_3 // "volume_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:323
+    // const vw = this.volume_weight.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/credit_oracle/contract.algo.ts:324
+    // const tw = this.tenure_weight.value
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:86
+    // tenure_weight = GlobalState<uint64>()
+    bytec 4 // "tenure_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:324
+    // const tw = this.tenure_weight.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/credit_oracle/contract.algo.ts:325
+    // const cw = this.concentration_weight.value
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:87
+    // concentration_weight = GlobalState<uint64>()
+    bytec 5 // "concentration_weight"
+    // smart_contracts/credit_oracle/contract.algo.ts:325
+    // const cw = this.concentration_weight.value
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/credit_oracle/contract.algo.ts:328
+    // (BigUint(p.repayment_score) * BigUint(rw) +
+    frame_dig -1
+    extract 0 8
+    uncover 4
+    itob
+    b*
+    // smart_contracts/credit_oracle/contract.algo.ts:329
+    // BigUint(p.volume_score) * BigUint(vw) +
+    frame_dig -1
+    extract 8 8
+    uncover 4
+    itob
+    b*
+    // smart_contracts/credit_oracle/contract.algo.ts:328-329
+    // (BigUint(p.repayment_score) * BigUint(rw) +
+    //  BigUint(p.volume_score) * BigUint(vw) +
+    b+
+    // smart_contracts/credit_oracle/contract.algo.ts:330
+    // BigUint(p.tenure_score) * BigUint(tw) +
+    frame_dig -1
+    extract 16 8
+    uncover 3
+    itob
+    b*
+    // smart_contracts/credit_oracle/contract.algo.ts:328-330
+    // (BigUint(p.repayment_score) * BigUint(rw) +
+    //  BigUint(p.volume_score) * BigUint(vw) +
+    //  BigUint(p.tenure_score) * BigUint(tw) +
+    b+
+    // smart_contracts/credit_oracle/contract.algo.ts:331
+    // BigUint(p.concentration_risk) * BigUint(cw)) /
+    frame_dig -1
+    extract 24 8
+    uncover 2
+    itob
+    b*
+    // smart_contracts/credit_oracle/contract.algo.ts:328-331
+    // (BigUint(p.repayment_score) * BigUint(rw) +
+    //  BigUint(p.volume_score) * BigUint(vw) +
+    //  BigUint(p.tenure_score) * BigUint(tw) +
+    //  BigUint(p.concentration_risk) * BigUint(cw)) /
+    b+
+    // smart_contracts/credit_oracle/contract.algo.ts:332
+    // BigUint(1000)
+    pushbytes 0x03e8
+    // smart_contracts/credit_oracle/contract.algo.ts:328-332
+    // (BigUint(p.repayment_score) * BigUint(rw) +
+    //  BigUint(p.volume_score) * BigUint(vw) +
+    //  BigUint(p.tenure_score) * BigUint(tw) +
+    //  BigUint(p.concentration_risk) * BigUint(cw)) /
+    // BigUint(1000)
+    b/
+    // smart_contracts/credit_oracle/contract.algo.ts:334
+    // const composite = op.btoi(Bytes(weighted))
+    btoi
+    // smart_contracts/credit_oracle/contract.algo.ts:335
+    // return composite > MAX_SCORE ? MAX_SCORE : composite
+    dup
+    intc 4 // 1000
+    >
+    intc 4 // 1000
+    swap
+    select
+    frame_dig -1
+    retsub
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.calculate_volume_score(cumulative_repaid: uint64) -> uint64:
+calculate_volume_score:
+    // smart_contracts/credit_oracle/contract.algo.ts:338
+    // private calculate_volume_score(cumulative_repaid: uint64): uint64 {
+    proto 1 1
+    // smart_contracts/credit_oracle/contract.algo.ts:339
+    // if (cumulative_repaid === Uint64(0)) return Uint64(0)
+    frame_dig -1
+    bnz calculate_volume_score_after_if_else@2
+    intc_1 // 0
+    retsub
+
+calculate_volume_score_after_if_else@2:
+    // smart_contracts/credit_oracle/contract.algo.ts:340
+    // const units: uint64 = cumulative_repaid / VOLUME_UNIT
+    frame_dig -1
+    pushint 100000000 // 100000000
+    /
+    // smart_contracts/credit_oracle/contract.algo.ts:341
+    // const raw: uint64 = units * VOLUME_POINTS_PER_UNIT
+    pushint 10 // 10
+    *
+    // smart_contracts/credit_oracle/contract.algo.ts:342
+    // return raw > MAX_VOLUME_SCORE ? MAX_VOLUME_SCORE : raw
+    dup
+    intc 4 // 1000
+    >
+    intc 4 // 1000
+    swap
+    select
+    retsub
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.calculate_tenure_score(rounds_active: uint64) -> uint64:
+calculate_tenure_score:
+    // smart_contracts/credit_oracle/contract.algo.ts:345
+    // private calculate_tenure_score(rounds_active: uint64): uint64 {
+    proto 1 1
+    // smart_contracts/credit_oracle/contract.algo.ts:346
+    // if (rounds_active === Uint64(0)) return Uint64(0)
+    frame_dig -1
+    bnz calculate_tenure_score_after_if_else@2
+    intc_1 // 0
+    retsub
+
+calculate_tenure_score_after_if_else@2:
+    // smart_contracts/credit_oracle/contract.algo.ts:347
+    // const points: uint64 = rounds_active / TENURE_ROUNDS_PER_POINT
+    frame_dig -1
+    pushint 211754 // 211754
+    /
+    // smart_contracts/credit_oracle/contract.algo.ts:348
+    // return points > MAX_SCORE ? MAX_SCORE : points
+    dup
+    intc 4 // 1000
+    >
+    intc 4 // 1000
+    swap
+    select
+    retsub
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.assert_authorized() -> void:
+assert_authorized:
+    // smart_contracts/credit_oracle/contract.algo.ts:356
+    // Txn.sender.bytes === this.governance_address.value,
+    txn Sender
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:79
+    // governance_address = GlobalState<bytes>()
+    bytec_1 // "governance_address"
+    // smart_contracts/credit_oracle/contract.algo.ts:356
+    // Txn.sender.bytes === this.governance_address.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // smart_contracts/credit_oracle/contract.algo.ts:355-358
+    // assert(
+    //   Txn.sender.bytes === this.governance_address.value,
+    //   'Unauthorized caller'
+    // )
+    assert // Unauthorized caller
+    retsub
+
+
+// smart_contracts/credit_oracle/contract.algo.ts::CreditOracle.assert_governance() -> void:
+assert_governance:
+    // smart_contracts/credit_oracle/contract.algo.ts:363
+    // Txn.sender.bytes === this.governance_address.value,
+    txn Sender
+    intc_1 // 0
+    // smart_contracts/credit_oracle/contract.algo.ts:79
+    // governance_address = GlobalState<bytes>()
+    bytec_1 // "governance_address"
+    // smart_contracts/credit_oracle/contract.algo.ts:363
+    // Txn.sender.bytes === this.governance_address.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // smart_contracts/credit_oracle/contract.algo.ts:362-365
+    // assert(
+    //   Txn.sender.bytes === this.governance_address.value,
+    //   'Caller is not governance'
+    // )
+    assert // Caller is not governance
+    retsub

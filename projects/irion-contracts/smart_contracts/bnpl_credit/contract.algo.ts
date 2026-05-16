@@ -146,40 +146,34 @@ export class BNPLCredit extends Contract {
     const payment_round: uint64 = Global.round
     const is_on_time: boolean = payment_round <= loan.next_due_round
 
-    if (is_on_time) {
-      loan.total_repaid = loan.total_repaid + payment.assetAmount
-      loan.installments_paid = loan.installments_paid + Uint64(1)
+    let effective_payment: uint64 = payment.assetAmount
 
-      if (loan.installments_paid >= loan.num_installments) {
-        loan.status = LOAN_STATUS_COMPLETED
-        const repay_selector = methodSelector('repay(asset_transfer,address)')
-        itxn.applicationCall({
-          appId: this.lending_pool_app_id.value,
-          appArgs: [repay_selector, Bytes(payment.assetAmount), loan.borrower],
-          fee: Uint64(0),
-        }).submit()
-      } else {
+    if (!is_on_time) {
+      const [high, low] = op.mulw(payment.assetAmount, this.late_fee_bps.value)
+      const late_fee: uint64 = op.divw(high, low, Uint64(10000))
+      effective_payment = payment.assetAmount + late_fee
+    }
+
+    loan.total_repaid = loan.total_repaid + effective_payment
+    loan.installments_paid = loan.installments_paid + Uint64(1)
+
+    if (is_on_time) {
+      if (loan.installments_paid < loan.num_installments) {
         loan.next_due_round = loan.next_due_round + this.installment_interval.value
       }
     } else {
-      const [high, low] = op.mulw(payment.assetAmount, this.late_fee_bps.value)
-      const late_fee: uint64 = op.divw(high, low, Uint64(10000))
-      const total_payment: uint64 = payment.assetAmount + late_fee
-
-      loan.total_repaid = loan.total_repaid + total_payment
-      loan.installments_paid = loan.installments_paid + Uint64(1)
-
-      if (loan.installments_paid >= loan.num_installments) {
-        loan.status = LOAN_STATUS_COMPLETED
-        const repay_selector = methodSelector('repay(asset_transfer,address)')
-        itxn.applicationCall({
-          appId: this.lending_pool_app_id.value,
-          appArgs: [repay_selector, Bytes(total_payment), loan.borrower],
-          fee: Uint64(0),
-        }).submit()
-      } else {
+      if (loan.installments_paid < loan.num_installments) {
         loan.next_due_round = loan.next_due_round + this.installment_interval.value
       }
+    }
+
+    if (loan.installments_paid >= loan.num_installments) {
+      loan.status = LOAN_STATUS_COMPLETED
+      // Pool repay is handled at the caller (atomic group) level:
+      //   txn[0]: AssetTransfer borrower→LendingPool (repayment)
+      //   txn[1]: ApplicationCall LendingPool.repay(ref:txn[0], borrower)
+      //   txn[2]: ApplicationCall BNPLCredit.make_payment(loan_id, ref:txn[0])
+      // This contract only records the state change.
     }
 
     this.loan_boxes(loan_id).value = clone(loan)
