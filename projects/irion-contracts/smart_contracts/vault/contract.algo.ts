@@ -388,7 +388,7 @@ export class Vault extends Contract {
 
   private assert_loan_factory_or_governance(): void {
     assert(
-      Txn.applicationId.id === this.loan_factory_app_id.value ||
+      op.Global.callerApplicationId === this.loan_factory_app_id.value ||
       Txn.sender.bytes === this.governance_address.value,
       'Not authorized'
     )

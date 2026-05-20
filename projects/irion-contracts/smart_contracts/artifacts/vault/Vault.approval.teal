@@ -1786,19 +1786,19 @@ assert_governance:
 // smart_contracts/vault/contract.algo.ts::Vault.assert_loan_factory_or_governance() -> void:
 assert_loan_factory_or_governance:
     // smart_contracts/vault/contract.algo.ts:391
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
-    txn ApplicationID
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
+    global CallerApplicationID
     intc_2 // 0
     // smart_contracts/vault/contract.algo.ts:66
     // loan_factory_app_id = GlobalState<uint64>()
     bytec 4 // "loan_factory_app_id"
     // smart_contracts/vault/contract.algo.ts:391
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     app_global_get_ex
     assert // check GlobalState exists
     ==
     // smart_contracts/vault/contract.algo.ts:391-392
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     // Txn.sender.bytes === this.governance_address.value,
     bnz assert_loan_factory_or_governance_bool_true@2
     // smart_contracts/vault/contract.algo.ts:392
@@ -1814,7 +1814,7 @@ assert_loan_factory_or_governance:
     assert // check GlobalState exists
     ==
     // smart_contracts/vault/contract.algo.ts:391-392
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     // Txn.sender.bytes === this.governance_address.value,
     bz assert_loan_factory_or_governance_bool_false@3
 
@@ -1824,7 +1824,7 @@ assert_loan_factory_or_governance_bool_true@2:
 assert_loan_factory_or_governance_bool_merge@4:
     // smart_contracts/vault/contract.algo.ts:390-394
     // assert(
-    //   Txn.applicationId.id === this.loan_factory_app_id.value ||
+    //   op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     //   Txn.sender.bytes === this.governance_address.value,
     //   'Not authorized'
     // )

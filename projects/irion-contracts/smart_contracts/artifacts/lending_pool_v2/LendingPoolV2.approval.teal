@@ -2602,19 +2602,19 @@ assert_governance:
 // smart_contracts/lending_pool_v2/contract.algo.ts::LendingPoolV2.assert_loan_factory() -> void:
 assert_loan_factory:
     // smart_contracts/lending_pool_v2/contract.algo.ts:554
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
-    txn ApplicationID
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
+    global CallerApplicationID
     intc_0 // 0
     // smart_contracts/lending_pool_v2/contract.algo.ts:58
     // loan_factory_app_id = GlobalState<uint64>()
     bytec 20 // "loan_factory_app_id"
     // smart_contracts/lending_pool_v2/contract.algo.ts:554
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     app_global_get_ex
     assert // check GlobalState exists
     ==
     // smart_contracts/lending_pool_v2/contract.algo.ts:554-555
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     // Txn.sender.bytes === this.governance_address.value,
     bnz assert_loan_factory_bool_true@2
     // smart_contracts/lending_pool_v2/contract.algo.ts:555
@@ -2630,7 +2630,7 @@ assert_loan_factory:
     assert // check GlobalState exists
     ==
     // smart_contracts/lending_pool_v2/contract.algo.ts:554-555
-    // Txn.applicationId.id === this.loan_factory_app_id.value ||
+    // op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     // Txn.sender.bytes === this.governance_address.value,
     bz assert_loan_factory_bool_false@3
 
@@ -2640,7 +2640,7 @@ assert_loan_factory_bool_true@2:
 assert_loan_factory_bool_merge@4:
     // smart_contracts/lending_pool_v2/contract.algo.ts:553-557
     // assert(
-    //   Txn.applicationId.id === this.loan_factory_app_id.value ||
+    //   op.Global.callerApplicationId === this.loan_factory_app_id.value ||
     //   Txn.sender.bytes === this.governance_address.value,
     //   'Caller is not LoanFactory'
     // )

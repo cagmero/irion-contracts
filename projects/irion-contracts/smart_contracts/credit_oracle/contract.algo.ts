@@ -350,10 +350,10 @@ export class CreditOracle extends Contract {
 
   private assert_authorized(): void {
     // For MVP: oracle updates are permissioned to governance only.
-    // LoanFactory calls are done off-chain by the API after confirming txns.
-    // Phase 2+ will use Txn.applicationId for inner-txn caller checks.
+    // Phase 2+: LoanFactory inner txns use callerApplicationId
     assert(
-      Txn.sender.bytes === this.governance_address.value,
+      Txn.sender.bytes === this.governance_address.value ||
+      op.Global.callerApplicationId === this.loan_factory_app_id.value,
       'Unauthorized caller'
     )
   }

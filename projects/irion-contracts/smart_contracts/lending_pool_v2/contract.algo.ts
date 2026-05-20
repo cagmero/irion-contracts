@@ -551,7 +551,7 @@ export class LendingPoolV2 extends Contract {
 
   private assert_loan_factory(): void {
     assert(
-      Txn.applicationId.id === this.loan_factory_app_id.value ||
+      op.Global.callerApplicationId === this.loan_factory_app_id.value ||
       Txn.sender.bytes === this.governance_address.value,
       'Caller is not LoanFactory'
     )
